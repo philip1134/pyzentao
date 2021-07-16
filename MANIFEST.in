@@ -1,4 +1,4 @@
 include LICENSE.rst README.rst
 recursive-exclude * __pycache__
-recursive-include minimo *
+recursive-include pyzentao *
 global-exclude *.py[co]
