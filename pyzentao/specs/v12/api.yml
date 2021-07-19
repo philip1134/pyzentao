@@ -1,0 +1,60 @@
+api_getSessionID:
+    method: GET
+    path: api-getSessionID
+
+api_getModel:
+    method: GET
+    path: api-getModel
+    params:
+        - moduleName
+        - methodName
+        - params
+
+api_debug:
+    method: POST
+    path: api-debug
+    params:
+        - filePath
+        - action
+
+api_sql:
+    method: POST
+    path: api-sql
+    params:
+        - keyField
+
+entry_browse:
+    method: GET
+    path: entry-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+entry_create:
+    method: POST
+    path: entry-create
+
+entry_edit:
+    method: POST
+    path: entry-edit
+    params:
+        - id
+
+entry_delete:
+    method: GET
+    path: entry-delete
+    params:
+        - id
+
+entry_log:
+    method: GET
+    path: entry-log
+    params:
+        - id
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+

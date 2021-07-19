@@ -5,11 +5,16 @@
 #
 
 
+import os
 import yaml
-import json
-import urllib
-import requests
 from .attribute_dict import AttributeDict
+from .session import Session
+
+
+def make_api_method(api, **kwargs):
+    def _api(self, **kwargs):
+        return self.request(api, **kwargs)
+    return _api
 
 
 class Zentao:
@@ -18,21 +23,26 @@ class Zentao:
     def __init__(self, config):
         super(Zentao, self).__init__()
 
-        self._load_config(config)
-        self.connected = False
+        self._setup(config)
 
-    def connect(self):
-        """setup connection"""
-
-        if not self.connected:
-            self.connected = self._get_session() and self._login()
-
-        return self.connected
+    def request(self, api, **kwargs):
+        return self.session.request(api, **kwargs)
 
 # protected
+    def _setup(self, config):
+        """setup zentao env"""
+
+        self._load_config(config)
+        self.session = Session(self.config)
+
+        # add dynamical methods for api
+        for api in self.config.api:
+            setattr(Zentao, api, make_api_method(api))
+
     def _load_config(self, config):
         """load configuration"""
 
+        # load customized config
         if isinstance(config, str):
             # config file path
             # raise exception if config file does not exist
@@ -42,59 +52,36 @@ class Zentao:
             cfg = config
 
         self.config = AttributeDict({
-            # zentao root url
-            "root_url": "",
-
-            # authentication
+            "url": "",
+            "version": "15",
             "username": "",
             "password": "",
-
-            # urls
-            "session_url": "api-getSessionID.json",
-            "login_url": "user-login.json"
+            "api": None,
         })
+
+        # load default api specs
+        self.config.api = self._load_default_specs()
         self.config.update(cfg)
 
-    def _login(self):
-        """login zentao with username and password"""
+        # check out url
+        if not self.config.url.endswith("/"):
+            self.config.url += "/"
 
-        if self.session_name is None or self.session_id is None:
-            return False
+    def _load_default_specs(self):
+        """load default api specs from yaml files"""
 
-        resp = requests.post(
-            urllib.parse.urljoin(
-                self.config.root_url,
-                self.config.login_url
-            ),
-            params={
-                "account": self.config.username,
-                "password": self.config.password,
-                self.session_name: self.session_id
-            }
+        specs = {}
+        specs_path = os.path.join(
+            os.path.dirname(__file__),
+            "specs",
+            "v%s" % str(self.config.version)
         )
+        for file_name in os.listdir(specs_path):
+            if file_name.endswith(".yml"):
+                with open(os.path.join(specs_path, file_name),
+                          mode="r", encoding="utf-8") as f:
+                    specs.update(yaml.full_load(f.read()))
 
-        self.response = resp.json()
-        return "success" == self.response.get("status")
-
-    def _get_session(self):
-        """get zentao session name and session id"""
-
-        resp = requests.get(
-            urllib.parse.urljoin(
-                self.config.root_url,
-                self.config.session_url
-            )
-        )
-        self.response = resp.json()
-
-        if "success" == self.response.get("status"):
-            # get data list and return to caller
-            session = json.loads(self.response["data"])
-            self.session_name = session["sessionName"]
-            self.session_id = session["sessionID"]
-            return True
-        else:
-            # fail to get session
-            return False
+        return specs
 
 # end

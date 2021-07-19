@@ -1,0 +1,221 @@
+index:
+    method: GET
+    path: index
+
+index_testext:
+    method: GET
+    path: index-testext
+
+my:
+    method: GET
+    path: my
+
+my_score:
+    method: GET
+    path: my-score
+    params:
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_calendar:
+    method: GET
+    path: my-calendar
+
+my_todo:
+    method: GET
+    path: my-todo
+    params:
+        - type
+        - userID
+        - status
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_story:
+    method: GET
+    path: my-story
+    params:
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_task:
+    method: GET
+    path: my-task
+    params:
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_bug:
+    method: GET
+    path: my-bug
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_testtask:
+    method: GET
+    path: my-testtask
+
+my_testcase:
+    method: GET
+    path: my-testcase
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_project:
+    method: GET
+    path: my-project
+
+my_editProfile:
+    method: POST
+    path: my-editProfile
+
+my_changePassword:
+    method: POST
+    path: my-changePassword
+
+my_manageContacts:
+    method: POST
+    path: my-manageContacts
+    params:
+        - listID
+        - mode
+
+my_deleteContacts:
+    method: GET
+    path: my-deleteContacts
+    params:
+        - listID
+        - confirm
+
+my_buildContactLists:
+    method: GET
+    path: my-buildContactLists
+
+my_profile:
+    method: GET
+    path: my-profile
+
+my_dynamic:
+    method: GET
+    path: my-dynamic
+    params:
+        - type
+        - recTotal
+        - date
+        - direction
+
+my_unbind:
+    method: GET
+    path: my-unbind
+    params:
+        - confirm
+
+todo_create:
+    method: POST
+    path: todo-create
+    params:
+        - date
+        - userID
+
+todo_batchCreate:
+    method: POST
+    path: todo-batchCreate
+    params:
+        - date
+
+todo_edit:
+    method: POST
+    path: todo-edit
+    params:
+        - todoID
+
+todo_batchEdit:
+    method: POST
+    path: todo-batchEdit
+    params:
+        - from
+        - type
+        - userID
+        - status
+
+todo_start:
+    method: GET
+    path: todo-start
+    params:
+        - todoID
+
+todo_activate:
+    method: GET
+    path: todo-activate
+
+todo_close:
+    method: GET
+    path: todo-close
+
+todo_assignTo:
+    method: POST
+    path: todo-assignTo
+
+todo_view:
+    method: GET
+    path: todo-view
+    params:
+        - todoID
+        - from
+
+todo_delete:
+    method: GET
+    path: todo-delete
+    params:
+        - todoID
+        - confirm
+
+todo_finish:
+    method: GET
+    path: todo-finish
+    params:
+        - todoID
+
+todo_batchFinish:
+    method: POST
+    path: todo-batchFinish
+
+todo_batchClose:
+    method: POST
+    path: todo-batchClose
+
+todo_import2Today:
+    method: POST
+    path: todo-import2Today
+
+todo_export:
+    method: POST
+    path: todo-export
+    params:
+        - userID
+        - orderBy
+
+todo_ajaxGetDetail:
+    method: GET
+    path: todo-ajaxGetDetail
+    params:
+        - todoID
+
+todo_createCycle:
+    method: GET
+    path: todo-createCycle
+

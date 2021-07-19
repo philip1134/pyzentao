@@ -1,0 +1,654 @@
+build_create:
+    method: POST
+    path: build-create
+    params:
+        - projectID
+        - productID
+
+build_edit:
+    method: POST
+    path: build-edit
+    params:
+        - buildID
+
+build_view:
+    method: GET
+    path: build-view
+    params:
+        - buildID
+        - type
+        - link
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+build_delete:
+    method: GET
+    path: build-delete
+    params:
+        - buildID
+        - confirm
+
+build_ajaxGetProductBuilds:
+    method: GET
+    path: build-ajaxGetProductBuilds
+    params:
+        - productID
+        - varName
+        - build
+        - branch
+        - index
+        - type
+
+build_ajaxGetProjectBuilds:
+    method: GET
+    path: build-ajaxGetProjectBuilds
+    params:
+        - projectID
+        - varName
+        - build
+        - branch
+        - index
+        - needCreate
+        - type
+
+build_linkStory:
+    method: POST
+    path: build-linkStory
+    params:
+        - buildID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+build_unlinkStory:
+    method: GET
+    path: build-unlinkStory
+    params:
+        - storyID
+        - confirm
+
+build_batchUnlinkStory:
+    method: GET
+    path: build-batchUnlinkStory
+    params:
+        - confirm
+
+build_linkBug:
+    method: POST
+    path: build-linkBug
+    params:
+        - buildID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+build_unlinkBug:
+    method: GET
+    path: build-unlinkBug
+    params:
+        - buildID
+        - bugID
+
+build_batchUnlinkBug:
+    method: GET
+    path: build-batchUnlinkBug
+    params:
+        - buildID
+
+project_index:
+    method: GET
+    path: project-index
+    params:
+        - locate
+        - status
+        - projectID
+
+project_browse:
+    method: GET
+    path: project-browse
+    params:
+        - projectID
+
+project_commonAction:
+    method: GET
+    path: project-commonAction
+    params:
+        - projectID
+
+project_task:
+    method: GET
+    path: project-task
+    params:
+        - projectID
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_grouptask:
+    method: GET
+    path: project-grouptask
+    params:
+        - projectID
+        - groupBy
+
+project_importTask:
+    method: POST
+    path: project-importTask
+    params:
+        - projectID
+        - fromProject
+
+project_importBug:
+    method: POST
+    path: project-importBug
+    params:
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_story:
+    method: GET
+    path: project-story
+    params:
+        - projectID
+        - orderBy
+
+project_bug:
+    method: GET
+    path: project-bug
+    params:
+        - projectID
+        - orderBy
+        - build
+        - type
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_build:
+    method: GET
+    path: project-build
+    params:
+        - projectID
+        - type
+        - param
+
+project_testtask:
+    method: GET
+    path: project-testtask
+    params:
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_burn:
+    method: GET
+    path: project-burn
+    params:
+        - projectID
+        - type
+        - interval
+
+project_computeBurn:
+    method: GET
+    path: project-computeBurn
+    params:
+        - reload
+
+project_fixFirst:
+    method: POST
+    path: project-fixFirst
+    params:
+        - projectID
+
+project_team:
+    method: GET
+    path: project-team
+    params:
+        - projectID
+
+project_create:
+    method: POST
+    path: project-create
+    params:
+        - productID
+        - projectID
+        - copyProjectID
+        - planID
+        - confirm
+
+project_edit:
+    method: POST
+    path: project-edit
+    params:
+        - projectID
+        - action
+        - extra
+
+project_batchEdit:
+    method: POST
+    path: project-batchEdit
+    params:
+        - projectID
+
+project_start:
+    method: POST
+    path: project-start
+    params:
+        - projectID
+
+project_putoff:
+    method: POST
+    path: project-putoff
+    params:
+        - projectID
+
+project_suspend:
+    method: POST
+    path: project-suspend
+    params:
+        - projectID
+
+project_activate:
+    method: POST
+    path: project-activate
+    params:
+        - projectID
+
+project_close:
+    method: POST
+    path: project-close
+    params:
+        - projectID
+
+project_view:
+    method: GET
+    path: project-view
+    params:
+        - projectID
+
+project_kanban:
+    method: GET
+    path: project-kanban
+    params:
+        - projectID
+        - type
+        - orderBy
+
+project_tree:
+    method: GET
+    path: project-tree
+    params:
+        - projectID
+        - type
+
+project_printKanban:
+    method: POST
+    path: project-printKanban
+    params:
+        - projectID
+        - orderBy
+
+project_storyKanban:
+    method: GET
+    path: project-storyKanban
+    params:
+        - projectID
+
+project_delete:
+    method: GET
+    path: project-delete
+    params:
+        - projectID
+        - confirm
+
+project_manageProducts:
+    method: POST
+    path: project-manageProducts
+    params:
+        - projectID
+
+project_manageMembers:
+    method: POST
+    path: project-manageMembers
+    params:
+        - projectID
+        - team2Import
+
+project_unlinkMember:
+    method: GET
+    path: project-unlinkMember
+    params:
+        - projectID
+        - userID
+        - confirm
+
+project_linkStory:
+    method: POST
+    path: project-linkStory
+    params:
+        - projectID
+
+project_unlinkStory:
+    method: GET
+    path: project-unlinkStory
+    params:
+        - projectID
+        - storyID
+        - confirm
+
+project_batchUnlinkStory:
+    method: POST
+    path: project-batchUnlinkStory
+    params:
+        - projectID
+
+project_dynamic:
+    method: GET
+    path: project-dynamic
+    params:
+        - projectID
+        - type
+        - param
+        - recTotal
+        - date
+        - direction
+
+project_ajaxGetProducts:
+    method: GET
+    path: project-ajaxGetProducts
+    params:
+        - projectID
+
+project_ajaxGetMembers:
+    method: GET
+    path: project-ajaxGetMembers
+    params:
+        - projectID
+        - assignedTo
+
+project_tips:
+    method: GET
+    path: project-tips
+    params:
+        - projectID
+
+project_ajaxGetDropMenu:
+    method: GET
+    path: project-ajaxGetDropMenu
+    params:
+        - projectID
+        - module
+        - method
+        - extra
+
+project_updateOrder:
+    method: POST
+    path: project-updateOrder
+
+project_storySort:
+    method: POST
+    path: project-storySort
+    params:
+        - projectID
+
+project_all:
+    method: GET
+    path: project-all
+    params:
+        - status
+        - projectID
+        - orderBy
+        - productID
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_export:
+    method: POST
+    path: project-export
+    params:
+        - status
+        - productID
+        - orderBy
+
+project_doc:
+    method: GET
+    path: project-doc
+    params:
+        - projectID
+
+project_ajaxKanbanSetting:
+    method: POST
+    path: project-ajaxKanbanSetting
+    params:
+        - projectID
+
+project_ajaxResetKanban:
+    method: GET
+    path: project-ajaxResetKanban
+    params:
+        - projectID
+        - confirm
+
+project_importPlanStories:
+    method: GET
+    path: project-importPlanStories
+    params:
+        - projectID
+        - planID
+
+project_treeStory:
+    method: GET
+    path: project-treeStory
+    params:
+        - storyID
+        - version
+
+project_treeTask:
+    method: GET
+    path: project-treeTask
+    params:
+        - taskID
+
+task_create:
+    method: POST
+    path: task-create
+    params:
+        - projectID
+        - storyID
+        - moduleID
+        - taskID
+        - todoID
+
+task_batchCreate:
+    method: POST
+    path: task-batchCreate
+    params:
+        - projectID
+        - storyID
+        - iframe
+        - taskID
+
+task_commonAction:
+    method: GET
+    path: task-commonAction
+    params:
+        - taskID
+
+task_edit:
+    method: POST
+    path: task-edit
+    params:
+        - taskID
+
+task_batchEdit:
+    method: POST
+    path: task-batchEdit
+    params:
+        - projectID
+
+task_assignTo:
+    method: POST
+    path: task-assignTo
+    params:
+        - requestID
+
+task_batchChangeModule:
+    method: POST
+    path: task-batchChangeModule
+    params:
+        - moduleID
+
+task_batchAssignTo:
+    method: POST
+    path: task-batchAssignTo
+    params:
+        - project
+
+task_view:
+    method: GET
+    path: task-view
+    params:
+        - taskID
+
+task_confirmStoryChange:
+    method: GET
+    path: task-confirmStoryChange
+    params:
+        - taskID
+
+task_start:
+    method: POST
+    path: task-start
+    params:
+        - taskID
+
+task_recordEstimate:
+    method: POST
+    path: task-recordEstimate
+    params:
+        - taskID
+
+task_editEstimate:
+    method: POST
+    path: task-editEstimate
+    params:
+        - estimateID
+
+task_deleteEstimate:
+    method: GET
+    path: task-deleteEstimate
+    params:
+        - estimateID
+        - confirm
+
+task_finish:
+    method: POST
+    path: task-finish
+    params:
+        - taskID
+
+task_pause:
+    method: POST
+    path: task-pause
+    params:
+        - taskID
+
+task_restart:
+    method: POST
+    path: task-restart
+    params:
+        - taskID
+
+task_close:
+    method: POST
+    path: task-close
+    params:
+        - taskID
+
+task_batchCancel:
+    method: POST
+    path: task-batchCancel
+    params:
+        - skipTaskIdList
+
+task_batchClose:
+    method: POST
+    path: task-batchClose
+
+task_cancel:
+    method: POST
+    path: task-cancel
+    params:
+        - taskID
+
+task_activate:
+    method: POST
+    path: task-activate
+    params:
+        - taskID
+
+task_delete:
+    method: GET
+    path: task-delete
+    params:
+        - projectID
+        - taskID
+        - confirm
+
+task_ajaxGetUserTasks:
+    method: GET
+    path: task-ajaxGetUserTasks
+    params:
+        - userID
+        - id
+        - status
+
+task_ajaxGetProjectTasks:
+    method: GET
+    path: task-ajaxGetProjectTasks
+    params:
+        - projectID
+        - taskID
+
+task_ajaxGetDetail:
+    method: GET
+    path: task-ajaxGetDetail
+    params:
+        - taskID
+
+task_report:
+    method: POST
+    path: task-report
+    params:
+        - projectID
+        - browseType
+
+task_export:
+    method: POST
+    path: task-export
+    params:
+        - projectID
+        - orderBy
+
+task_ajaxGetByID:
+    method: GET
+    path: task-ajaxGetByID
+    params:
+        - taskID
+

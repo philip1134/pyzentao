@@ -1,0 +1,847 @@
+bug:
+    method: GET
+    path: bug
+
+bug_browse:
+    method: GET
+    path: bug-browse
+    params:
+        - productID
+        - branch
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+bug_report:
+    method: POST
+    path: bug-report
+    params:
+        - productID
+        - browseType
+        - branchID
+        - moduleID
+
+bug_create:
+    method: POST
+    path: bug-create
+    params:
+        - productID
+        - branch
+        - extras
+
+bug_batchCreate:
+    method: POST
+    path: bug-batchCreate
+    params:
+        - productID
+        - executionID
+        - moduleID
+
+bug_view:
+    method: GET
+    path: bug-view
+    params:
+        - bugID
+        - form
+
+bug_edit:
+    method: POST
+    path: bug-edit
+    params:
+        - bugID
+
+bug_batchEdit:
+    method: POST
+    path: bug-batchEdit
+    params:
+        - productID
+
+bug_assignTo:
+    method: POST
+    path: bug-assignTo
+    params:
+        - bugID
+
+bug_batchChangeBranch:
+    method: POST
+    path: bug-batchChangeBranch
+    params:
+        - branchID
+
+bug_batchChangeModule:
+    method: POST
+    path: bug-batchChangeModule
+    params:
+        - moduleID
+
+bug_batchAssignTo:
+    method: POST
+    path: bug-batchAssignTo
+    params:
+        - objectID
+        - type
+
+bug_confirmBug:
+    method: POST
+    path: bug-confirmBug
+    params:
+        - bugID
+
+bug_batchConfirm:
+    method: POST
+    path: bug-batchConfirm
+
+bug_resolve:
+    method: POST
+    path: bug-resolve
+    params:
+        - bugID
+
+bug_batchResolve:
+    method: POST
+    path: bug-batchResolve
+    params:
+        - resolution
+        - resolvedBuild
+
+bug_activate:
+    method: POST
+    path: bug-activate
+    params:
+        - bugID
+
+bug_close:
+    method: POST
+    path: bug-close
+    params:
+        - bugID
+
+bug_linkBugs:
+    method: GET
+    path: bug-linkBugs
+    params:
+        - bugID
+        - browseType
+        - param
+
+bug_batchClose:
+    method: POST
+    path: bug-batchClose
+
+bug_batchActivate:
+    method: POST
+    path: bug-batchActivate
+
+bug_confirmStoryChange:
+    method: GET
+    path: bug-confirmStoryChange
+    params:
+        - bugID
+
+bug_delete:
+    method: GET
+    path: bug-delete
+    params:
+        - bugID
+        - confirm
+
+bug_ajaxGetUserBugs:
+    method: GET
+    path: bug-ajaxGetUserBugs
+    params:
+        - userID
+        - id
+
+bug_ajaxGetModuleOwner:
+    method: GET
+    path: bug-ajaxGetModuleOwner
+    params:
+        - moduleID
+        - productID
+
+bug_ajaxLoadAssignedTo:
+    method: GET
+    path: bug-ajaxLoadAssignedTo
+    params:
+        - executionID
+        - selectedUser
+
+bug_ajaxLoadExecutionTeamMembers:
+    method: GET
+    path: bug-ajaxLoadExecutionTeamMembers
+    params:
+        - productID
+        - selectedUser
+
+bug_ajaxLoadAllUsers:
+    method: GET
+    path: bug-ajaxLoadAllUsers
+    params:
+        - selectedUser
+
+bug_ajaxGetDetail:
+    method: GET
+    path: bug-ajaxGetDetail
+    params:
+        - bugID
+
+bug_export:
+    method: POST
+    path: bug-export
+    params:
+        - productID
+        - orderBy
+        - browseType
+        - executionID
+
+bug_ajaxGetByID:
+    method: GET
+    path: bug-ajaxGetByID
+    params:
+        - bugID
+
+bug_ajaxGetBugFieldOptions:
+    method: GET
+    path: bug-ajaxGetBugFieldOptions
+    params:
+        - productID
+        - executionID
+
+bug_ajaxGetDropMenu:
+    method: GET
+    path: bug-ajaxGetDropMenu
+    params:
+        - productID
+        - module
+        - method
+        - extra
+
+caselib:
+    method: GET
+    path: caselib
+
+caselib_create:
+    method: POST
+    path: caselib-create
+
+caselib_edit:
+    method: POST
+    path: caselib-edit
+    params:
+        - lib
+
+caselib_delete:
+    method: GET
+    path: caselib-delete
+    params:
+        - libID
+        - confirm
+
+caselib_browse:
+    method: GET
+    path: caselib-browse
+    params:
+        - libID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+caselib_createCase:
+    method: POST
+    path: caselib-createCase
+    params:
+        - libID
+        - moduleID
+
+caselib_batchCreateCase:
+    method: POST
+    path: caselib-batchCreateCase
+    params:
+        - libID
+        - moduleID
+
+caselib_view:
+    method: GET
+    path: caselib-view
+    params:
+        - libID
+
+caselib_ajaxGetDropMenu:
+    method: GET
+    path: caselib-ajaxGetDropMenu
+    params:
+        - libID
+        - module
+        - method
+        - extra
+
+caselib_ajaxGetMatchedItems:
+    method: GET
+    path: caselib-ajaxGetMatchedItems
+    params:
+        - keywords
+        - module
+        - method
+        - extra
+
+caselib_exportTemplet:
+    method: POST
+    path: caselib-exportTemplet
+    params:
+        - libID
+
+caselib_import:
+    method: POST
+    path: caselib-import
+    params:
+        - libID
+
+caselib_showImport:
+    method: POST
+    path: caselib-showImport
+    params:
+        - libID
+        - pagerID
+        - maxImport
+        - insert
+
+qa:
+    method: GET
+    path: qa
+
+testcase:
+    method: GET
+    path: testcase
+
+testcase_browse:
+    method: GET
+    path: testcase-browse
+    params:
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+        - projectID
+
+testcase_groupCase:
+    method: GET
+    path: testcase-groupCase
+    params:
+        - productID
+        - groupBy
+
+testcase_create:
+    method: POST
+    path: testcase-create
+    params:
+        - branch
+        - moduleID
+        - from
+        - param
+        - storyID
+        - extras
+
+testcase_batchCreate:
+    method: POST
+    path: testcase-batchCreate
+    params:
+        - productID
+        - moduleID
+        - storyID
+
+testcase_createBug:
+    method: GET
+    path: testcase-createBug
+    params:
+        - productID
+        - extras
+
+testcase_view:
+    method: GET
+    path: testcase-view
+    params:
+        - caseID
+        - version
+        - from
+
+testcase_edit:
+    method: POST
+    path: testcase-edit
+    params:
+        - caseID
+
+testcase_batchEdit:
+    method: POST
+    path: testcase-batchEdit
+    params:
+        - productID
+
+testcase_review:
+    method: POST
+    path: testcase-review
+    params:
+        - caseID
+
+testcase_batchReview:
+    method: POST
+    path: testcase-batchReview
+    params:
+        - result
+
+testcase_delete:
+    method: GET
+    path: testcase-delete
+    params:
+        - caseID
+        - confirm
+
+testcase_batchDelete:
+    method: POST
+    path: testcase-batchDelete
+    params:
+        - productID
+
+testcase_batchChangeBranch:
+    method: POST
+    path: testcase-batchChangeBranch
+    params:
+        - branchID
+
+testcase_batchChangeModule:
+    method: POST
+    path: testcase-batchChangeModule
+    params:
+        - moduleID
+
+testcase_batchCaseTypeChange:
+    method: POST
+    path: testcase-batchCaseTypeChange
+    params:
+        - result
+
+testcase_linkCases:
+    method: GET
+    path: testcase-linkCases
+    params:
+        - caseID
+        - browseType
+        - param
+
+testcase_confirmChange:
+    method: GET
+    path: testcase-confirmChange
+    params:
+        - caseID
+        - taskID
+        - from
+
+testcase_confirmLibcaseChange:
+    method: GET
+    path: testcase-confirmLibcaseChange
+    params:
+        - caseID
+        - libcaseID
+        - version
+
+testcase_ignoreLibcaseChange:
+    method: GET
+    path: testcase-ignoreLibcaseChange
+    params:
+        - caseID
+
+testcase_confirmStoryChange:
+    method: GET
+    path: testcase-confirmStoryChange
+    params:
+        - caseID
+
+testcase_batchConfirmStoryChange:
+    method: POST
+    path: testcase-batchConfirmStoryChange
+    params:
+        - productID
+
+testcase_export:
+    method: POST
+    path: testcase-export
+    params:
+        - productID
+        - orderBy
+        - taskID
+        - browseType
+
+testcase_exportTemplet:
+    method: POST
+    path: testcase-exportTemplet
+    params:
+        - productID
+
+testcase_import:
+    method: POST
+    path: testcase-import
+    params:
+        - productID
+
+testcase_importFromLib:
+    method: POST
+    path: testcase-importFromLib
+    params:
+        - productID
+        - branch
+        - libID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testcase_showImport:
+    method: POST
+    path: testcase-showImport
+    params:
+        - productID
+        - branch
+        - pagerID
+        - maxImport
+        - insert
+
+testcase_bugs:
+    method: GET
+    path: testcase-bugs
+    params:
+        - runID
+        - caseID
+        - version
+
+testcase_ajaxGetStoryModule:
+    method: GET
+    path: testcase-ajaxGetStoryModule
+
+testcase_ajaxGetStatus:
+    method: GET
+    path: testcase-ajaxGetStatus
+    params:
+        - methodName
+        - caseID
+
+testreport_browse:
+    method: POST
+    path: testreport-browse
+    params:
+        - objectID
+        - objectType
+        - extra
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testreport_create:
+    method: POST
+    path: testreport-create
+    params:
+        - objectID
+        - objectType
+        - extra
+        - begin
+        - end
+
+testreport_edit:
+    method: POST
+    path: testreport-edit
+    params:
+        - reportID
+        - begin
+        - end
+
+testreport_view:
+    method: GET
+    path: testreport-view
+    params:
+        - reportID
+        - tab
+        - recTotal
+        - recPerPage
+        - pageID
+
+testreport_delete:
+    method: GET
+    path: testreport-delete
+    params:
+        - reportID
+        - confirm
+
+testreport_commonAction:
+    method: GET
+    path: testreport-commonAction
+    params:
+        - objectID
+        - objectType
+
+testreport_setChartDatas:
+    method: GET
+    path: testreport-setChartDatas
+    params:
+        - taskID
+
+testsuite:
+    method: GET
+    path: testsuite
+
+testsuite_browse:
+    method: GET
+    path: testsuite-browse
+    params:
+        - productID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testsuite_create:
+    method: POST
+    path: testsuite-create
+    params:
+        - productID
+
+testsuite_view:
+    method: GET
+    path: testsuite-view
+    params:
+        - suiteID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testsuite_edit:
+    method: POST
+    path: testsuite-edit
+    params:
+        - suiteID
+
+testsuite_delete:
+    method: GET
+    path: testsuite-delete
+    params:
+        - suiteID
+        - confirm
+
+testsuite_linkCase:
+    method: POST
+    path: testsuite-linkCase
+    params:
+        - suiteID
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+testsuite_unlinkCase:
+    method: GET
+    path: testsuite-unlinkCase
+    params:
+        - suiteID
+        - rowID
+        - confirm
+
+testsuite_batchUnlinkCases:
+    method: POST
+    path: testsuite-batchUnlinkCases
+    params:
+        - suiteID
+
+testtask:
+    method: GET
+    path: testtask
+
+testtask_browse:
+    method: GET
+    path: testtask-browse
+    params:
+        - productID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testtask_browseUnits:
+    method: GET
+    path: testtask-browseUnits
+    params:
+        - productID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+testtask_create:
+    method: POST
+    path: testtask-create
+    params:
+        - productID
+        - executionID
+        - build
+        - projectID
+
+testtask_view:
+    method: GET
+    path: testtask-view
+    params:
+        - taskID
+
+testtask_unitCases:
+    method: GET
+    path: testtask-unitCases
+    params:
+        - taskID
+        - orderBy
+
+testtask_cases:
+    method: GET
+    path: testtask-cases
+    params:
+        - taskID
+        - browseType
+        - orderBy
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+testtask_report:
+    method: POST
+    path: testtask-report
+    params:
+        - productID
+        - browseType
+        - branchID
+        - moduleID
+
+testtask_groupCase:
+    method: GET
+    path: testtask-groupCase
+    params:
+        - taskID
+        - groupBy
+
+testtask_edit:
+    method: POST
+    path: testtask-edit
+    params:
+        - taskID
+
+testtask_start:
+    method: POST
+    path: testtask-start
+    params:
+        - taskID
+
+testtask_activate:
+    method: POST
+    path: testtask-activate
+    params:
+        - taskID
+
+testtask_close:
+    method: POST
+    path: testtask-close
+    params:
+        - taskID
+
+testtask_block:
+    method: POST
+    path: testtask-block
+    params:
+        - taskID
+
+testtask_delete:
+    method: GET
+    path: testtask-delete
+    params:
+        - taskID
+        - confirm
+
+testtask_linkCase:
+    method: POST
+    path: testtask-linkCase
+    params:
+        - taskID
+
+testtask_unlinkCase:
+    method: GET
+    path: testtask-unlinkCase
+    params:
+        - rowID
+
+testtask_batchUnlinkCases:
+    method: POST
+    path: testtask-batchUnlinkCases
+    params:
+        - taskID
+
+testtask_runCase:
+    method: POST
+    path: testtask-runCase
+    params:
+        - runID
+        - extras
+
+testtask_batchRun:
+    method: POST
+    path: testtask-batchRun
+    params:
+        - productID
+        - orderBy
+        - from
+
+testtask_results:
+    method: GET
+    path: testtask-results
+    params:
+        - runID
+        - caseID
+
+testtask_batchAssign:
+    method: POST
+    path: testtask-batchAssign
+    params:
+        - taskID
+
+testtask_importUnitResult:
+    method: POST
+    path: testtask-importUnitResult
+    params:
+        - productID
+
+testtask_ajaxGetUserTestTasks:
+    method: GET
+    path: testtask-ajaxGetUserTestTasks
+    params:
+        - userID
+        - id
+        - status
+
+testtask_ajaxGetTestTasks:
+    method: GET
+    path: testtask-ajaxGetTestTasks
+    params:
+        - productID
+        - executionID
+
+testtask_ajaxGetTestReports:
+    method: GET
+    path: testtask-ajaxGetTestReports
+    params:
+        - buildID
+

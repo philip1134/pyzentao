@@ -1,0 +1,75 @@
+# user
+user_view:
+    path: user-view
+    params:
+        - userID
+
+user_todo:
+    path: user-todo
+    params:
+        - userID
+        - type
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_story:
+    path: user-story
+    params:
+        - userID
+        - storyType
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_task:
+    path: user-task
+    params:
+        - userID
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_bug:
+    path: user-bug
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_testtask:
+    path: user-testtask
+    params:
+        - userID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_testcase:
+    path: user-testcase
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_execution:
+    path: user-execution
+    params:
+        - userID
+        - recTotal
+        - recPerPage
+        - pageID
+
+
+# end

@@ -1,0 +1,344 @@
+ci_initQueue:
+    method: GET
+    path: ci-initQueue
+
+ci_exec:
+    method: GET
+    path: ci-exec
+
+ci_checkCompileStatus:
+    method: GET
+    path: ci-checkCompileStatus
+
+ci_commitResult:
+    method: GET
+    path: ci-commitResult
+
+compile_browse:
+    method: GET
+    path: compile-browse
+    params:
+        - jobID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+compile_logs:
+    method: GET
+    path: compile-logs
+    params:
+        - buildID
+
+git_run:
+    method: GET
+    path: git-run
+
+git_diff:
+    method: GET
+    path: git-diff
+    params:
+        - path
+        - revision
+
+git_cat:
+    method: GET
+    path: git-cat
+    params:
+        - path
+        - revision
+
+git_apiSync:
+    method: POST
+    path: git-apiSync
+
+git_ajaxSaveLog:
+    method: POST
+    path: git-ajaxSaveLog
+
+git_ajaxGetRepos:
+    method: GET
+    path: git-ajaxGetRepos
+
+jenkins_browse:
+    method: GET
+    path: jenkins-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+jenkins_create:
+    method: POST
+    path: jenkins-create
+
+jenkins_edit:
+    method: POST
+    path: jenkins-edit
+    params:
+        - id
+
+jenkins_delete:
+    method: GET
+    path: jenkins-delete
+    params:
+        - id
+
+jenkins_ajaxGetTasks:
+    method: GET
+    path: jenkins-ajaxGetTasks
+    params:
+        - id
+
+job_browse:
+    method: GET
+    path: job-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+job_create:
+    method: POST
+    path: job-create
+
+job_edit:
+    method: POST
+    path: job-edit
+    params:
+        - id
+
+job_delete:
+    method: GET
+    path: job-delete
+    params:
+        - id
+
+job_view:
+    method: GET
+    path: job-view
+    params:
+        - jobID
+        - compileID
+
+job_exec:
+    method: GET
+    path: job-exec
+    params:
+        - id
+
+repo_commonAction:
+    method: GET
+    path: repo-commonAction
+    params:
+        - repoID
+        - objectID
+
+repo_maintain:
+    method: GET
+    path: repo-maintain
+    params:
+        - objectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_create:
+    method: POST
+    path: repo-create
+    params:
+        - objectID
+
+repo_edit:
+    method: POST
+    path: repo-edit
+    params:
+        - repoID
+        - objectID
+
+repo_delete:
+    method: GET
+    path: repo-delete
+    params:
+        - repoID
+        - objectID
+        - confirm
+
+repo_view:
+    method: POST
+    path: repo-view
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - showBug
+        - encoding
+
+repo_browse:
+    method: POST
+    path: repo-browse
+    params:
+        - repoID
+        - branchID
+        - objectID
+        - path
+        - revision
+        - refresh
+
+repo_log:
+    method: POST
+    path: repo-log
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_revision:
+    method: GET
+    path: repo-revision
+    params:
+        - repoID
+        - objectID
+        - revision
+        - root
+        - type
+
+repo_blame:
+    method: GET
+    path: repo-blame
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - encoding
+
+repo_diff:
+    method: POST
+    path: repo-diff
+    params:
+        - repoID
+        - objectID
+        - entry
+        - oldRevision
+        - newRevision
+        - showBug
+        - encoding
+
+repo_download:
+    method: GET
+    path: repo-download
+    params:
+        - repoID
+        - path
+        - fromRevision
+        - toRevision
+        - type
+
+repo_setRules:
+    method: POST
+    path: repo-setRules
+
+repo_showSyncCommit:
+    method: GET
+    path: repo-showSyncCommit
+    params:
+        - repoID
+        - objectID
+        - branch
+
+repo_ajaxSyncCommit:
+    method: GET
+    path: repo-ajaxSyncCommit
+    params:
+        - repoID
+        - type
+
+repo_ajaxSyncBranchCommit:
+    method: GET
+    path: repo-ajaxSyncBranchCommit
+    params:
+        - repoID
+        - branch
+
+repo_ajaxSideCommits:
+    method: GET
+    path: repo-ajaxSideCommits
+    params:
+        - repoID
+        - path
+        - objectID
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_ajaxGetSVNDirs:
+    method: GET
+    path: repo-ajaxGetSVNDirs
+    params:
+        - repoID
+        - path
+
+repo_ajaxGetDropMenu:
+    method: GET
+    path: repo-ajaxGetDropMenu
+    params:
+        - repoID
+        - type
+        - objectID
+
+repo_ajaxGetGitlabProjects:
+    method: GET
+    path: repo-ajaxGetGitlabProjects
+    params:
+        - host
+        - token
+
+repo_ajaxGetBranchDropMenu:
+    method: GET
+    path: repo-ajaxGetBranchDropMenu
+    params:
+        - repoID
+        - branchID
+        - objectID
+
+svn_run:
+    method: GET
+    path: svn-run
+
+svn_diff:
+    method: GET
+    path: svn-diff
+    params:
+        - url
+        - revision
+
+svn_cat:
+    method: GET
+    path: svn-cat
+    params:
+        - url
+        - revision
+
+svn_apiSync:
+    method: POST
+    path: svn-apiSync
+
+svn_ajaxSaveLog:
+    method: POST
+    path: svn-ajaxSaveLog
+
+svn_ajaxGetRepos:
+    method: GET
+    path: svn-ajaxGetRepos
+

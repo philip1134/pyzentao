@@ -1,0 +1,125 @@
+client:
+    method: GET
+    path: client
+
+client_browse:
+    method: GET
+    path: client-browse
+
+client_create:
+    method: POST
+    path: client-create
+
+client_download:
+    method: GET
+    path: client-download
+    params:
+        - version
+        - link
+        - os
+
+client_edit:
+    method: POST
+    path: client-edit
+    params:
+        - clientID
+
+client_changelog:
+    method: GET
+    path: client-changelog
+    params:
+        - clientID
+
+client_delete:
+    method: GET
+    path: client-delete
+    params:
+        - clientID
+
+client_checkUpgrade:
+    method: GET
+    path: client-checkUpgrade
+
+client_downloadClient:
+    method: POST
+    path: client-downloadClient
+    params:
+        - action
+        - os
+
+client_ajaxGetClientPackage:
+    method: GET
+    path: client-ajaxGetClientPackage
+    params:
+        - os
+
+client_ajaxGetPackageSize:
+    method: GET
+    path: client-ajaxGetPackageSize
+
+client_ajaxSetClientConfig:
+    method: GET
+    path: client-ajaxSetClientConfig
+    params:
+        - os
+
+misc_ping:
+    method: GET
+    path: misc-ping
+
+misc_phpinfo:
+    method: GET
+    path: misc-phpinfo
+
+misc_about:
+    method: GET
+    path: misc-about
+
+misc_updateNL:
+    method: GET
+    path: misc-updateNL
+
+misc_checkUpdate:
+    method: GET
+    path: misc-checkUpdate
+    params:
+        - sn
+
+misc_checkExtension:
+    method: GET
+    path: misc-checkExtension
+
+misc_downNotify:
+    method: GET
+    path: misc-downNotify
+
+misc_qrCode:
+    method: GET
+    path: misc-qrCode
+
+misc_ajaxIgnoreBrowser:
+    method: GET
+    path: misc-ajaxIgnoreBrowser
+
+misc_changeLog:
+    method: GET
+    path: misc-changeLog
+
+misc_checkNetConnect:
+    method: GET
+    path: misc-checkNetConnect
+
+misc_ajaxSetUnfoldID:
+    method: POST
+    path: misc-ajaxSetUnfoldID
+    params:
+        - objectID
+        - objectType
+        - action
+
+owt_admin:
+    method: POST
+    path: owt-admin
+    params:
+        - type
+

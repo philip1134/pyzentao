@@ -1,0 +1,400 @@
+automation_browse:
+    method: GET
+    path: automation-browse
+    params:
+        - productID
+        - branch
+
+client:
+    method: GET
+    path: client
+
+client_browse:
+    method: GET
+    path: client-browse
+
+client_create:
+    method: POST
+    path: client-create
+
+client_download:
+    method: GET
+    path: client-download
+    params:
+        - version
+        - link
+        - os
+
+client_edit:
+    method: POST
+    path: client-edit
+    params:
+        - clientID
+
+client_changelog:
+    method: GET
+    path: client-changelog
+    params:
+        - clientID
+
+client_delete:
+    method: GET
+    path: client-delete
+    params:
+        - clientID
+
+client_checkUpgrade:
+    method: GET
+    path: client-checkUpgrade
+
+client_downloadClient:
+    method: POST
+    path: client-downloadClient
+    params:
+        - action
+        - os
+
+client_ajaxGetClientPackage:
+    method: GET
+    path: client-ajaxGetClientPackage
+    params:
+        - os
+
+client_ajaxGetPackageSize:
+    method: GET
+    path: client-ajaxGetPackageSize
+
+client_ajaxSetClientConfig:
+    method: GET
+    path: client-ajaxSetClientConfig
+    params:
+        - os
+
+misc_ping:
+    method: GET
+    path: misc-ping
+
+misc_phpinfo:
+    method: GET
+    path: misc-phpinfo
+
+misc_about:
+    method: GET
+    path: misc-about
+
+misc_updateNL:
+    method: GET
+    path: misc-updateNL
+
+misc_checkUpdate:
+    method: GET
+    path: misc-checkUpdate
+    params:
+        - sn
+
+misc_checkExtension:
+    method: GET
+    path: misc-checkExtension
+
+misc_downNotify:
+    method: GET
+    path: misc-downNotify
+
+misc_qrCode:
+    method: GET
+    path: misc-qrCode
+
+misc_ajaxIgnoreBrowser:
+    method: GET
+    path: misc-ajaxIgnoreBrowser
+
+misc_changeLog:
+    method: GET
+    path: misc-changeLog
+
+misc_checkNetConnect:
+    method: GET
+    path: misc-checkNetConnect
+
+misc_captcha:
+    method: GET
+    path: misc-captcha
+    params:
+        - sessionVar
+        - uuid
+
+misc_getRemind:
+    method: GET
+    path: misc-getRemind
+
+owt_admin:
+    method: POST
+    path: owt-admin
+    params:
+        - type
+
+personnel_accessible:
+    method: GET
+    path: personnel-accessible
+    params:
+        - programID
+        - deptID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+personnel_invest:
+    method: GET
+    path: personnel-invest
+    params:
+        - browseType
+        - orderBy
+
+personnel_whitelist:
+    method: GET
+    path: personnel-whitelist
+    params:
+        - objectID
+        - module
+        - objectType
+        - orderby
+        - recTotal
+        - recPerPage
+        - pageID
+        - programID
+        - from
+
+personnel_addWhitelist:
+    method: POST
+    path: personnel-addWhitelist
+    params:
+        - objectID
+        - deptID
+        - objectType
+        - module
+        - programID
+        - from
+
+personnel_unbindWhitelist:
+    method: GET
+    path: personnel-unbindWhitelist
+
+projectbuild_browse:
+    method: GET
+    path: projectbuild-browse
+    params:
+        - projectID
+        - type
+        - param
+
+projectrelease_commonAction:
+    method: GET
+    path: projectrelease-commonAction
+    params:
+        - projectID
+        - productID
+        - branch
+
+projectrelease_browse:
+    method: GET
+    path: projectrelease-browse
+    params:
+        - projectID
+        - executionID
+        - type
+
+projectrelease_create:
+    method: POST
+    path: projectrelease-create
+    params:
+        - projectID
+
+projectrelease_edit:
+    method: POST
+    path: projectrelease-edit
+    params:
+        - releaseID
+
+projectrelease_view:
+    method: GET
+    path: projectrelease-view
+    params:
+        - releaseID
+        - type
+        - link
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_delete:
+    method: GET
+    path: projectrelease-delete
+    params:
+        - releaseID
+        - confirm
+
+projectrelease_export:
+    method: POST
+    path: projectrelease-export
+
+projectrelease_linkStory:
+    method: POST
+    path: projectrelease-linkStory
+    params:
+        - releaseID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_unlinkStory:
+    method: GET
+    path: projectrelease-unlinkStory
+    params:
+        - releaseID
+        - storyID
+
+projectrelease_batchUnlinkStory:
+    method: GET
+    path: projectrelease-batchUnlinkStory
+    params:
+        - releaseID
+
+projectrelease_linkBug:
+    method: POST
+    path: projectrelease-linkBug
+    params:
+        - releaseID
+        - browseType
+        - param
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_unlinkBug:
+    method: GET
+    path: projectrelease-unlinkBug
+    params:
+        - releaseID
+        - bugID
+        - type
+
+projectrelease_batchUnlinkBug:
+    method: GET
+    path: projectrelease-batchUnlinkBug
+    params:
+        - releaseID
+        - type
+
+projectrelease_changeStatus:
+    method: GET
+    path: projectrelease-changeStatus
+    params:
+        - releaseID
+        - status
+
+stakeholder_browse:
+    method: GET
+    path: stakeholder-browse
+    params:
+        - projectID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+stakeholder_create:
+    method: POST
+    path: stakeholder-create
+    params:
+        - bjectID
+
+stakeholder_batchCreate:
+    method: POST
+    path: stakeholder-batchCreate
+    params:
+        - projectID
+        - dept
+
+stakeholder_edit:
+    method: POST
+    path: stakeholder-edit
+    params:
+        - stakeholderID
+
+stakeholder_ajaxGetMembers:
+    method: GET
+    path: stakeholder-ajaxGetMembers
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetCompanyUser:
+    method: GET
+    path: stakeholder-ajaxGetCompanyUser
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetOutsideUser:
+    method: GET
+    path: stakeholder-ajaxGetOutsideUser
+
+stakeholder_ajaxGetControl:
+    method: GET
+    path: stakeholder-ajaxGetControl
+
+stakeholder_delete:
+    method: GET
+    path: stakeholder-delete
+    params:
+        - userID
+        - confirm
+
+stakeholder_view:
+    method: GET
+    path: stakeholder-view
+    params:
+        - userID
+
+stakeholder_issue:
+    method: GET
+    path: stakeholder-issue
+
+stakeholder_viewIssue:
+    method: GET
+    path: stakeholder-viewIssue
+
+stakeholder_communicate:
+    method: POST
+    path: stakeholder-communicate
+    params:
+        - userID
+
+stakeholder_expect:
+    method: POST
+    path: stakeholder-expect
+    params:
+        - expectID
+
+stakeholder_commonAction:
+    method: GET
+    path: stakeholder-commonAction
+    params:
+        - stakeholderID
+
+stakeholder_userIssue:
+    method: GET
+    path: stakeholder-userIssue
+    params:
+        - userID
+

@@ -1,0 +1,374 @@
+im_sysServerStart:
+    method: GET
+    path: im-sysServerStart
+
+im_sysGetServerInfo:
+    method: GET
+    path: im-sysGetServerInfo
+    params:
+        - account
+        - password
+        - apiVersion
+        - userID
+        - version
+        - device
+
+im_userLogin:
+    method: GET
+    path: im-userLogin
+    params:
+        - account
+        - password
+        - options
+        - userID
+        - version
+        - device
+
+im_userLogout:
+    method: GET
+    path: im-userLogout
+    params:
+        - normal
+        - userID
+
+im_userGetList:
+    method: GET
+    path: im-userGetList
+    params:
+        - userID
+
+im_userGetDeleted:
+    method: GET
+    path: im-userGetDeleted
+    params:
+        - idList
+        - userID
+
+im_userUpdate:
+    method: GET
+    path: im-userUpdate
+    params:
+        - user
+        - userID
+
+im_userSyncSettings:
+    method: GET
+    path: im-userSyncSettings
+    params:
+        - account
+        - settings
+        - userID
+
+im_userSetDeviceToken:
+    method: GET
+    path: im-userSetDeviceToken
+    params:
+        - deviceToken
+        - deviceType
+        - userID
+
+im_chatGetPublicList:
+    method: GET
+    path: im-chatGetPublicList
+    params:
+        - userID
+
+im_chatGetList:
+    method: GET
+    path: im-chatGetList
+    params:
+        - userID
+
+im_chatGetMembers:
+    method: GET
+    path: im-chatGetMembers
+    params:
+        - gid
+        - userID
+
+im_chatCreate:
+    method: GET
+    path: im-chatCreate
+    params:
+        - gid
+        - name
+        - type
+        - members
+        - subjectID
+        - public
+        - userID
+
+im_chatSetAdmins:
+    method: GET
+    path: im-chatSetAdmins
+    params:
+        - gid
+        - admins
+        - userID
+
+im_chatRemoveAdmins:
+    method: GET
+    path: im-chatRemoveAdmins
+    params:
+        - gid
+        - admins
+        - userID
+
+im_chatJoin:
+    method: GET
+    path: im-chatJoin
+    params:
+        - gid
+        - userID
+
+im_chatLeave:
+    method: GET
+    path: im-chatLeave
+    params:
+        - gid
+        - userID
+
+im_chatRename:
+    method: GET
+    path: im-chatRename
+    params:
+        - gid
+        - name
+        - userID
+
+im_chatDismiss:
+    method: GET
+    path: im-chatDismiss
+    params:
+        - gid
+        - userID
+
+im_chatSetCommitters:
+    method: GET
+    path: im-chatSetCommitters
+    params:
+        - gid
+        - committers
+        - userID
+
+im_chatSetVisibility:
+    method: GET
+    path: im-chatSetVisibility
+    params:
+        - gid
+        - public
+        - userID
+
+im_chatStar:
+    method: GET
+    path: im-chatStar
+    params:
+        - star
+        - gid
+        - userID
+
+im_chatHide:
+    method: GET
+    path: im-chatHide
+    params:
+        - hide
+        - gid
+        - userID
+
+im_chatMute:
+    method: GET
+    path: im-chatMute
+    params:
+        - gid
+        - mute
+        - userID
+
+im_chatFreeze:
+    method: GET
+    path: im-chatFreeze
+    params:
+        - gid
+        - freeze
+        - userID
+
+im_chatSetCategory:
+    method: GET
+    path: im-chatSetCategory
+    params:
+        - gids
+        - category
+        - userID
+
+im_chatInvite:
+    method: GET
+    path: im-chatInvite
+    params:
+        - gid
+        - members
+        - userID
+
+im_chatKick:
+    method: GET
+    path: im-chatKick
+    params:
+        - gid
+        - users
+        - userID
+
+im_chatGetHistory:
+    method: GET
+    path: im-chatGetHistory
+    params:
+        - gid
+        - recPerPage
+        - pageID
+        - recTotal
+        - continued
+        - userID
+
+im_messageRetract:
+    method: GET
+    path: im-messageRetract
+    params:
+        - messages
+        - userID
+
+im_messageSend:
+    method: GET
+    path: im-messageSend
+    params:
+        - messages
+        - userID
+
+im_conferenceCreate:
+    method: GET
+    path: im-conferenceCreate
+    params:
+        - chatID
+        - invitee
+        - userID
+
+im_conferenceJoin:
+    method: GET
+    path: im-conferenceJoin
+    params:
+        - chatID
+        - userID
+
+im_conferenceLeave:
+    method: GET
+    path: im-conferenceLeave
+    params:
+        - chatID
+        - userID
+
+im_conferenceClose:
+    method: GET
+    path: im-conferenceClose
+    params:
+        - chatID
+        - userID
+
+im_extensionGetList:
+    method: GET
+    path: im-extensionGetList
+    params:
+        - userID
+
+im_syncNotifications:
+    method: GET
+    path: im-syncNotifications
+    params:
+        - offline
+        - sendfail
+
+im_syncUsers:
+    method: GET
+    path: im-syncUsers
+
+im_fileUpload:
+    method: GET
+    path: im-fileUpload
+    params:
+        - fileName
+        - path
+        - size
+        - time
+        - gid
+        - userID
+
+im_todoUpsert:
+    method: POST
+    path: im-todoUpsert
+    params:
+        - todo
+        - userID
+
+im_todoGetList:
+    method: GET
+    path: im-todoGetList
+    params:
+        - mode
+        - orderBy
+        - status
+        - recTotal
+        - recPerPage
+        - pageID
+        - userID
+
+im_getGroupChats:
+    method: GET
+    path: im-getGroupChats
+
+im_getChatUsers:
+    method: GET
+    path: im-getChatUsers
+    params:
+        - gid
+
+im_sendNotification:
+    method: GET
+    path: im-sendNotification
+
+im_sendChatMessage:
+    method: GET
+    path: im-sendChatMessage
+
+im_syncUsersData:
+    method: GET
+    path: im-syncUsersData
+
+im_syncDeptsData:
+    method: GET
+    path: im-syncDeptsData
+
+im_debug:
+    method: GET
+    path: im-debug
+
+im_showLog:
+    method: GET
+    path: im-showLog
+
+im_updateLastPoll:
+    method: GET
+    path: im-updateLastPoll
+
+im_checkPasswordChanges:
+    method: GET
+    path: im-checkPasswordChanges
+
+im_downloadXxdPackage:
+    method: GET
+    path: im-downloadXxdPackage
+    params:
+        - xd
+
+im_authorize:
+    method: GET
+    path: im-authorize
+    params:
+        - account
+        - token
+        - url
+

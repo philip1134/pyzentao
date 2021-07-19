@@ -1,0 +1,136 @@
+doc:
+    method: GET
+    path: doc
+
+doc_browse:
+    method: POST
+    path: doc-browse
+    params:
+        - libID
+        - moduleID
+        - productID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+doc_createLib:
+    method: POST
+    path: doc-createLib
+    params:
+        - type
+        - objectID
+
+doc_editLib:
+    method: POST
+    path: doc-editLib
+    params:
+        - libID
+
+doc_deleteLib:
+    method: GET
+    path: doc-deleteLib
+    params:
+        - libID
+        - confirm
+
+doc_create:
+    method: POST
+    path: doc-create
+    params:
+        - libID
+        - moduleID
+        - productID
+        - projectID
+        - from
+
+doc_edit:
+    method: POST
+    path: doc-edit
+    params:
+        - docID
+
+doc_view:
+    method: GET
+    path: doc-view
+    params:
+        - docID
+        - version
+
+doc_delete:
+    method: GET
+    path: doc-delete
+    params:
+        - docID
+        - confirm
+
+doc_deleteFile:
+    method: GET
+    path: doc-deleteFile
+    params:
+        - docID
+        - fileID
+        - confirm
+
+doc_collect:
+    method: GET
+    path: doc-collect
+    params:
+        - objectID
+        - objectType
+
+doc_sort:
+    method: POST
+    path: doc-sort
+
+doc_ajaxGetModules:
+    method: GET
+    path: doc-ajaxGetModules
+    params:
+        - libID
+
+doc_ajaxFixedMenu:
+    method: GET
+    path: doc-ajaxFixedMenu
+    params:
+        - libID
+        - type
+
+doc_ajaxGetAllLibs:
+    method: GET
+    path: doc-ajaxGetAllLibs
+
+doc_ajaxGetChild:
+    method: GET
+    path: doc-ajaxGetChild
+
+doc_allLibs:
+    method: GET
+    path: doc-allLibs
+    params:
+        - type
+        - product
+        - recTotal
+        - recPerPage
+        - pageID
+
+doc_showFiles:
+    method: GET
+    path: doc-showFiles
+    params:
+        - type
+        - objectID
+
+doc_accessDenied:
+    method: GET
+    path: doc-accessDenied
+
+doc_objectLibs:
+    method: GET
+    path: doc-objectLibs
+    params:
+        - type
+        - objectID
+        - from
+
