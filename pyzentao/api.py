@@ -71,7 +71,7 @@ class API:
         if config is None:
             self._load_default()
         else:
-            if "merge" == config.get("type", "merge"):
+            if config.get("merge", True):
                 self._load_default()
 
             self._load_path(config.get("path"))
