@@ -39,15 +39,15 @@ pyzentao
         ...
     )
 
-安装
----
+Install and update using ``pip``
+--------------------------------
 
 .. code:: text
 
     $ pip install -U pyzentao
 
-用法
----
+Usage
+-----
 
 举个栗子
 
@@ -66,9 +66,6 @@ pyzentao
         userID=1,
         type="finishedBy"
     )
-
-配置说明
-~~~~~~
 
 初始化 ``Zentao`` 对象时的参数说明如下
 
