@@ -6,17 +6,26 @@
 
 
 import json
-import urllib
 import requests
 
 
 class Session:
     """zentao connection session"""
 
-    def __init__(self, config):
+    def __init__(
+        self,
+        username,
+        password,
+        session_api,
+        login_api,
+    ):
         super(Session, self).__init__()
 
-        self.config = config
+        self.username = username
+        self.password = password
+        self.session_api = session_api
+        self.login_api = login_api
+
         self.connected = False
         self.name = None
         self.id = None
@@ -30,75 +39,12 @@ class Session:
 
         return self.connected
 
-    def request(self, api, **kwargs):
-        """wrapper for requests.request"""
-
-        self.connect()
-
-        # check out par
-        params = kwargs.get("params", {})
-        params[self.name] = self.id
-
-        return requests.request(
-            method=self._get_method(api),
-            url=self._get_url(self._get_path(api, kwargs)),
-            params=params
-        ).json()
-
 # protected
-    def _get_method(self, api):
-        """get api method"""
-
-        spec = self.config.api[api]
-        return spec.get("method", "GET")
-
-    def _get_url(self, path):
-        """join root and path to make api url"""
-
-        return "%s.json" % urllib.parse.urljoin(
-            self.config.url, path
-        )
-
-    def _get_path(self, api, params):
-        """get api path by the params according to api spec"""
-
-        spec = self.config.api[api]
-        keep = spec.get("keep", False)
-        path = [spec["path"]]
-
-        if "params" in spec and params is not None:
-            for param in spec["params"]:
-                if param in params:
-                    path.append(str(params[param]))
-                elif keep:
-                    path.append("")
-
-                print(path)
-
-        return "-".join(path)
-
-    def _login(self):
-        """login zentao with username and password"""
-
-        if self.name is None or self.id is None:
-            return False
-
-        resp = requests.post(
-            self._get_url(self.config.api.user_login.path),
-            params={
-                "account": self.config.username,
-                "password": self.config.password,
-                self.name: self.id
-            }
-        )
-
-        return "success" == resp.json().get("status")
-
     def _get_session(self):
         """get zentao session name and session id"""
 
         resp = requests.get(
-            self._get_url(self.config.api.api_getSessionID.path)
+            self.session_api.get("url")
         )
         response = resp.json()
 
@@ -110,6 +56,23 @@ class Session:
             return True
         else:
             # fail to get session
-            return False
+            raise RuntimeError("Fail to get session")
+
+    def _login(self):
+        """login zentao with username and password"""
+
+        resp = requests.post(
+            self.login_api.get("url"),
+            params={
+                "account": self.username,
+                "password": self.password,
+                self.name: self.id
+            }
+        )
+
+        if "success" == resp.json().get("status"):
+            return True
+        else:
+            raise RuntimeError("Fail to sign in Zentao")
 
 # end
