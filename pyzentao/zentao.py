@@ -47,7 +47,6 @@ class Zentao:
         self.session.connect()
 
         # check out params
-        return_raw = kwargs.pop("raw", False)
         params = kwargs.pop("params", {})
         params[self.session.name] = self.session.id
 
@@ -59,7 +58,8 @@ class Zentao:
             params=params
         ).json()
 
-        if return_raw:
+        # return raw data or not
+        if kwargs.pop("raw", False):
             response = _response
         else:
             response = Response(_response)
