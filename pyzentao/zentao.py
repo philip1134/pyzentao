@@ -11,6 +11,7 @@ import requests
 from .attribute_dict import AttributeDict
 from .api import API
 from .session import Session
+from .response import Response
 
 
 def make_api_method(api, **kwargs):
@@ -45,17 +46,25 @@ class Zentao:
 
         self.session.connect()
 
-        # check out par
+        # check out params
+        return_raw = kwargs.pop("raw", False)
         params = kwargs.pop("params", {})
         params[self.session.name] = self.session.id
 
         api = self.apis.get(api_name, kwargs)
 
-        return requests.request(
+        _response = requests.request(
             method=api.get("method", "GET"),
             url=api.get("url"),
             params=params
         ).json()
+
+        if return_raw:
+            response = _response
+        else:
+            response = Response(_response)
+
+        return response
 
 # protected
     def _init_apis(self):
