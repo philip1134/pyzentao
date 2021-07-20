@@ -39,8 +39,8 @@ pyzentao
         ...
     )
 
-Install and update using ``pip``
---------------------------------
+Installation
+------------
 
 .. code:: text
 
