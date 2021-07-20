@@ -50,7 +50,7 @@ class API:
         keep = spec.get("keep", False)
         paths = [spec["path"]]
 
-        if "params" in spec and params is not None:
+        if "params" in spec and isinstance(params, dict):
             for param in spec["params"]:
                 if param in params:
                     paths.append(str(params[param]))
