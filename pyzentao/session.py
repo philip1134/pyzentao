@@ -73,6 +73,7 @@ class Session:
         if "success" == resp.json().get("status"):
             return True
         else:
+            # fail to sign in
             raise RuntimeError("Fail to sign in Zentao")
 
 # end
