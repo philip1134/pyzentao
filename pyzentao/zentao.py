@@ -52,7 +52,7 @@ class Zentao:
 
         api = self.apis.get(api_name, kwargs)
 
-        _response = requests.request(
+        response = requests.request(
             method=api.get("method", "GET"),
             url=api.get("url"),
             params=params
@@ -60,11 +60,9 @@ class Zentao:
 
         # return raw data or not
         if kwargs.pop("raw", False):
-            response = _response
+            return response
         else:
-            response = Response(_response)
-
-        return response
+            return Response(response)
 
 # protected
     def _init_apis(self):

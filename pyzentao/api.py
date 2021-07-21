@@ -31,7 +31,7 @@ class API:
 
         spec = self._specs.get(name, None)
         if spec is None:
-            raise KeyError("Unknown api name '%s'" % name)
+            raise KeyError("Unknown API name '%s'" % name)
 
         spec["url"] = self._get_url(name, params)
         return spec
@@ -59,10 +59,8 @@ class API:
                 elif keep:
                     paths.append("")
 
-        path = "-".join(paths)
-
         return "%s.json" % urllib.parse.urljoin(
-            self.base_url, path
+            self.base_url, "-".join(paths)
         )
 
     def _load(self, config):
