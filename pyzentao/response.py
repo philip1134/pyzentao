@@ -6,7 +6,6 @@
 
 
 import json
-import requests
 from .attribute_dict import AttributeDict
 
 
@@ -21,6 +20,16 @@ class Response:
         self.data = {}
 
         self.parse()
+
+    def __str__(self):
+        """printer"""
+
+        text = ""
+        for attr in ("status", "data",):
+            text += "%s: %s\n" % (
+                attr, str(self.__dict__[attr]))
+
+        return text
 
 # public
     def parse(self):
