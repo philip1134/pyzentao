@@ -14,13 +14,34 @@ pyzentao
    :target: https://pypi.org/project/pyzentao/
    :alt: Supported Python versions
 
-``pyzentao`` 是禅道API的Python SDK，将禅道API映射成为Python方法，例如：
+``pyzentao`` 是禅道API的Python SDK，简单封装了禅道API，将其映射成为Python方法，例如：
 
 .. code:: text
 
     GET  /zentao/user-task-[userID]-[type]-[recTotal]-[recPerPage]-[pageID].json
 
-被映射成为 ``Zentao.user_task(...)``
+被映射成为 ``Zentao.user_task(...)`` 。
+
+在调用方法时，``pyzentao`` 会根据初始化时输入的配置参数获取禅道的授权，然后调用对应的API，并返回原生的数据结果。
+
+
+Installation
+------------
+
+.. code:: text
+
+    $ pip install -U pyzentao
+
+Usage
+-----
+
+举个栗子，要获取指定用户的任务，原生API为：
+
+.. code:: text
+
+    GET  /zentao/user-task-[userID]-[type]-[recTotal]-[recPerPage]-[pageID].json
+
+该API被映射为 ``user_task`` 方法：
 
 .. code:: python
 
@@ -39,35 +60,11 @@ pyzentao
         ...
     )
 
-Installation
-------------
+    print(tasks.status) # success
+    print(tasks.data) # dict...
 
-.. code:: text
 
-    $ pip install -U pyzentao
-
-Usage
------
-
-举个栗子
-
-.. code:: python
-
-    import pyzentao
-
-    zentao = pyzentao.Zentao(
-        "url": "http://my.zentao.site",
-        "version": "15",
-        "username": "admin",
-        "password": "123456",
-    )
-
-    tasks = zentao.user_task(
-        userID=1,
-        type="finishedBy"
-    )
-
-初始化 ``Zentao`` 对象时的参数说明如下
+初始化 ``Zentao`` 对象时的参数说明如下：
 
 .. code:: text
 
@@ -78,3 +75,4 @@ Usage
     spec:   自定义的API规则，选填
         path: 存放自定义规则的路径或者文件路径，须为yaml文件
         merge: 合并方式，True 表示与默认规则合并
+
