@@ -47,10 +47,12 @@ class API:
 
         # combine path by spec and params
         spec = self._specs.get(name)
-        keep = spec.get("keep", False)
         paths = [spec["path"]]
 
         if "params" in spec and isinstance(params, dict):
+            # placeholder for parameter
+            keep = spec.get("keep", False) or params.pop("keep", False)
+
             for param in spec["params"]:
                 if param in params:
                     paths.append(str(params[param]))
