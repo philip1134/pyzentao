@@ -2,8 +2,8 @@
 pyzentao
 ========
 
-.. image:: https://travis-ci.org/philip1134/pyzentao.svg?branch=master
-   :target: https://travis-ci.org/philip1134/pyzentao
+.. image:: https://travis-ci.com/philip1134/pyzentao.svg?branch=master
+   :target: https://travis-ci.com/philip1134/pyzentao
    :alt: Build Status
 
 .. image:: https://img.shields.io/pypi/v/pyzentao.svg?color=orange
