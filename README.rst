@@ -20,7 +20,7 @@ pyzentao
 
     GET  /zentao/user-task-[userID]-[type]-[recTotal]-[recPerPage]-[pageID].json
 
-被映射成为 ``Zentao.user_task(...)`` 。
+被映射成为 ``Zentao.user_task(...)`` ，后续 ``[...]`` 里的参数被映射成为调用方法的参数。
 
 在调用方法时，``pyzentao`` 会根据初始化时输入的配置参数获取禅道的授权，然后调用对应的API，并返回原生的数据结果。
 
