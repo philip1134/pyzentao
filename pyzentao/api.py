@@ -8,6 +8,7 @@
 import os
 import yaml
 import urllib
+from .exceptions import APINameError
 
 
 class API:
@@ -31,7 +32,7 @@ class API:
 
         spec = self._specs.get(name, None)
         if spec is None:
-            raise KeyError("Unknown API name '%s'" % name)
+            raise APINameError(name)
 
         spec["url"] = self._get_url(name, params)
         return spec

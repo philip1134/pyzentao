@@ -7,6 +7,7 @@
 
 import json
 import requests
+from .exceptions import AuthenticationError
 
 
 class Session:
@@ -56,7 +57,7 @@ class Session:
             return True
         else:
             # fail to get session
-            raise RuntimeError("Fail to get session")
+            raise AuthenticationError("Fail to get session")
 
     def _login(self):
         """login zentao with username and password"""
@@ -74,6 +75,6 @@ class Session:
             return True
         else:
             # fail to sign in
-            raise RuntimeError("Fail to sign in Zentao")
+            raise AuthenticationError("Fail to sign in Zentao")
 
 # end
