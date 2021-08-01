@@ -4,6 +4,14 @@ pytest Changelog
 Here you can see the full list of changes between each pytest release.
 
 
+Version 0.2.1
+-------------
+
+Released on 2021-08-01
+
+- customized exceptions
+
+
 Version 0.2.0
 -------------
 
