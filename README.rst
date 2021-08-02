@@ -47,12 +47,12 @@ Usage
 
     import pyzentao
 
-    zentao = pyzentao.Zentao(
+    zentao = pyzentao.Zentao({
         "url": "http://my.zentao.site/namespace",
         "version": "15",
         "username": "admin",
         "password": "123456",
-    )
+    })
 
     tasks = zentao.user_task(
         userID=1,
