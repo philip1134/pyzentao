@@ -68,7 +68,7 @@ Usage
 
 .. code:: text
 
-    url: 禅道站点的域名，一般需要加上``zentao``这个前缀，如``http://foo.bar/zentao``
+    url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://foo.bar/zentao
     version: 禅道版本号，不同的禅道版本其API格式不同
     username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
     password: 登录禅道的帐号密码
