@@ -76,3 +76,5 @@ Usage
         path: 存放自定义规则的路径或者文件路径，须为yaml文件
         merge: 合并方式，True 表示与默认规则合并
 
+
+注意，禅道API的返回数据中如果不包含合法的json数据，将会抛出 ``requests.exceptions.JSONDecodeError`` 的异常，一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
