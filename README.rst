@@ -23,6 +23,7 @@ pyzentao
 被映射成为 ``Zentao.user_task(...)`` ，后续 ``[...]`` 里的参数被映射成为调用方法的参数。
 
 在调用方法时，``pyzentao`` 会根据初始化时输入的配置参数获取禅道的授权，然后调用对应的API，并返回原生的数据结果。
+目前支持禅道开源版v15和v12。
 
 
 Installation
@@ -68,7 +69,7 @@ Usage
 
 .. code:: text
 
-    url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://foo.bar/zentao
+    url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://my.zentao.site/zentao
     version: 禅道版本号，不同的禅道版本其API格式不同
     username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
     password: 登录禅道的帐号密码
@@ -76,5 +77,22 @@ Usage
         path: 存放自定义规则的路径或者文件路径，须为yaml文件
         merge: 合并方式，True 表示与默认规则合并
 
+禅道原生API的返回数据中字段繁杂，默认情况下 ``pyzentao`` 做了整理，只保留了 ``status`` 和 ``data`` 的数据，
+如果需要获得全部原生的数据，可在API调用中加入参数 ``raw=True``，例如
 
-注意，禅道API的返回数据中如果不包含合法的json数据，将会抛出 ``requests.exceptions.JSONDecodeError`` 的异常，一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
+.. code:: python
+
+    tasks = zentao.user_task(
+        userID=1,
+        type="finishedBy",
+        ...
+        raw=True
+    )
+
+
+``pyzentao`` 对于API调用过程中出现的异常并不作捕获，建议业务层根据自身使用场景决定处理逻辑。
+
+如果API的返回数据中不包含合法的json数据，将会抛出 ``InvalidJSONResponseError`` 的异常，
+一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
+
+作为懒癌晚期患者，功能仅在Linux/Python3.8环境下做了测试 (๑¯ω¯๑) 不支持Python2和Python3.3以前版本。
