@@ -12,6 +12,7 @@ from .attribute_dict import AttributeDict
 from .api import API
 from .session import Session
 from .response import Response
+from .common import get_json
 
 
 def make_api_method(api, **kwargs):
@@ -52,13 +53,13 @@ class Zentao:
 
         api = self.apis.get(api_name, kwargs)
 
-        response = requests.request(
+        response = get_json(requests.request(
             method=api.get("method", "GET"),
             url=api.get("url"),
             params=params
-        ).json()
+        ))
 
-        # return raw data or not
+        # return raw response or not
         if kwargs.pop("raw", False):
             return response
         else:

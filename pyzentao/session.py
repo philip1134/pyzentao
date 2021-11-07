@@ -7,6 +7,7 @@
 
 import json
 import requests
+from .common import get_json
 from .exceptions import AuthenticationError
 
 
@@ -44,10 +45,9 @@ class Session:
     def _get_session(self):
         """get zentao session name and session id"""
 
-        resp = requests.get(
+        response = get_json(requests.get(
             self.session_api.get("url")
-        )
-        response = resp.json()
+        ))
 
         if "success" == response.get("status"):
             # get data list and return to caller
@@ -62,19 +62,22 @@ class Session:
     def _login(self):
         """login zentao with username and password"""
 
-        resp = requests.post(
+        response = get_json(requests.post(
             self.login_api.get("url"),
             params={
                 "account": self.username,
                 "password": self.password,
                 self.name: self.id
             }
-        )
+        ))
 
-        if "success" == resp.json().get("status"):
+        if "success" == response.get("status"):
             return True
         else:
             # fail to sign in
-            raise AuthenticationError("Fail to sign in Zentao")
+            raise AuthenticationError(
+                "Fail to sign in Zentao with account '%s', password '%s'" % (
+                    self.username, self.password))
+
 
 # end

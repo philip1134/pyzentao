@@ -33,7 +33,7 @@ class Response:
 
 # public
     def parse(self):
-        """setup connection"""
+        """parse raw data, just keep 'status' and 'data'"""
 
         if isinstance(self.raw, dict):
             self.status = self.raw.get("status", None)
@@ -41,6 +41,5 @@ class Response:
                 json.loads(self.raw.get("data", {}))
             )
 
-# protected
 
 # end
