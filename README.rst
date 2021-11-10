@@ -95,4 +95,4 @@ Usage
 如果API的返回数据中不包含合法的json数据，将会抛出 ``InvalidJSONResponseError`` 的异常，
 一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
 
-作为懒癌晚期患者，功能仅在Linux/Python3.8环境下做了测试 (๑¯ω¯๑) 不支持Python2和Python3.3以前版本。
+作为懒癌晚期患者，功能仅在 ``Linux/Python3.8`` 环境下测试，不打算兼容 ``Python2`` 和 ``Python3.3`` 以前版本 (๑¯ω¯๑)
