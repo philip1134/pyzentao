@@ -33,7 +33,7 @@ class SimpleAttributeDict(dict):
 
 class AttributeDict(dict):
     """Works like dict but provides methods to get attribute by '.',
-    inherited from EasyDict from Mathieu Leplatre
+    inspired by EasyDict of Mathieu Leplatre
 
     such as::
         attrDict = AttributeDict({'foo': foo, 'bar': bar})
