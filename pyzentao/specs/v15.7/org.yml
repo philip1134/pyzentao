@@ -1,0 +1,372 @@
+company:
+    method: GET
+    path: company
+
+company_browse:
+    method: GET
+    path: company-browse
+    params:
+        - param
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+company_create:
+    method: POST
+    path: company-create
+
+company_edit:
+    method: POST
+    path: company-edit
+
+company_view:
+    method: GET
+    path: company-view
+
+company_dynamic:
+    method: GET
+    path: company-dynamic
+    params:
+        - browseType
+        - param
+        - recTotal
+        - date
+        - direction
+        - userID
+        - productID
+        - projectID
+        - executionID
+
+company_ajaxGetOutsideCompany:
+    method: GET
+    path: company-ajaxGetOutsideCompany
+
+dept_browse:
+    method: GET
+    path: dept-browse
+    params:
+        - deptID
+
+dept_updateOrder:
+    method: POST
+    path: dept-updateOrder
+
+dept_manageChild:
+    method: POST
+    path: dept-manageChild
+
+dept_edit:
+    method: POST
+    path: dept-edit
+    params:
+        - deptID
+
+dept_delete:
+    method: GET
+    path: dept-delete
+    params:
+        - deptID
+        - confirm
+
+dept_ajaxGetUsers:
+    method: GET
+    path: dept-ajaxGetUsers
+    params:
+        - dept
+        - user
+
+group_browse:
+    method: GET
+    path: group-browse
+
+group_create:
+    method: POST
+    path: group-create
+
+group_edit:
+    method: POST
+    path: group-edit
+    params:
+        - groupID
+
+group_copy:
+    method: POST
+    path: group-copy
+    params:
+        - groupID
+
+group_manageView:
+    method: POST
+    path: group-manageView
+    params:
+        - groupID
+
+group_managePriv:
+    method: POST
+    path: group-managePriv
+    params:
+        - groupID
+
+group_manageMember:
+    method: POST
+    path: group-manageMember
+    params:
+        - groupID
+        - deptID
+
+group_manageProjectAdmin:
+    method: POST
+    path: group-manageProjectAdmin
+    params:
+        - groupID
+        - deptID
+
+group_delete:
+    method: GET
+    path: group-delete
+    params:
+        - groupID
+        - confirm
+
+user_view:
+    method: GET
+    path: user-view
+    params:
+        - userID
+
+user_todo:
+    method: GET
+    path: user-todo
+    params:
+        - userID
+        - type
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_story:
+    method: GET
+    path: user-story
+    params:
+        - userID
+        - storyType
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_task:
+    method: GET
+    path: user-task
+    params:
+        - userID
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_bug:
+    method: GET
+    path: user-bug
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_testtask:
+    method: GET
+    path: user-testtask
+    params:
+        - userID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_testcase:
+    method: GET
+    path: user-testcase
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_execution:
+    method: GET
+    path: user-execution
+    params:
+        - userID
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_issue:
+    method: GET
+    path: user-issue
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_risk:
+    method: GET
+    path: user-risk
+    params:
+        - userID
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+user_profile:
+    method: GET
+    path: user-profile
+    params:
+        - userID
+
+user_setReferer:
+    method: GET
+    path: user-setReferer
+    params:
+        - referer
+
+user_create:
+    method: POST
+    path: user-create
+    params:
+        - deptID
+
+user_batchCreate:
+    method: POST
+    path: user-batchCreate
+    params:
+        - deptID
+
+user_edit:
+    method: POST
+    path: user-edit
+    params:
+        - userID
+
+user_batchEdit:
+    method: POST
+    path: user-batchEdit
+    params:
+        - deptID
+
+user_delete:
+    method: POST
+    path: user-delete
+    params:
+        - userID
+        - confirm
+
+user_unlock:
+    method: GET
+    path: user-unlock
+    params:
+        - userID
+        - confirm
+
+user_unbind:
+    method: GET
+    path: user-unbind
+    params:
+        - userID
+        - confirm
+
+user_login:
+    method: POST
+    path: user-login
+    params:
+        - referer
+        - from
+
+user_deny:
+    method: GET
+    path: user-deny
+    params:
+        - module
+        - method
+        - refererBeforeDeny
+
+user_logout:
+    method: GET
+    path: user-logout
+
+user_reset:
+    method: POST
+    path: user-reset
+
+user_dynamic:
+    method: GET
+    path: user-dynamic
+    params:
+        - userID
+        - period
+        - recTotal
+        - date
+        - direction
+
+user_cropAvatar:
+    method: POST
+    path: user-cropAvatar
+    params:
+        - image
+
+user_ajaxGetUser:
+    method: GET
+    path: user-ajaxGetUser
+    params:
+        - requestID
+        - assignedTo
+
+user_ajaxGetContactUsers:
+    method: GET
+    path: user-ajaxGetContactUsers
+    params:
+        - contactListID
+
+user_ajaxGetContactList:
+    method: GET
+    path: user-ajaxGetContactList
+
+user_ajaxPrintTemplates:
+    method: GET
+    path: user-ajaxPrintTemplates
+    params:
+        - type
+        - link
+
+user_ajaxSaveTemplate:
+    method: GET
+    path: user-ajaxSaveTemplate
+
+user_ajaxDeleteTemplate:
+    method: GET
+    path: user-ajaxDeleteTemplate
+    params:
+        - templateID
+
+user_ajaxGetMore:
+    method: GET
+    path: user-ajaxGetMore
+
+user_refreshRandom:
+    method: GET
+    path: user-refreshRandom
+

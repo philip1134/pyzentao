@@ -1,0 +1,478 @@
+action_trash:
+    method: GET
+    path: action-trash
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+action_undelete:
+    method: GET
+    path: action-undelete
+    params:
+        - actionID
+
+action_hideOne:
+    method: GET
+    path: action-hideOne
+    params:
+        - actionID
+
+action_hideAll:
+    method: GET
+    path: action-hideAll
+    params:
+        - confirm
+
+action_comment:
+    method: POST
+    path: action-comment
+    params:
+        - objectType
+        - objectID
+
+action_editComment:
+    method: POST
+    path: action-editComment
+    params:
+        - actionID
+
+admin:
+    method: GET
+    path: admin
+
+admin_ignore:
+    method: GET
+    path: admin-ignore
+
+admin_register:
+    method: POST
+    path: admin-register
+    params:
+        - from
+
+admin_bind:
+    method: POST
+    path: admin-bind
+    params:
+        - from
+
+admin_checkDB:
+    method: GET
+    path: admin-checkDB
+
+admin_safe:
+    method: POST
+    path: admin-safe
+
+admin_checkWeak:
+    method: GET
+    path: admin-checkWeak
+
+admin_sso:
+    method: POST
+    path: admin-sso
+
+admin_certifyZtEmail:
+    method: POST
+    path: admin-certifyZtEmail
+    params:
+        - email
+
+admin_certifyZtMobile:
+    method: POST
+    path: admin-certifyZtMobile
+    params:
+        - mobile
+
+admin_ztCompany:
+    method: POST
+    path: admin-ztCompany
+
+admin_ajaxSendCode:
+    method: GET
+    path: admin-ajaxSendCode
+    params:
+        - type
+
+admin_log:
+    method: POST
+    path: admin-log
+
+admin_deleteLog:
+    method: GET
+    path: admin-deleteLog
+
+backup:
+    method: GET
+    path: backup
+
+backup_backup:
+    method: GET
+    path: backup-backup
+
+backup_restore:
+    method: GET
+    path: backup-restore
+    params:
+        - fileName
+        - confirm
+
+backup_rmPHPHeader:
+    method: GET
+    path: backup-rmPHPHeader
+    params:
+        - fileName
+
+backup_delete:
+    method: GET
+    path: backup-delete
+    params:
+        - fileName
+        - confirm
+
+backup_change:
+    method: POST
+    path: backup-change
+
+backup_setting:
+    method: POST
+    path: backup-setting
+
+backup_ajaxGetProgress:
+    method: GET
+    path: backup-ajaxGetProgress
+
+convert:
+    method: GET
+    path: convert
+
+convert_selectSource:
+    method: GET
+    path: convert-selectSource
+
+convert_setConfig:
+    method: POST
+    path: convert-setConfig
+
+convert_setBugFree:
+    method: GET
+    path: convert-setBugFree
+    params:
+        - version
+
+convert_setRedmine:
+    method: GET
+    path: convert-setRedmine
+    params:
+        - version
+
+convert_checkConfig:
+    method: POST
+    path: convert-checkConfig
+
+convert_checkBugFree:
+    method: GET
+    path: convert-checkBugFree
+    params:
+        - version
+
+convert_checkRedmine:
+    method: GET
+    path: convert-checkRedmine
+    params:
+        - version
+
+convert_execute:
+    method: POST
+    path: convert-execute
+
+convert_convertBugFree:
+    method: GET
+    path: convert-convertBugFree
+    params:
+        - version
+
+convert_convertRedmine:
+    method: POST
+    path: convert-convertRedmine
+    params:
+        - version
+
+cron:
+    method: GET
+    path: cron
+
+cron_turnon:
+    method: GET
+    path: cron-turnon
+
+cron_openProcess:
+    method: GET
+    path: cron-openProcess
+
+cron_create:
+    method: POST
+    path: cron-create
+
+cron_edit:
+    method: POST
+    path: cron-edit
+    params:
+        - cronID
+
+cron_toggle:
+    method: GET
+    path: cron-toggle
+    params:
+        - cronID
+        - status
+
+cron_delete:
+    method: GET
+    path: cron-delete
+    params:
+        - cronID
+        - confirm
+
+cron_ajaxExec:
+    method: GET
+    path: cron-ajaxExec
+    params:
+        - restart
+
+custom:
+    method: GET
+    path: custom
+
+custom_set:
+    method: POST
+    path: custom-set
+    params:
+        - module
+        - field
+        - lang
+
+custom_restore:
+    method: GET
+    path: custom-restore
+    params:
+        - module
+        - field
+        - confirm
+
+custom_working:
+    method: POST
+    path: custom-working
+
+custom_required:
+    method: GET
+    path: custom-required
+    params:
+        - moduleName
+
+custom_score:
+    method: POST
+    path: custom-score
+
+custom_timezone:
+    method: POST
+    path: custom-timezone
+
+custom_browseStoryConcept:
+    method: GET
+    path: custom-browseStoryConcept
+
+custom_setStoryConcept:
+    method: POST
+    path: custom-setStoryConcept
+
+custom_editStoryConcept:
+    method: POST
+    path: custom-editStoryConcept
+    params:
+        - key
+
+custom_setDefaultConcept:
+    method: GET
+    path: custom-setDefaultConcept
+    params:
+        - key
+
+custom_deleteStoryConcept:
+    method: GET
+    path: custom-deleteStoryConcept
+    params:
+        - key
+        - confirm
+
+custom_execution:
+    method: POST
+    path: custom-execution
+
+custom_product:
+    method: POST
+    path: custom-product
+
+custom_flow:
+    method: POST
+    path: custom-flow
+
+custom_mode:
+    method: POST
+    path: custom-mode
+
+custom_ajaxSaveCustomFields:
+    method: POST
+    path: custom-ajaxSaveCustomFields
+    params:
+        - module
+        - section
+        - key
+
+custom_ajaxMenu:
+    method: GET
+    path: custom-ajaxMenu
+    params:
+        - module
+        - method
+
+custom_ajaxSetMenu:
+    method: POST
+    path: custom-ajaxSetMenu
+    params:
+        - module
+        - method
+        - menus
+
+custom_ajaxGetMenu:
+    method: GET
+    path: custom-ajaxGetMenu
+    params:
+        - module
+        - method
+        - type
+
+custom_ajaxRestoreMenu:
+    method: GET
+    path: custom-ajaxRestoreMenu
+    params:
+        - confirm
+
+custom_ajaxSetDoc:
+    method: POST
+    path: custom-ajaxSetDoc
+
+custom_resetRequired:
+    method: GET
+    path: custom-resetRequired
+    params:
+        - module
+        - confirm
+
+dev_api:
+    method: GET
+    path: dev-api
+
+dev_db:
+    method: GET
+    path: dev-db
+    params:
+        - table
+
+dev_editor:
+    method: GET
+    path: dev-editor
+
+dev_translate:
+    method: GET
+    path: dev-translate
+
+extension_browse:
+    method: GET
+    path: extension-browse
+    params:
+        - status
+
+extension_obtain:
+    method: POST
+    path: extension-obtain
+    params:
+        - type
+        - param
+
+extension_install:
+    method: POST
+    path: extension-install
+    params:
+        - extension
+        - downLink
+        - md5
+        - type
+        - overridePackage
+        - ignoreCompatible
+        - overrideFile
+        - agreeLicense
+        - upgrade
+
+extension_uninstall:
+    method: GET
+    path: extension-uninstall
+    params:
+        - extension
+
+extension_activate:
+    method: GET
+    path: extension-activate
+    params:
+        - extension
+
+extension_deactivate:
+    method: GET
+    path: extension-deactivate
+    params:
+        - extension
+
+extension_upload:
+    method: GET
+    path: extension-upload
+
+extension_erase:
+    method: GET
+    path: extension-erase
+    params:
+        - extension
+
+extension_upgrade:
+    method: GET
+    path: extension-upgrade
+    params:
+        - extension
+        - downLink
+        - md5
+        - type
+
+extension_structure:
+    method: GET
+    path: extension-structure
+    params:
+        - extension
+
+score_ajax:
+    method: GET
+    path: score-ajax
+    params:
+        - method
+
+score_rule:
+    method: GET
+    path: score-rule
+
+score_reset:
+    method: GET
+    path: score-reset
+    params:
+        - lastID
+

@@ -1,0 +1,700 @@
+block_admin:
+    method: GET
+    path: block-admin
+    params:
+        - id
+        - module
+
+block_set:
+    method: POST
+    path: block-set
+    params:
+        - id
+        - type
+
+block_delete:
+    method: GET
+    path: block-delete
+    params:
+        - id
+        - sys
+        - type
+
+block_sort:
+    method: GET
+    path: block-sort
+    params:
+        - oldOrder
+        - newOrder
+        - module
+
+block_resize:
+    method: GET
+    path: block-resize
+    params:
+        - id
+
+block_dashboard:
+    method: GET
+    path: block-dashboard
+    params:
+        - module
+        - type
+        - projectID
+
+block_dynamic:
+    method: GET
+    path: block-dynamic
+
+block_welcome:
+    method: GET
+    path: block-welcome
+
+block_contribute:
+    method: GET
+    path: block-contribute
+
+block_printBlock:
+    method: GET
+    path: block-printBlock
+    params:
+        - id
+
+block_main:
+    method: GET
+    path: block-main
+
+block_printListBlock:
+    method: GET
+    path: block-printListBlock
+
+block_printTodoBlock:
+    method: GET
+    path: block-printTodoBlock
+
+block_printTaskBlock:
+    method: GET
+    path: block-printTaskBlock
+
+block_printBugBlock:
+    method: GET
+    path: block-printBugBlock
+
+block_printCaseBlock:
+    method: GET
+    path: block-printCaseBlock
+
+block_printTesttaskBlock:
+    method: GET
+    path: block-printTesttaskBlock
+
+block_printStoryBlock:
+    method: GET
+    path: block-printStoryBlock
+
+block_printPlanBlock:
+    method: GET
+    path: block-printPlanBlock
+
+block_printReleaseBlock:
+    method: GET
+    path: block-printReleaseBlock
+
+block_printBuildBlock:
+    method: GET
+    path: block-printBuildBlock
+
+block_printProjectBlock:
+    method: GET
+    path: block-printProjectBlock
+
+block_printProductBlock:
+    method: GET
+    path: block-printProductBlock
+
+block_printStatisticBlock:
+    method: GET
+    path: block-printStatisticBlock
+    params:
+        - module
+
+block_printProjectStatisticBlock:
+    method: GET
+    path: block-printProjectStatisticBlock
+
+block_printProductStatisticBlock:
+    method: GET
+    path: block-printProductStatisticBlock
+    params:
+        - storyType
+
+block_printExecutionStatisticBlock:
+    method: GET
+    path: block-printExecutionStatisticBlock
+
+block_printWaterfallReportBlock:
+    method: GET
+    path: block-printWaterfallReportBlock
+
+block_printWaterfallGanttBlock:
+    method: GET
+    path: block-printWaterfallGanttBlock
+
+block_printWaterfallIssueBlock:
+    method: GET
+    path: block-printWaterfallIssueBlock
+
+block_printWaterfallRiskBlock:
+    method: GET
+    path: block-printWaterfallRiskBlock
+
+block_printWaterfallEstimateBlock:
+    method: GET
+    path: block-printWaterfallEstimateBlock
+
+block_printWaterfallProgressBlock:
+    method: GET
+    path: block-printWaterfallProgressBlock
+
+block_printScrumOverviewBlock:
+    method: GET
+    path: block-printScrumOverviewBlock
+
+block_printScrumListBlock:
+    method: GET
+    path: block-printScrumListBlock
+
+block_printScrumProductBlock:
+    method: GET
+    path: block-printScrumProductBlock
+
+block_printSprintBlock:
+    method: GET
+    path: block-printSprintBlock
+
+block_printProjectDynamicBlock:
+    method: GET
+    path: block-printProjectDynamicBlock
+
+block_printScrumRoadMapBlock:
+    method: POST
+    path: block-printScrumRoadMapBlock
+    params:
+        - productID
+        - roadMapID
+
+block_printScrumTestBlock:
+    method: GET
+    path: block-printScrumTestBlock
+
+block_printQaStatisticBlock:
+    method: GET
+    path: block-printQaStatisticBlock
+
+block_printOverviewBlock:
+    method: GET
+    path: block-printOverviewBlock
+
+block_printProductOverviewBlock:
+    method: GET
+    path: block-printProductOverviewBlock
+
+block_printExecutionOverviewBlock:
+    method: GET
+    path: block-printExecutionOverviewBlock
+
+block_printQaOverviewBlock:
+    method: GET
+    path: block-printQaOverviewBlock
+
+block_printExecutionBlock:
+    method: GET
+    path: block-printExecutionBlock
+
+block_printAssignToMeBlock:
+    method: GET
+    path: block-printAssignToMeBlock
+
+block_printRecentProjectBlock:
+    method: GET
+    path: block-printRecentProjectBlock
+
+block_printProjectTeamBlock:
+    method: GET
+    path: block-printProjectTeamBlock
+
+block_flowchart:
+    method: GET
+    path: block-flowchart
+
+block_close:
+    method: GET
+    path: block-close
+    params:
+        - blockID
+
+block_ajaxReset:
+    method: GET
+    path: block-ajaxReset
+    params:
+        - module
+        - confirm
+
+block_ajaxUseNew:
+    method: GET
+    path: block-ajaxUseNew
+    params:
+        - module
+        - confirm
+
+file_buildForm:
+    method: GET
+    path: file-buildForm
+    params:
+        - fileCount
+        - percent
+        - filesName
+        - labelsName
+
+file_ajaxUpload:
+    method: GET
+    path: file-ajaxUpload
+
+file_download:
+    method: GET
+    path: file-download
+    params:
+        - fileID
+        - mouse
+
+file_export2CSV:
+    method: POST
+    path: file-export2CSV
+
+file_export2XML:
+    method: POST
+    path: file-export2XML
+
+file_export2HTML:
+    method: POST
+    path: file-export2HTML
+
+file_sendDownHeader:
+    method: GET
+    path: file-sendDownHeader
+    params:
+        - fileName
+        - extension
+
+file_delete:
+    method: GET
+    path: file-delete
+    params:
+        - fileID
+        - confirm
+
+file_printFiles:
+    method: GET
+    path: file-printFiles
+    params:
+        - files
+        - fieldset
+        - object
+
+file_edit:
+    method: POST
+    path: file-edit
+    params:
+        - fileID
+
+file_ajaxPasteImage:
+    method: POST
+    path: file-ajaxPasteImage
+
+file_uploadImages:
+    method: GET
+    path: file-uploadImages
+    params:
+        - module
+        - params
+
+file_buildExportTPL:
+    method: GET
+    path: file-buildExportTPL
+    params:
+        - module
+        - templateID
+
+file_ajaxSaveTemplate:
+    method: GET
+    path: file-ajaxSaveTemplate
+    params:
+        - module
+
+file_ajaxDeleteTemplate:
+    method: GET
+    path: file-ajaxDeleteTemplate
+    params:
+        - templateID
+
+file_read:
+    method: GET
+    path: file-read
+    params:
+        - fileID
+
+install:
+    method: GET
+    path: install
+
+install_license:
+    method: GET
+    path: install-license
+
+install_step1:
+    method: GET
+    path: install-step1
+
+install_step2:
+    method: GET
+    path: install-step2
+
+install_step3:
+    method: POST
+    path: install-step3
+
+install_step4:
+    method: POST
+    path: install-step4
+
+install_step5:
+    method: POST
+    path: install-step5
+
+install_step6:
+    method: GET
+    path: install-step6
+
+search_buildForm:
+    method: GET
+    path: search-buildForm
+    params:
+        - module
+        - fields
+        - params
+        - actionURL
+        - queryID
+
+search_buildQuery:
+    method: POST
+    path: search-buildQuery
+
+search_saveQuery:
+    method: POST
+    path: search-saveQuery
+    params:
+        - module
+        - onMenuBar
+
+search_deleteQuery:
+    method: GET
+    path: search-deleteQuery
+    params:
+        - queryID
+
+search_ajaxGetQuery:
+    method: GET
+    path: search-ajaxGetQuery
+    params:
+        - module
+        - queryID
+
+search_ajaxRemoveMenu:
+    method: GET
+    path: search-ajaxRemoveMenu
+    params:
+        - queryID
+
+search_buildIndex:
+    method: GET
+    path: search-buildIndex
+    params:
+        - type
+        - lastID
+
+search_index:
+    method: POST
+    path: search-index
+    params:
+        - recTotal
+        - pageID
+
+sso_login:
+    method: GET
+    path: sso-login
+    params:
+        - type
+
+sso_logout:
+    method: GET
+    path: sso-logout
+    params:
+        - type
+
+sso_ajaxSetConfig:
+    method: POST
+    path: sso-ajaxSetConfig
+
+sso_bind:
+    method: POST
+    path: sso-bind
+    params:
+        - referer
+
+sso_getUserPairs:
+    method: GET
+    path: sso-getUserPairs
+
+sso_getBindUsers:
+    method: GET
+    path: sso-getBindUsers
+
+sso_bindUser:
+    method: POST
+    path: sso-bindUser
+
+sso_createUser:
+    method: POST
+    path: sso-createUser
+
+sso_getTodoList:
+    method: GET
+    path: sso-getTodoList
+    params:
+        - account
+
+tree_browse:
+    method: GET
+    path: tree-browse
+    params:
+        - rootID
+        - viewType
+        - currentModuleID
+        - branch
+        - from
+
+tree_browseTask:
+    method: GET
+    path: tree-browseTask
+    params:
+        - rootID
+        - productID
+        - currentModuleID
+
+tree_edit:
+    method: POST
+    path: tree-edit
+    params:
+        - moduleID
+
+tree_fix:
+    method: GET
+    path: tree-fix
+    params:
+        - root
+        - type
+
+tree_updateOrder:
+    method: POST
+    path: tree-updateOrder
+
+tree_manageChild:
+    method: POST
+    path: tree-manageChild
+    params:
+        - rootID
+        - viewType
+
+tree_delete:
+    method: GET
+    path: tree-delete
+    params:
+        - rootID
+        - moduleID
+        - confirm
+
+tree_ajaxGetOptionMenu:
+    method: GET
+    path: tree-ajaxGetOptionMenu
+    params:
+        - rootID
+        - viewType
+        - branch
+        - rootModuleID
+        - returnType
+        - fieldID
+        - needManage
+        - extra
+        - currentModuleID
+
+tree_ajaxGetDropMenu:
+    method: GET
+    path: tree-ajaxGetDropMenu
+    params:
+        - rootID
+        - module
+        - method
+        - extra
+
+tree_ajaxGetModules:
+    method: GET
+    path: tree-ajaxGetModules
+    params:
+        - productID
+        - viewType
+        - branchID
+        - number
+
+tree_ajaxGetSonModules:
+    method: GET
+    path: tree-ajaxGetSonModules
+    params:
+        - moduleID
+        - rootID
+        - type
+
+tutorial_start:
+    method: GET
+    path: tutorial-start
+
+tutorial:
+    method: GET
+    path: tutorial
+
+tutorial_ajaxSetTasks:
+    method: POST
+    path: tutorial-ajaxSetTasks
+    params:
+        - finish
+
+tutorial_quit:
+    method: GET
+    path: tutorial-quit
+    params:
+        - referer
+
+tutorial_ajaxQuit:
+    method: GET
+    path: tutorial-ajaxQuit
+
+tutorial_wizard:
+    method: POST
+    path: tutorial-wizard
+    params:
+        - module
+        - method
+        - params
+
+tutorial_ajaxSaveNovice:
+    method: GET
+    path: tutorial-ajaxSaveNovice
+    params:
+        - novice
+        - reload
+
+tutorial_ajaxFinish:
+    method: GET
+    path: tutorial-ajaxFinish
+
+upgrade:
+    method: GET
+    path: upgrade
+
+upgrade_license:
+    method: GET
+    path: upgrade-license
+
+upgrade_backup:
+    method: GET
+    path: upgrade-backup
+
+upgrade_selectVersion:
+    method: GET
+    path: upgrade-selectVersion
+
+upgrade_confirm:
+    method: POST
+    path: upgrade-confirm
+
+upgrade_execute:
+    method: POST
+    path: upgrade-execute
+
+upgrade_to15Guide:
+    method: POST
+    path: upgrade-to15Guide
+    params:
+        - fromVersion
+
+upgrade_mergeTips:
+    method: GET
+    path: upgrade-mergeTips
+
+upgrade_mergeProgram:
+    method: POST
+    path: upgrade-mergeProgram
+    params:
+        - type
+        - programID
+        - projectType
+
+upgrade_mergeRepo:
+    method: POST
+    path: upgrade-mergeRepo
+
+upgrade_ajaxGetProjectPairsByProgram:
+    method: GET
+    path: upgrade-ajaxGetProjectPairsByProgram
+    params:
+        - programID
+
+upgrade_ajaxGetLinesPairsByProgram:
+    method: GET
+    path: upgrade-ajaxGetLinesPairsByProgram
+    params:
+        - programID
+
+upgrade_afterExec:
+    method: GET
+    path: upgrade-afterExec
+    params:
+        - fromVersion
+        - processed
+
+upgrade_consistency:
+    method: GET
+    path: upgrade-consistency
+
+upgrade_checkExtension:
+    method: GET
+    path: upgrade-checkExtension
+
+upgrade_ajaxUpdateFile:
+    method: GET
+    path: upgrade-ajaxUpdateFile
+    params:
+        - type
+        - lastID
+
+upgrade_ajaxGetProductName:
+    method: GET
+    path: upgrade-ajaxGetProductName
+    params:
+        - productID
+
+upgrade_ajaxGetProgramStatus:
+    method: GET
+    path: upgrade-ajaxGetProgramStatus
+    params:
+        - projectID
+
