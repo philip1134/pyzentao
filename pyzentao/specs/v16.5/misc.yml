@@ -1,0 +1,1572 @@
+automation_browse:
+    method: GET
+    path: automation-browse
+    params:
+        - productID
+        - branch
+
+design_commonAction:
+    method: GET
+    path: design-commonAction
+    params:
+        - projectID
+        - productID
+        - designID
+
+design_browse:
+    method: GET
+    path: design-browse
+    params:
+        - projectID
+        - productID
+        - type
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_create:
+    method: POST
+    path: design-create
+    params:
+        - projectID
+        - productID
+        - type
+
+design_batchCreate:
+    method: POST
+    path: design-batchCreate
+    params:
+        - projectID
+        - productID
+        - type
+
+design_view:
+    method: GET
+    path: design-view
+    params:
+        - designID
+
+design_edit:
+    method: POST
+    path: design-edit
+    params:
+        - designID
+
+design_linkCommit:
+    method: POST
+    path: design-linkCommit
+    params:
+        - designID
+        - repoID
+        - begin
+        - end
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_unlinkCommit:
+    method: GET
+    path: design-unlinkCommit
+    params:
+        - designID
+        - commitID
+        - confirm
+
+design_viewCommit:
+    method: GET
+    path: design-viewCommit
+    params:
+        - designID
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_revision:
+    method: GET
+    path: design-revision
+    params:
+        - repoID
+        - projectID
+
+design_ajaxGetDropMenu:
+    method: GET
+    path: design-ajaxGetDropMenu
+    params:
+        - projectID
+        - productID
+        - extra
+
+design_delete:
+    method: GET
+    path: design-delete
+    params:
+        - designID
+        - confirm
+
+design_assignTo:
+    method: POST
+    path: design-assignTo
+    params:
+        - designID
+
+gitlab_browse:
+    method: GET
+    path: gitlab-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_create:
+    method: POST
+    path: gitlab-create
+
+gitlab_view:
+    method: GET
+    path: gitlab-view
+    params:
+        - id
+
+gitlab_edit:
+    method: POST
+    path: gitlab-edit
+    params:
+        - id
+
+gitlab_bindUser:
+    method: POST
+    path: gitlab-bindUser
+    params:
+        - gitlabID
+
+gitlab_bindProduct:
+    method: GET
+    path: gitlab-bindProduct
+    params:
+        - gitlabID
+
+gitlab_delete:
+    method: GET
+    path: gitlab-delete
+    params:
+        - id
+
+gitlab_checkToken:
+    method: POST
+    path: gitlab-checkToken
+
+gitlab_webhook:
+    method: GET
+    path: gitlab-webhook
+
+gitlab_browseGroup:
+    method: GET
+    path: gitlab-browseGroup
+    params:
+        - gitlabID
+        - orderBy
+
+gitlab_createGroup:
+    method: POST
+    path: gitlab-createGroup
+    params:
+        - gitlabID
+
+gitlab_editGroup:
+    method: POST
+    path: gitlab-editGroup
+    params:
+        - gitlabID
+        - userID
+
+gitlab_deleteGroup:
+    method: GET
+    path: gitlab-deleteGroup
+    params:
+        - gitlabID
+        - groupID
+
+gitlab_manageGroupMembers:
+    method: POST
+    path: gitlab-manageGroupMembers
+    params:
+        - gitlabID
+        - groupID
+
+gitlab_browseUser:
+    method: GET
+    path: gitlab-browseUser
+    params:
+        - gitlabID
+
+gitlab_createUser:
+    method: POST
+    path: gitlab-createUser
+    params:
+        - gitlabID
+
+gitlab_editUser:
+    method: POST
+    path: gitlab-editUser
+    params:
+        - gitlabID
+        - userID
+
+gitlab_deleteUser:
+    method: GET
+    path: gitlab-deleteUser
+    params:
+        - gitlabID
+        - userID
+
+gitlab_browseProject:
+    method: POST
+    path: gitlab-browseProject
+    params:
+        - gitlabID
+        - keyword
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createProject:
+    method: POST
+    path: gitlab-createProject
+    params:
+        - gitlabID
+
+gitlab_editProject:
+    method: POST
+    path: gitlab-editProject
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_deleteProject:
+    method: GET
+    path: gitlab-deleteProject
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_browseBranch:
+    method: GET
+    path: gitlab-browseBranch
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createBranch:
+    method: POST
+    path: gitlab-createBranch
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_browseBranchPriv:
+    method: POST
+    path: gitlab-browseBranchPriv
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createBranchPriv:
+    method: POST
+    path: gitlab-createBranchPriv
+    params:
+        - gitlabID
+        - projectID
+        - branch
+
+gitlab_editBranchPriv:
+    method: GET
+    path: gitlab-editBranchPriv
+    params:
+        - gitlabID
+        - projectID
+        - branch
+
+gitlab_deleteBranchPriv:
+    method: GET
+    path: gitlab-deleteBranchPriv
+    params:
+        - gitlabID
+        - projectID
+        - branch
+        - confirm
+
+gitlab_browseTag:
+    method: POST
+    path: gitlab-browseTag
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_browseTagPriv:
+    method: POST
+    path: gitlab-browseTagPriv
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createTagPriv:
+    method: POST
+    path: gitlab-createTagPriv
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_editTagPriv:
+    method: POST
+    path: gitlab-editTagPriv
+    params:
+        - gitlabID
+        - projectID
+        - tag
+
+gitlab_deleteTagPriv:
+    method: GET
+    path: gitlab-deleteTagPriv
+    params:
+        - gitlabID
+        - projectID
+        - tag
+
+gitlab_importIssue:
+    method: POST
+    path: gitlab-importIssue
+    params:
+        - repoID
+
+gitlab_createWebhook:
+    method: GET
+    path: gitlab-createWebhook
+    params:
+        - repoID
+        - confirm
+
+gitlab_manageProjectMembers:
+    method: POST
+    path: gitlab-manageProjectMembers
+    params:
+        - repoID
+
+gitlab_ajaxGetExecutionsByProduct:
+    method: GET
+    path: gitlab-ajaxGetExecutionsByProduct
+    params:
+        - productID
+
+gitlab_ajaxGetProjectBranches:
+    method: GET
+    path: gitlab-ajaxGetProjectBranches
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_ajaxGetMRUserPairs:
+    method: GET
+    path: gitlab-ajaxGetMRUserPairs
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_createTag:
+    method: POST
+    path: gitlab-createTag
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_deleteTag:
+    method: GET
+    path: gitlab-deleteTag
+    params:
+        - gitlabID
+        - projectID
+        - tagName
+        - confirm
+
+holiday:
+    method: GET
+    path: holiday
+
+holiday_browse:
+    method: GET
+    path: holiday-browse
+    params:
+        - year
+
+holiday_create:
+    method: POST
+    path: holiday-create
+
+holiday_edit:
+    method: POST
+    path: holiday-edit
+    params:
+        - id
+
+holiday_delete:
+    method: GET
+    path: holiday-delete
+    params:
+        - id
+        - confirm
+
+kanban_space:
+    method: GET
+    path: kanban-space
+    params:
+        - browseType
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_createSpace:
+    method: POST
+    path: kanban-createSpace
+    params:
+        - type
+
+kanban_editSpace:
+    method: POST
+    path: kanban-editSpace
+    params:
+        - spaceID
+
+kanban_closeSpace:
+    method: POST
+    path: kanban-closeSpace
+
+kanban_deleteSpace:
+    method: GET
+    path: kanban-deleteSpace
+    params:
+        - spaceID
+        - confirm
+
+kanban_create:
+    method: POST
+    path: kanban-create
+    params:
+        - spaceID
+        - type
+
+kanban_edit:
+    method: POST
+    path: kanban-edit
+    params:
+        - kanbanID
+
+kanban_close:
+    method: POST
+    path: kanban-close
+
+kanban_view:
+    method: GET
+    path: kanban-view
+    params:
+        - kanbanID
+
+kanban_delete:
+    method: GET
+    path: kanban-delete
+    params:
+        - kanbanID
+        - confirm
+
+kanban_createRegion:
+    method: POST
+    path: kanban-createRegion
+    params:
+        - kanbanID
+        - from
+
+kanban_editRegion:
+    method: POST
+    path: kanban-editRegion
+
+kanban_sortRegion:
+    method: GET
+    path: kanban-sortRegion
+    params:
+        - regions
+
+kanban_sortGroup:
+    method: GET
+    path: kanban-sortGroup
+    params:
+        - region
+        - groups
+
+kanban_deleteRegion:
+    method: GET
+    path: kanban-deleteRegion
+    params:
+        - regionID
+        - confirm
+
+kanban_createLane:
+    method: POST
+    path: kanban-createLane
+    params:
+        - kanbanID
+        - regionID
+        - from
+
+kanban_sortLane:
+    method: GET
+    path: kanban-sortLane
+    params:
+        - regionID
+        - lanes
+
+kanban_sortColumn:
+    method: GET
+    path: kanban-sortColumn
+    params:
+        - regionID
+        - kanbanID
+        - columns
+
+kanban_setLaneHeight:
+    method: POST
+    path: kanban-setLaneHeight
+    params:
+        - kanbanID
+        - from
+
+kanban_setColumnWidth:
+    method: POST
+    path: kanban-setColumnWidth
+    params:
+        - kanbanID
+        - from
+
+kanban_deleteLane:
+    method: GET
+    path: kanban-deleteLane
+    params:
+        - laneID
+        - confirm
+
+kanban_createColumn:
+    method: POST
+    path: kanban-createColumn
+    params:
+        - columnID
+        - position
+
+kanban_splitColumn:
+    method: POST
+    path: kanban-splitColumn
+
+kanban_archiveColumn:
+    method: GET
+    path: kanban-archiveColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_restoreColumn:
+    method: GET
+    path: kanban-restoreColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_viewArchivedColumn:
+    method: GET
+    path: kanban-viewArchivedColumn
+    params:
+        - regionID
+
+kanban_deleteColumn:
+    method: GET
+    path: kanban-deleteColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_createCard:
+    method: POST
+    path: kanban-createCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+
+kanban_batchCreateCard:
+    method: POST
+    path: kanban-batchCreateCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - laneID
+        - columnID
+
+kanban_editCard:
+    method: POST
+    path: kanban-editCard
+    params:
+        - cardID
+
+kanban_finishCard:
+    method: GET
+    path: kanban-finishCard
+    params:
+        - cardID
+        - kanbanID
+
+kanban_activateCard:
+    method: POST
+    path: kanban-activateCard
+    params:
+        - cardID
+        - kanbanID
+
+kanban_viewCard:
+    method: GET
+    path: kanban-viewCard
+    params:
+        - cardID
+
+kanban_moveCard:
+    method: GET
+    path: kanban-moveCard
+    params:
+        - cardID
+        - fromColID
+        - toColID
+        - fromLaneID
+        - toLaneID
+        - kanbanID
+
+kanban_importCard:
+    method: POST
+    path: kanban-importCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedKanbanID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importPlan:
+    method: POST
+    path: kanban-importPlan
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProductID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importRelease:
+    method: POST
+    path: kanban-importRelease
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProductID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importBuild:
+    method: POST
+    path: kanban-importBuild
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProjectID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importExecution:
+    method: POST
+    path: kanban-importExecution
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProjectID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_setCardColor:
+    method: GET
+    path: kanban-setCardColor
+    params:
+        - cardID
+        - color
+        - kanbanID
+
+kanban_sortCard:
+    method: GET
+    path: kanban-sortCard
+    params:
+        - kanbanID
+        - laneID
+        - columnID
+        - cards
+
+kanban_archiveCard:
+    method: GET
+    path: kanban-archiveCard
+    params:
+        - cardID
+        - confirm
+
+kanban_viewArchivedCard:
+    method: GET
+    path: kanban-viewArchivedCard
+    params:
+        - regionID
+
+kanban_restoreCard:
+    method: GET
+    path: kanban-restoreCard
+    params:
+        - cardID
+        - confirm
+
+kanban_deleteCard:
+    method: GET
+    path: kanban-deleteCard
+    params:
+        - cardID
+        - confirm
+
+kanban_deleteObjectCard:
+    method: GET
+    path: kanban-deleteObjectCard
+    params:
+        - objectType
+        - objectID
+        - regionID
+
+kanban_setWIP:
+    method: POST
+    path: kanban-setWIP
+    params:
+        - columnID
+        - executionID
+        - from
+
+kanban_setLane:
+    method: POST
+    path: kanban-setLane
+    params:
+        - laneID
+        - executionID
+        - from
+
+kanban_setColumn:
+    method: POST
+    path: kanban-setColumn
+    params:
+        - columnID
+        - executionID
+        - from
+
+kanban_performable:
+    method: POST
+    path: kanban-performable
+    params:
+        - kanbanID
+
+kanban_enableArchived:
+    method: POST
+    path: kanban-enableArchived
+    params:
+        - kanbanID
+
+kanban_ajaxCardsSort:
+    method: GET
+    path: kanban-ajaxCardsSort
+    params:
+        - laneType
+        - columnID
+        - orderBy
+
+kanban_ajaxMoveCard:
+    method: GET
+    path: kanban-ajaxMoveCard
+    params:
+        - cardID
+        - fromColID
+        - toColID
+        - fromLaneID
+        - toLaneID
+        - executionID
+        - browseType
+        - groupBy
+        - regionID
+        - orderBy
+
+kanban_laneMove:
+    method: GET
+    path: kanban-laneMove
+    params:
+        - executionID
+        - currentType
+        - targetType
+
+kanban_ajaxGetContactUsers:
+    method: GET
+    path: kanban-ajaxGetContactUsers
+    params:
+        - contactListID
+
+kanban_ajaxGetKanbanMenu:
+    method: GET
+    path: kanban-ajaxGetKanbanMenu
+    params:
+        - kanbanID
+        - moduleName
+        - methodName
+
+kanban_ajaxGetLanes:
+    method: GET
+    path: kanban-ajaxGetLanes
+    params:
+        - regionID
+        - type
+        - field
+        - i
+
+kanban_import:
+    method: POST
+    path: kanban-import
+    params:
+        - kanbanID
+
+misc_ping:
+    method: GET
+    path: misc-ping
+
+misc_phpinfo:
+    method: GET
+    path: misc-phpinfo
+
+misc_about:
+    method: GET
+    path: misc-about
+
+misc_updateNL:
+    method: GET
+    path: misc-updateNL
+
+misc_checkUpdate:
+    method: GET
+    path: misc-checkUpdate
+    params:
+        - sn
+
+misc_checkExtension:
+    method: GET
+    path: misc-checkExtension
+
+misc_downNotify:
+    method: GET
+    path: misc-downNotify
+
+misc_qrCode:
+    method: GET
+    path: misc-qrCode
+
+misc_ajaxIgnoreBrowser:
+    method: GET
+    path: misc-ajaxIgnoreBrowser
+
+misc_changeLog:
+    method: GET
+    path: misc-changeLog
+
+misc_checkNetConnect:
+    method: GET
+    path: misc-checkNetConnect
+
+misc_captcha:
+    method: GET
+    path: misc-captcha
+    params:
+        - sessionVar
+        - uuid
+
+misc_ajaxSetUnfoldID:
+    method: POST
+    path: misc-ajaxSetUnfoldID
+    params:
+        - objectID
+        - objectType
+        - action
+
+misc_getRemind:
+    method: GET
+    path: misc-getRemind
+
+misc_features:
+    method: GET
+    path: misc-features
+
+misc_ajaxSaveViewed:
+    method: GET
+    path: misc-ajaxSaveViewed
+    params:
+        - feature
+
+mr_browse:
+    method: GET
+    path: mr-browse
+    params:
+        - mode
+        - param
+        - objectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_create:
+    method: POST
+    path: mr-create
+
+mr_apiCreate:
+    method: POST
+    path: mr-apiCreate
+
+mr_edit:
+    method: POST
+    path: mr-edit
+
+mr_delete:
+    method: GET
+    path: mr-delete
+    params:
+        - id
+
+mr_view:
+    method: GET
+    path: mr-view
+    params:
+        - id
+
+mr_syncMR:
+    method: GET
+    path: mr-syncMR
+
+mr_accept:
+    method: GET
+    path: mr-accept
+    params:
+        - MRID
+
+mr_diff:
+    method: POST
+    path: mr-diff
+    params:
+        - MRID
+
+mr_approval:
+    method: POST
+    path: mr-approval
+    params:
+        - MRID
+        - action
+
+mr_close:
+    method: GET
+    path: mr-close
+    params:
+        - MRID
+
+mr_reopen:
+    method: GET
+    path: mr-reopen
+    params:
+        - MRID
+
+mr_link:
+    method: GET
+    path: mr-link
+    params:
+        - MRID
+        - type
+        - orderBy
+        - link
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkStory:
+    method: POST
+    path: mr-linkStory
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkBug:
+    method: POST
+    path: mr-linkBug
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkTask:
+    method: POST
+    path: mr-linkTask
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_unlink:
+    method: GET
+    path: mr-unlink
+    params:
+        - MRID
+        - productID
+        - type
+        - linkID
+        - confirm
+
+mr_addReview:
+    method: POST
+    path: mr-addReview
+    params:
+        - repoID
+        - mr
+        - v1
+        - v2
+
+mr_ajaxGetMRTargetProjects:
+    method: GET
+    path: mr-ajaxGetMRTargetProjects
+    params:
+        - gitlabID
+        - projectID
+
+mr_ajaxGetRepoList:
+    method: GET
+    path: mr-ajaxGetRepoList
+    params:
+        - gitlabID
+        - projectID
+
+mr_ajaxGetJobList:
+    method: GET
+    path: mr-ajaxGetJobList
+    params:
+        - repoID
+
+mr_ajaxGetCompileList:
+    method: GET
+    path: mr-ajaxGetCompileList
+    params:
+        - jobID
+
+mr_ajaxCheckSameOpened:
+    method: POST
+    path: mr-ajaxCheckSameOpened
+    params:
+        - gitlabID
+
+personnel_accessible:
+    method: GET
+    path: personnel-accessible
+    params:
+        - programID
+        - deptID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+personnel_invest:
+    method: GET
+    path: personnel-invest
+    params:
+        - browseType
+        - orderBy
+
+personnel_whitelist:
+    method: GET
+    path: personnel-whitelist
+    params:
+        - objectID
+        - module
+        - objectType
+        - orderby
+        - recTotal
+        - recPerPage
+        - pageID
+        - programID
+        - from
+
+personnel_addWhitelist:
+    method: POST
+    path: personnel-addWhitelist
+    params:
+        - objectID
+        - deptID
+        - copyID
+        - objectType
+        - module
+        - programID
+        - from
+
+personnel_unbindWhitelist:
+    method: GET
+    path: personnel-unbindWhitelist
+
+programplan_commonAction:
+    method: GET
+    path: programplan-commonAction
+    params:
+        - projectID
+        - productID
+        - extra
+
+programplan_browse:
+    method: GET
+    path: programplan-browse
+    params:
+        - projectID
+        - productID
+        - type
+        - orderBy
+        - baselineID
+
+programplan_create:
+    method: POST
+    path: programplan-create
+    params:
+        - projectID
+        - productID
+        - planID
+
+programplan_edit:
+    method: POST
+    path: programplan-edit
+    params:
+        - planID
+        - projectID
+
+programplan_ajaxCustom:
+    method: POST
+    path: programplan-ajaxCustom
+
+projectbuild_browse:
+    method: GET
+    path: projectbuild-browse
+    params:
+        - projectID
+        - type
+        - param
+
+projectrelease_commonAction:
+    method: GET
+    path: projectrelease-commonAction
+    params:
+        - projectID
+        - productID
+        - branch
+
+projectrelease_browse:
+    method: GET
+    path: projectrelease-browse
+    params:
+        - projectID
+        - executionID
+        - type
+        - orderBy
+
+projectrelease_create:
+    method: POST
+    path: projectrelease-create
+    params:
+        - projectID
+
+projectrelease_edit:
+    method: POST
+    path: projectrelease-edit
+    params:
+        - releaseID
+
+projectrelease_view:
+    method: GET
+    path: projectrelease-view
+    params:
+        - releaseID
+        - type
+        - link
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_notify:
+    method: POST
+    path: projectrelease-notify
+    params:
+        - releaseID
+
+projectrelease_delete:
+    method: GET
+    path: projectrelease-delete
+    params:
+        - releaseID
+        - confirm
+
+projectrelease_export:
+    method: POST
+    path: projectrelease-export
+
+projectrelease_linkStory:
+    method: POST
+    path: projectrelease-linkStory
+    params:
+        - releaseID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_unlinkStory:
+    method: GET
+    path: projectrelease-unlinkStory
+    params:
+        - releaseID
+        - storyID
+
+projectrelease_batchUnlinkStory:
+    method: GET
+    path: projectrelease-batchUnlinkStory
+    params:
+        - releaseID
+
+projectrelease_linkBug:
+    method: POST
+    path: projectrelease-linkBug
+    params:
+        - releaseID
+        - browseType
+        - param
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectrelease_unlinkBug:
+    method: GET
+    path: projectrelease-unlinkBug
+    params:
+        - releaseID
+        - bugID
+        - type
+
+projectrelease_batchUnlinkBug:
+    method: GET
+    path: projectrelease-batchUnlinkBug
+    params:
+        - releaseID
+        - type
+
+projectrelease_changeStatus:
+    method: GET
+    path: projectrelease-changeStatus
+    params:
+        - releaseID
+        - status
+
+sonarqube_browse:
+    method: GET
+    path: sonarqube-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+sonarqube_reportView:
+    method: GET
+    path: sonarqube-reportView
+    params:
+        - jobID
+
+sonarqube_ajaxGetProjectList:
+    method: GET
+    path: sonarqube-ajaxGetProjectList
+    params:
+        - sonarqubeID
+        - projectKey
+
+sonarqube_create:
+    method: POST
+    path: sonarqube-create
+
+sonarqube_checkToken:
+    method: POST
+    path: sonarqube-checkToken
+    params:
+        - sonarqubeID
+
+sonarqube_edit:
+    method: POST
+    path: sonarqube-edit
+    params:
+        - sonarqubeID
+
+sonarqube_delete:
+    method: GET
+    path: sonarqube-delete
+    params:
+        - sonarqubeID
+
+sonarqube_execJob:
+    method: GET
+    path: sonarqube-execJob
+    params:
+        - jobID
+
+sonarqube_browseProject:
+    method: POST
+    path: sonarqube-browseProject
+    params:
+        - sonarqubeID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+sonarqube_createProject:
+    method: POST
+    path: sonarqube-createProject
+    params:
+        - sonarqubeID
+
+sonarqube_deleteProject:
+    method: GET
+    path: sonarqube-deleteProject
+    params:
+        - sonarqubeID
+        - projectKey
+        - confirm
+
+sonarqube_browseIssue:
+    method: POST
+    path: sonarqube-browseIssue
+    params:
+        - sonarqubeID
+        - projectKey
+        - search
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+stage_browse:
+    method: GET
+    path: stage-browse
+    params:
+        - orderBy
+
+stage_create:
+    method: POST
+    path: stage-create
+
+stage_batchCreate:
+    method: POST
+    path: stage-batchCreate
+
+stage_edit:
+    method: POST
+    path: stage-edit
+    params:
+        - stageID
+
+stage_setType:
+    method: POST
+    path: stage-setType
+
+stage_delete:
+    method: GET
+    path: stage-delete
+    params:
+        - stageID
+        - confirm
+
+stakeholder_browse:
+    method: GET
+    path: stakeholder-browse
+    params:
+        - projectID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+stakeholder_create:
+    method: POST
+    path: stakeholder-create
+    params:
+        - bjectID
+
+stakeholder_batchCreate:
+    method: POST
+    path: stakeholder-batchCreate
+    params:
+        - projectID
+        - dept
+
+stakeholder_edit:
+    method: POST
+    path: stakeholder-edit
+    params:
+        - stakeholderID
+
+stakeholder_ajaxGetMembers:
+    method: GET
+    path: stakeholder-ajaxGetMembers
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetCompanyUser:
+    method: GET
+    path: stakeholder-ajaxGetCompanyUser
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetOutsideUser:
+    method: GET
+    path: stakeholder-ajaxGetOutsideUser
+
+stakeholder_ajaxGetControl:
+    method: GET
+    path: stakeholder-ajaxGetControl
+
+stakeholder_delete:
+    method: GET
+    path: stakeholder-delete
+    params:
+        - userID
+        - confirm
+
+stakeholder_view:
+    method: GET
+    path: stakeholder-view
+    params:
+        - userID
+
+stakeholder_issue:
+    method: GET
+    path: stakeholder-issue
+
+stakeholder_viewIssue:
+    method: GET
+    path: stakeholder-viewIssue
+
+stakeholder_communicate:
+    method: POST
+    path: stakeholder-communicate
+    params:
+        - userID
+
+stakeholder_expect:
+    method: POST
+    path: stakeholder-expect
+    params:
+        - expectID
+
+stakeholder_commonAction:
+    method: GET
+    path: stakeholder-commonAction
+    params:
+        - stakeholderID
+
+stakeholder_userIssue:
+    method: GET
+    path: stakeholder-userIssue
+    params:
+        - userID
+
+weekly_commonAction:
+    method: GET
+    path: weekly-commonAction
+    params:
+        - projectID
+
+weekly_index:
+    method: GET
+    path: weekly-index
+    params:
+        - projectID
+        - date
+
+weekly_computeWeekly:
+    method: GET
+    path: weekly-computeWeekly
+

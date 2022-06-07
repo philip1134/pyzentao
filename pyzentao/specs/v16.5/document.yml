@@ -1,0 +1,176 @@
+doc:
+    method: GET
+    path: doc
+
+doc_browse:
+    method: GET
+    path: doc-browse
+    params:
+        - libID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+doc_createLib:
+    method: POST
+    path: doc-createLib
+    params:
+        - type
+        - objectID
+
+doc_editLib:
+    method: POST
+    path: doc-editLib
+    params:
+        - libID
+
+doc_deleteLib:
+    method: GET
+    path: doc-deleteLib
+    params:
+        - libID
+        - confirm
+        - from
+
+doc_create:
+    method: POST
+    path: doc-create
+    params:
+        - objectType
+        - objectID
+        - libID
+        - moduleID
+        - docType
+
+doc_edit:
+    method: POST
+    path: doc-edit
+    params:
+        - docID
+        - comment
+        - objectType
+        - objectID
+        - libID
+
+doc_view:
+    method: GET
+    path: doc-view
+    params:
+        - docID
+        - version
+
+doc_delete:
+    method: GET
+    path: doc-delete
+    params:
+        - docID
+        - confirm
+        - from
+
+doc_deleteFile:
+    method: GET
+    path: doc-deleteFile
+    params:
+        - docID
+        - fileID
+        - confirm
+
+doc_collect:
+    method: GET
+    path: doc-collect
+    params:
+        - objectID
+        - objectType
+
+doc_sort:
+    method: POST
+    path: doc-sort
+    params:
+        - type
+
+doc_ajaxGetModules:
+    method: GET
+    path: doc-ajaxGetModules
+    params:
+        - libID
+
+doc_ajaxFixedMenu:
+    method: GET
+    path: doc-ajaxFixedMenu
+    params:
+        - libID
+        - type
+
+doc_ajaxGetAllLibs:
+    method: GET
+    path: doc-ajaxGetAllLibs
+
+doc_ajaxGetChild:
+    method: GET
+    path: doc-ajaxGetChild
+
+doc_ajaxSaveDraft:
+    method: GET
+    path: doc-ajaxSaveDraft
+    params:
+        - docID
+
+doc_ajaxGetWhitelist:
+    method: GET
+    path: doc-ajaxGetWhitelist
+    params:
+        - doclibID
+        - acl
+
+doc_showFiles:
+    method: GET
+    path: doc-showFiles
+    params:
+        - type
+        - objectID
+        - viewType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+doc_allLibs:
+    method: GET
+    path: doc-allLibs
+    params:
+        - type
+        - product
+        - recTotal
+        - recPerPage
+        - pageID
+
+doc_accessDenied:
+    method: GET
+    path: doc-accessDenied
+
+doc_objectLibs:
+    method: GET
+    path: doc-objectLibs
+    params:
+        - type
+        - objectID
+        - libID
+        - docID
+        - version
+        - appendLib
+
+doc_tableContents:
+    method: GET
+    path: doc-tableContents
+    params:
+        - type
+        - objectID
+        - libID
+
+doc_selectLibType:
+    method: POST
+    path: doc-selectLibType
+

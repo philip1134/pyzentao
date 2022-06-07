@@ -1,0 +1,197 @@
+api_index:
+    method: GET
+    path: api-index
+    params:
+        - libID
+        - moduleID
+        - apiID
+        - version
+        - release
+
+api_releases:
+    method: GET
+    path: api-releases
+    params:
+        - libID
+
+api_deleteRelease:
+    method: GET
+    path: api-deleteRelease
+    params:
+        - libID
+        - id
+        - confirm
+
+api_createRelease:
+    method: POST
+    path: api-createRelease
+    params:
+        - libID
+
+api_struct:
+    method: GET
+    path: api-struct
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+api_createStruct:
+    method: POST
+    path: api-createStruct
+    params:
+        - libID
+
+api_editStruct:
+    method: POST
+    path: api-editStruct
+    params:
+        - libID
+        - structID
+
+api_deleteStruct:
+    method: GET
+    path: api-deleteStruct
+    params:
+        - libID
+        - structID
+        - confirm
+
+api_createLib_[ormal|demo]:
+    method: POST
+    path: api-createLib-[ormal|demo]
+
+api_editLib:
+    method: POST
+    path: api-editLib
+
+api_deleteLib:
+    method: GET
+    path: api-deleteLib
+    params:
+        - libID
+        - confirm
+        - from
+
+api_edit:
+    method: POST
+    path: api-edit
+    params:
+        - apiID
+
+api_create:
+    method: POST
+    path: api-create
+    params:
+        - libID
+        - moduleID
+
+api_delete:
+    method: GET
+    path: api-delete
+    params:
+        - apiID
+        - confirm
+
+api_ajaxGetParamsTypeOptions:
+    method: GET
+    path: api-ajaxGetParamsTypeOptions
+
+api_ajaxGetRefOptions:
+    method: GET
+    path: api-ajaxGetRefOptions
+    params:
+        - libID
+
+api_ajaxGetRefInfo:
+    method: GET
+    path: api-ajaxGetRefInfo
+    params:
+        - refID
+
+api_ajaxGetChild:
+    method: GET
+    path: api-ajaxGetChild
+
+api_setMenu:
+    method: GET
+    path: api-setMenu
+    params:
+        - libID
+        - moduleID
+
+api_generateLibsDropMenu:
+    method: GET
+    path: api-generateLibsDropMenu
+    params:
+        - libs
+        - libID
+        - version
+
+api_getSessionID:
+    method: GET
+    path: api-getSessionID
+
+api_getModel:
+    method: GET
+    path: api-getModel
+    params:
+        - moduleName
+        - methodName
+        - params
+
+api_debug:
+    method: POST
+    path: api-debug
+    params:
+        - filePath
+        - action
+
+api_sql:
+    method: POST
+    path: api-sql
+    params:
+        - keyField
+
+api_getTypeOptions:
+    method: GET
+    path: api-getTypeOptions
+    params:
+        - libID
+
+entry_browse:
+    method: GET
+    path: entry-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+entry_create:
+    method: POST
+    path: entry-create
+
+entry_edit:
+    method: POST
+    path: entry-edit
+    params:
+        - id
+
+entry_delete:
+    method: GET
+    path: entry-delete
+    params:
+        - id
+
+entry_log:
+    method: GET
+    path: entry-log
+    params:
+        - id
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+

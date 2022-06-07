@@ -1,0 +1,403 @@
+index_index:
+    method: GET
+    path: index-index
+    params:
+        - open
+
+index_changeLog:
+    method: GET
+    path: index-changeLog
+    params:
+        - version
+
+index_testext:
+    method: GET
+    path: index-testext
+
+index_ajaxClearObjectSession:
+    method: POST
+    path: index-ajaxClearObjectSession
+
+index_ajaxGetViewMethod:
+    method: GET
+    path: index-ajaxGetViewMethod
+    params:
+        - objectID
+        - objectType
+
+my:
+    method: GET
+    path: my
+
+my_score:
+    method: GET
+    path: my-score
+    params:
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_calendar:
+    method: GET
+    path: my-calendar
+
+my_work:
+    method: GET
+    path: my-work
+    params:
+        - mode
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_showWorkCount:
+    method: GET
+    path: my-showWorkCount
+    params:
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_contribute:
+    method: GET
+    path: my-contribute
+    params:
+        - mode
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_todo:
+    method: GET
+    path: my-todo
+    params:
+        - type
+        - userID
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_story:
+    method: GET
+    path: my-story
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_requirement:
+    method: GET
+    path: my-requirement
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_task:
+    method: GET
+    path: my-task
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_bug:
+    method: GET
+    path: my-bug
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_testtask:
+    method: GET
+    path: my-testtask
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_testcase:
+    method: GET
+    path: my-testcase
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_doc:
+    method: GET
+    path: my-doc
+
+my_project:
+    method: GET
+    path: my-project
+    params:
+        - status
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_execution:
+    method: GET
+    path: my-execution
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_issue:
+    method: GET
+    path: my-issue
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_risk:
+    method: GET
+    path: my-risk
+    params:
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_audit:
+    method: GET
+    path: my-audit
+    params:
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_nc:
+    method: GET
+    path: my-nc
+    params:
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_myMeeting:
+    method: GET
+    path: my-myMeeting
+    params:
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_team:
+    method: GET
+    path: my-team
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+my_editProfile:
+    method: POST
+    path: my-editProfile
+
+my_changePassword:
+    method: POST
+    path: my-changePassword
+
+my_manageContacts:
+    method: POST
+    path: my-manageContacts
+    params:
+        - listID
+        - mode
+
+my_deleteContacts:
+    method: GET
+    path: my-deleteContacts
+    params:
+        - listID
+        - confirm
+
+my_buildContactLists:
+    method: GET
+    path: my-buildContactLists
+    params:
+        - dropdownName
+
+my_profile:
+    method: GET
+    path: my-profile
+
+my_preference:
+    method: POST
+    path: my-preference
+
+my_dynamic:
+    method: GET
+    path: my-dynamic
+    params:
+        - type
+        - recTotal
+        - date
+        - direction
+
+my_uploadAvatar:
+    method: GET
+    path: my-uploadAvatar
+
+my_unbind:
+    method: GET
+    path: my-unbind
+    params:
+        - confirm
+
+my_ajaxSwitchVision:
+    method: GET
+    path: my-ajaxSwitchVision
+    params:
+        - vision
+
+todo_create:
+    method: POST
+    path: todo-create
+    params:
+        - date
+        - userID
+        - from
+
+todo_batchCreate:
+    method: POST
+    path: todo-batchCreate
+    params:
+        - date
+
+todo_edit:
+    method: POST
+    path: todo-edit
+    params:
+        - todoID
+
+todo_batchEdit:
+    method: POST
+    path: todo-batchEdit
+    params:
+        - from
+        - type
+        - userID
+        - status
+
+todo_start:
+    method: GET
+    path: todo-start
+    params:
+        - todoID
+
+todo_activate:
+    method: GET
+    path: todo-activate
+
+todo_close:
+    method: GET
+    path: todo-close
+
+todo_assignTo:
+    method: POST
+    path: todo-assignTo
+
+todo_view:
+    method: GET
+    path: todo-view
+    params:
+        - todoID
+        - from
+
+todo_delete:
+    method: GET
+    path: todo-delete
+    params:
+        - todoID
+        - confirm
+
+todo_finish:
+    method: GET
+    path: todo-finish
+    params:
+        - todoID
+
+todo_batchFinish:
+    method: POST
+    path: todo-batchFinish
+
+todo_batchClose:
+    method: POST
+    path: todo-batchClose
+
+todo_import2Today:
+    method: POST
+    path: todo-import2Today
+
+todo_export:
+    method: POST
+    path: todo-export
+    params:
+        - userID
+        - orderBy
+
+todo_ajaxGetDetail:
+    method: GET
+    path: todo-ajaxGetDetail
+    params:
+        - todoID
+
+todo_ajaxGetProgramID:
+    method: GET
+    path: todo-ajaxGetProgramID
+    params:
+        - objectID
+        - objectType
+
+todo_ajaxGetExecutionPairs:
+    method: GET
+    path: todo-ajaxGetExecutionPairs
+    params:
+        - projectID
+
+todo_ajaxGetProductPairs:
+    method: GET
+    path: todo-ajaxGetProductPairs
+    params:
+        - projectID
+
+todo_createCycle:
+    method: GET
+    path: todo-createCycle
+

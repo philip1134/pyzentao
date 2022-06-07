@@ -1,0 +1,391 @@
+project_createGuide:
+    method: GET
+    path: project-createGuide
+    params:
+        - programID
+        - from
+        - productID
+        - branchID
+
+project_export:
+    method: POST
+    path: project-export
+    params:
+        - status
+        - orderBy
+
+project_ajaxGetDropMenu:
+    method: GET
+    path: project-ajaxGetDropMenu
+    params:
+        - projectID
+        - module
+        - method
+
+project_ajaxGetCopyProjects:
+    method: POST
+    path: project-ajaxGetCopyProjects
+
+project_ajaxGetUnlinkTips:
+    method: GET
+    path: project-ajaxGetUnlinkTips
+    params:
+        - projectID
+        - account
+
+project_ajaxGetLinkedProducts:
+    method: GET
+    path: project-ajaxGetLinkedProducts
+    params:
+        - projectID
+
+project_index:
+    method: GET
+    path: project-index
+    params:
+        - projectID
+        - browseType
+
+project_browse:
+    method: GET
+    path: project-browse
+    params:
+        - programID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_kanban:
+    method: GET
+    path: project-kanban
+
+project_programTitle:
+    method: POST
+    path: project-programTitle
+
+project_create:
+    method: POST
+    path: project-create
+    params:
+        - model
+        - programID
+        - copyProjectID
+        - extra
+
+project_edit:
+    method: POST
+    path: project-edit
+    params:
+        - projectID
+        - from
+
+project_batchEdit:
+    method: POST
+    path: project-batchEdit
+    params:
+        - from
+        - projectID
+
+project_view:
+    method: GET
+    path: project-view
+    params:
+        - projectID
+
+project_group:
+    method: GET
+    path: project-group
+    params:
+        - projectID
+        - programID
+
+project_createGroup:
+    method: POST
+    path: project-createGroup
+    params:
+        - projectID
+
+project_dynamic:
+    method: GET
+    path: project-dynamic
+    params:
+        - projectID
+        - type
+        - param
+        - recTotal
+        - date
+        - direction
+
+project_execution:
+    method: GET
+    path: project-execution
+    params:
+        - status
+        - projectID
+        - orderBy
+        - productID
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_qa:
+    method: GET
+    path: project-qa
+    params:
+        - projectID
+
+project_bug:
+    method: GET
+    path: project-bug
+    params:
+        - projectID
+        - productID
+        - orderBy
+        - build
+        - type
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_testcase:
+    method: GET
+    path: project-testcase
+    params:
+        - projectID
+        - productID
+        - branch
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_testreport:
+    method: GET
+    path: project-testreport
+    params:
+        - projectID
+        - objectType
+        - extra
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_testtask:
+    method: GET
+    path: project-testtask
+    params:
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_build:
+    method: GET
+    path: project-build
+    params:
+        - projectID
+        - type
+        - param
+        - orderBy
+
+project_managePriv:
+    method: POST
+    path: project-managePriv
+    params:
+        - projectID
+        - type
+        - param
+        - menu
+        - version
+
+project_team:
+    method: GET
+    path: project-team
+    params:
+        - projectID
+
+project_unlinkMember:
+    method: GET
+    path: project-unlinkMember
+    params:
+        - projectID
+        - userID
+        - confirm
+        - removeExecution
+
+project_manageMembers:
+    method: POST
+    path: project-manageMembers
+    params:
+        - projectID
+        - dept
+        - copyProjectID
+
+project_manageGroupMember:
+    method: POST
+    path: project-manageGroupMember
+    params:
+        - groupID
+        - deptID
+
+project_copyGroup:
+    method: POST
+    path: project-copyGroup
+    params:
+        - groupID
+
+project_editGroup:
+    method: POST
+    path: project-editGroup
+    params:
+        - groupID
+
+project_start:
+    method: POST
+    path: project-start
+    params:
+        - projectID
+
+project_suspend:
+    method: POST
+    path: project-suspend
+    params:
+        - projectID
+
+project_close:
+    method: POST
+    path: project-close
+    params:
+        - projectID
+
+project_activate:
+    method: POST
+    path: project-activate
+    params:
+        - projectID
+
+project_delete:
+    method: GET
+    path: project-delete
+    params:
+        - projectID
+        - from
+
+project_updateOrder:
+    method: POST
+    path: project-updateOrder
+
+project_whitelist:
+    method: GET
+    path: project-whitelist
+    params:
+        - projectID
+        - module
+        - from
+        - objectType
+        - orderby
+        - recTotal
+        - recPerPage
+        - pageID
+
+project_addWhitelist:
+    method: GET
+    path: project-addWhitelist
+    params:
+        - projectID
+        - deptID
+        - copyID
+        - programID
+        - from
+
+project_unbindWhitelist:
+    method: GET
+    path: project-unbindWhitelist
+
+project_manageProducts:
+    method: POST
+    path: project-manageProducts
+    params:
+        - projectID
+        - from
+
+project_ajaxCheckProduct:
+    method: GET
+    path: project-ajaxCheckProduct
+    params:
+        - programID
+        - projectID
+
+projectstory_story:
+    method: GET
+    path: projectstory-story
+    params:
+        - projectID
+        - productID
+        - branch
+        - browseType
+        - param
+        - storyType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectstory_track:
+    method: GET
+    path: projectstory-track
+    params:
+        - productID
+        - browseType
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectstory_view:
+    method: GET
+    path: projectstory-view
+    params:
+        - storyID
+
+projectstory_linkStory:
+    method: GET
+    path: projectstory-linkStory
+    params:
+        - projectID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+projectstory_unlinkStory:
+    method: GET
+    path: projectstory-unlinkStory
+    params:
+        - projectID
+        - storyID
+        - confirm
+
+projectstory_batchUnlinkStory:
+    method: GET
+    path: projectstory-batchUnlinkStory
+    params:
+        - projectID
+        - storyIdList
+
+projectstory_importPlanStories:
+    method: GET
+    path: projectstory-importPlanStories
+    params:
+        - projectID
+        - planID
+        - productID
+

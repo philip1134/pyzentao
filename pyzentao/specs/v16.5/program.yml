@@ -1,0 +1,155 @@
+program_browse:
+    method: GET
+    path: program-browse
+    params:
+        - status
+        - orderBy
+
+program_kanban:
+    method: GET
+    path: program-kanban
+
+program_product:
+    method: GET
+    path: program-product
+    params:
+        - programID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_create:
+    method: POST
+    path: program-create
+    params:
+        - parentProgramID
+        - extra
+
+program_edit:
+    method: POST
+    path: program-edit
+    params:
+        - programID
+
+program_close:
+    method: POST
+    path: program-close
+    params:
+        - programID
+
+program_start:
+    method: POST
+    path: program-start
+    params:
+        - programID
+
+program_activate:
+    method: POST
+    path: program-activate
+    params:
+        - programID
+
+program_suspend:
+    method: POST
+    path: program-suspend
+    params:
+        - programID
+
+program_delete:
+    method: GET
+    path: program-delete
+    params:
+        - programID
+        - confirm
+
+program_project:
+    method: GET
+    path: program-project
+    params:
+        - programID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_stakeholder:
+    method: GET
+    path: program-stakeholder
+    params:
+        - programID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_createStakeholder:
+    method: GET
+    path: program-createStakeholder
+    params:
+        - programID
+
+program_unlinkStakeholder:
+    method: GET
+    path: program-unlinkStakeholder
+    params:
+        - stakeholderID
+        - programID
+        - confirm
+
+program_batchUnlinkStakeholders:
+    method: POST
+    path: program-batchUnlinkStakeholders
+    params:
+        - programID
+        - stakeholderIDList
+        - confirm
+
+program_updateChildUserView:
+    method: GET
+    path: program-updateChildUserView
+    params:
+        - programID
+        - account
+
+program_export:
+    method: POST
+    path: program-export
+    params:
+        - status
+        - orderBy
+
+program_ajaxGetDropMenu:
+    method: GET
+    path: program-ajaxGetDropMenu
+    params:
+        - programID
+        - module
+        - method
+
+program_ajaxGetCopyProjects:
+    method: POST
+    path: program-ajaxGetCopyProjects
+
+program_ajaxGetBudgetLeft:
+    method: GET
+    path: program-ajaxGetBudgetLeft
+    params:
+        - programID
+
+program_updateOrder:
+    method: POST
+    path: program-updateOrder
+
+program_unbindWhitelist:
+    method: GET
+    path: program-unbindWhitelist
+
+program_view:
+    method: GET
+    path: program-view
+    params:
+        - programID
+
