@@ -76,7 +76,7 @@ Usage
 .. code:: text
 
     url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://my.zentao.site/zentao
-    version: 禅道版本号，支持 '15.7', '15' (15.2) 和 '12' (12.5.3)，不同的禅道版本其API格式不同
+    version: 禅道版本号，支持 '16.5', '15.7', '15' (15.2) 和 '12' (12.5.3)，不同的禅道版本其API格式不同
     username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
     password: 登录禅道的帐号密码
     spec:   自定义的API规则，选填
@@ -101,4 +101,4 @@ Usage
 如果API的返回数据中不包含合法的json数据，将会抛出 ``InvalidJSONResponseError`` 的异常，
 一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
 
-作为懒癌晚期患者，功能仅在 ``Linux/Python3.8`` 环境下测试，不打算兼容 ``Python2`` 和 ``Python3.3`` 以前版本 (๑¯ω¯๑)
+作为懒癌晚期患者，功能仅在 ``Linux/Python3.10`` 环境下测试，不打算兼容 ``Python2`` 和 ``Python3.3`` 以前版本 (๑¯ω¯๑)
