@@ -8,7 +8,7 @@
 import os
 import yaml
 import urllib
-from .exceptions import APINameError
+from pyzentao.exceptions import APINameError
 
 
 class API:

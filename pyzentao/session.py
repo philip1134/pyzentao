@@ -7,8 +7,8 @@
 
 import json
 import requests
-from .common import get_json
-from .exceptions import AuthenticationError
+from pyzentao.common import get_json
+from pyzentao.exceptions import AuthenticationError
 
 
 class Session:

@@ -7,7 +7,7 @@
 
 import json
 import requests
-from .exceptions import InvalidJSONResponseError
+from pyzentao.exceptions import InvalidJSONResponseError
 
 
 def get_json(response):

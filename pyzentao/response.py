@@ -6,7 +6,7 @@
 
 
 import json
-from .attribute_dict import AttributeDict
+from pyzentao.attribute_dict import AttributeDict
 
 
 class Response:

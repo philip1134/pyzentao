@@ -8,11 +8,11 @@
 import os
 import yaml
 import requests
-from .attribute_dict import AttributeDict
-from .api import API
-from .session import Session
-from .response import Response
-from .common import get_json
+from pyzentao.attribute_dict import AttributeDict
+from pyzentao.api import API
+from pyzentao.session import Session
+from pyzentao.response import Response
+from pyzentao.common import get_json
 
 
 def make_api_method(api, **kwargs):
