@@ -1,0 +1,317 @@
+personnel_accessible:
+    method: GET
+    path: personnel-accessible
+    params:
+        - programID
+        - deptID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+personnel_invest:
+    method: GET
+    path: personnel-invest
+    params:
+        - programID
+
+personnel_whitelist:
+    method: GET
+    path: personnel-whitelist
+    params:
+        - objectID
+        - module
+        - objectType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+        - programID
+        - from
+
+personnel_addWhitelist:
+    method: POST
+    path: personnel-addWhitelist
+    params:
+        - objectID
+        - deptID
+        - copyID
+        - objectType
+        - module
+        - programID
+        - from
+
+personnel_unbindWhitelist:
+    method: GET
+    path: personnel-unbindWhitelist
+    params:
+        - id
+        - confirm
+
+program_browse:
+    method: GET
+    path: program-browse
+    params:
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+        - param
+
+program_kanban:
+    method: GET
+    path: program-kanban
+
+program_product:
+    method: GET
+    path: program-product
+    params:
+        - programID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_create:
+    method: POST
+    path: program-create
+    params:
+        - parentProgramID
+        - extra
+
+program_edit:
+    method: POST
+    path: program-edit
+    params:
+        - programID
+
+program_close:
+    method: POST
+    path: program-close
+    params:
+        - programID
+
+program_start:
+    method: POST
+    path: program-start
+    params:
+        - programID
+
+program_activate:
+    method: POST
+    path: program-activate
+    params:
+        - programID
+
+program_suspend:
+    method: POST
+    path: program-suspend
+    params:
+        - programID
+
+program_delete:
+    method: GET
+    path: program-delete
+    params:
+        - programID
+        - confirm
+
+program_project:
+    method: GET
+    path: program-project
+    params:
+        - programID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_stakeholder:
+    method: GET
+    path: program-stakeholder
+    params:
+        - programID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+program_createStakeholder:
+    method: GET
+    path: program-createStakeholder
+    params:
+        - programID
+
+program_unlinkStakeholder:
+    method: GET
+    path: program-unlinkStakeholder
+    params:
+        - stakeholderID
+        - programID
+        - confirm
+
+program_batchUnlinkStakeholders:
+    method: POST
+    path: program-batchUnlinkStakeholders
+    params:
+        - programID
+        - stakeholderIDList
+        - confirm
+
+program_updateChildUserView:
+    method: GET
+    path: program-updateChildUserView
+    params:
+        - programID
+        - account
+
+program_export:
+    method: POST
+    path: program-export
+    params:
+        - status
+        - orderBy
+
+program_ajaxGetDropMenu:
+    method: GET
+    path: program-ajaxGetDropMenu
+    params:
+        - programID
+        - module
+        - method
+
+program_ajaxGetCopyProjects:
+    method: POST
+    path: program-ajaxGetCopyProjects
+
+program_updateOrder:
+    method: POST
+    path: program-updateOrder
+
+program_unbindWhitelist:
+    method: GET
+    path: program-unbindWhitelist
+    params:
+        - id
+        - confirm
+
+program_view:
+    method: GET
+    path: program-view
+    params:
+        - programID
+
+stakeholder_browse:
+    method: GET
+    path: stakeholder-browse
+    params:
+        - projectID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+stakeholder_create:
+    method: POST
+    path: stakeholder-create
+    params:
+        - objectID
+
+stakeholder_batchCreate:
+    method: POST
+    path: stakeholder-batchCreate
+    params:
+        - projectID
+        - dept
+        - parentID
+
+stakeholder_edit:
+    method: POST
+    path: stakeholder-edit
+    params:
+        - stakeholderID
+
+stakeholder_ajaxGetMembers:
+    method: GET
+    path: stakeholder-ajaxGetMembers
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetCompanyUser:
+    method: GET
+    path: stakeholder-ajaxGetCompanyUser
+    params:
+        - user
+        - programID
+        - projectID
+
+stakeholder_ajaxGetOutsideUser:
+    method: GET
+    path: stakeholder-ajaxGetOutsideUser
+    params:
+        - objectID
+
+stakeholder_ajaxGetControl:
+    method: GET
+    path: stakeholder-ajaxGetControl
+    params:
+        - activityID
+
+stakeholder_delete:
+    method: GET
+    path: stakeholder-delete
+    params:
+        - userID
+        - confirm
+
+stakeholder_view:
+    method: GET
+    path: stakeholder-view
+    params:
+        - userID
+
+stakeholder_issue:
+    method: GET
+    path: stakeholder-issue
+
+stakeholder_viewIssue:
+    method: GET
+    path: stakeholder-viewIssue
+    params:
+        - activityID
+        - recTotal
+        - recPerPage
+        - pageID
+
+stakeholder_communicate:
+    method: POST
+    path: stakeholder-communicate
+    params:
+        - userID
+
+stakeholder_expect:
+    method: POST
+    path: stakeholder-expect
+    params:
+        - expectID
+
+stakeholder_commonAction:
+    method: GET
+    path: stakeholder-commonAction
+    params:
+        - stakeholderID
+        - object
+
+stakeholder_userIssue:
+    method: GET
+    path: stakeholder-userIssue
+    params:
+        - userID
+

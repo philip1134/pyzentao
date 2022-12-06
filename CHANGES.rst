@@ -4,6 +4,16 @@ pytest Changelog
 Here you can see the full list of changes between each pytest release.
 
 
+Version 0.2.5
+-------------
+
+Released on 2022-12-06
+
+- support v17.6.1
+- remove redudant spec file in v15
+- more usage description in readme
+
+
 Version 0.2.4
 -------------
 

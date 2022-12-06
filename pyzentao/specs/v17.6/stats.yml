@@ -1,0 +1,74 @@
+datatable_ajaxSave:
+    method: POST
+    path: datatable-ajaxSave
+
+datatable_ajaxCustom:
+    method: GET
+    path: datatable-ajaxCustom
+    params:
+        - module
+        - method
+        - extra
+
+datatable_ajaxReset:
+    method: GET
+    path: datatable-ajaxReset
+    params:
+        - module
+        - method
+        - system
+        - confirm
+
+report:
+    method: GET
+    path: report
+
+report_projectDeviation:
+    method: GET
+    path: report-projectDeviation
+    params:
+        - begin
+        - end
+
+report_productSummary:
+    method: GET
+    path: report-productSummary
+    params:
+        - conditions
+
+report_bugCreate:
+    method: GET
+    path: report-bugCreate
+    params:
+        - begin
+        - end
+        - product
+        - execution
+
+report_bugAssign:
+    method: GET
+    path: report-bugAssign
+
+report_workload:
+    method: POST
+    path: report-workload
+    params:
+        - begin
+        - end
+        - days
+        - workday
+        - dept
+        - assign
+
+report_remind:
+    method: GET
+    path: report-remind
+
+report_annualData:
+    method: GET
+    path: report-annualData
+    params:
+        - year
+        - dept
+        - userID
+

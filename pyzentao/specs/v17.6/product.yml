@@ -1,0 +1,1134 @@
+branch_manage:
+    method: GET
+    path: branch-manage
+    params:
+        - productID
+        - browseType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+branch_create:
+    method: POST
+    path: branch-create
+    params:
+        - productID
+
+branch_edit:
+    method: POST
+    path: branch-edit
+    params:
+        - branchID
+        - productID
+
+branch_batchEdit:
+    method: POST
+    path: branch-batchEdit
+    params:
+        - productID
+
+branch_close:
+    method: GET
+    path: branch-close
+    params:
+        - branchID
+        - confirm
+
+branch_activate:
+    method: GET
+    path: branch-activate
+    params:
+        - branchID
+        - confirm
+
+branch_sort:
+    method: GET
+    path: branch-sort
+
+branch_ajaxGetDropMenu:
+    method: GET
+    path: branch-ajaxGetDropMenu
+    params:
+        - productID
+        - branch
+        - module
+        - method
+        - extra
+
+branch_delete:
+    method: GET
+    path: branch-delete
+    params:
+        - branchID
+        - confirm
+
+branch_ajaxGetBranches:
+    method: GET
+    path: branch-ajaxGetBranches
+    params:
+        - productID
+        - oldBranch
+        - param
+        - projectID
+        - withMainBranch
+
+branch_setDefault:
+    method: GET
+    path: branch-setDefault
+    params:
+        - productID
+        - branchID
+        - confirm
+
+branch_mergeBranch:
+    method: POST
+    path: branch-mergeBranch
+    params:
+        - productID
+
+branch_ajaxGetTargetBranches:
+    method: GET
+    path: branch-ajaxGetTargetBranches
+    params:
+        - productID
+        - mergedBranches
+
+design_commonAction:
+    method: GET
+    path: design-commonAction
+    params:
+        - projectID
+        - productID
+        - designID
+
+design_browse:
+    method: GET
+    path: design-browse
+    params:
+        - projectID
+        - productID
+        - type
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_create:
+    method: POST
+    path: design-create
+    params:
+        - projectID
+        - productID
+        - type
+
+design_batchCreate:
+    method: POST
+    path: design-batchCreate
+    params:
+        - projectID
+        - productID
+        - type
+
+design_view:
+    method: GET
+    path: design-view
+    params:
+        - designID
+
+design_edit:
+    method: POST
+    path: design-edit
+    params:
+        - designID
+
+design_linkCommit:
+    method: POST
+    path: design-linkCommit
+    params:
+        - designID
+        - repoID
+        - begin
+        - end
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_unlinkCommit:
+    method: GET
+    path: design-unlinkCommit
+    params:
+        - designID
+        - commitID
+        - confirm
+
+design_viewCommit:
+    method: GET
+    path: design-viewCommit
+    params:
+        - designID
+        - recTotal
+        - recPerPage
+        - pageID
+
+design_revision:
+    method: GET
+    path: design-revision
+    params:
+        - repoID
+        - projectID
+
+design_ajaxGetDropMenu:
+    method: GET
+    path: design-ajaxGetDropMenu
+    params:
+        - projectID
+        - productID
+
+design_delete:
+    method: GET
+    path: design-delete
+    params:
+        - designID
+        - confirm
+
+design_assignTo:
+    method: POST
+    path: design-assignTo
+    params:
+        - designID
+
+product_index:
+    method: GET
+    path: product-index
+    params:
+        - locate
+        - productID
+        - status
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+product_project:
+    method: GET
+    path: product-project
+    params:
+        - status
+        - productID
+        - branch
+        - involved
+        - orderBy
+
+product_browse:
+    method: GET
+    path: product-browse
+    params:
+        - productID
+        - branch
+        - browseType
+        - param
+        - storyType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+        - projectID
+
+product_create:
+    method: POST
+    path: product-create
+    params:
+        - programID
+        - extra
+
+product_edit:
+    method: POST
+    path: product-edit
+    params:
+        - productID
+        - action
+        - extra
+        - programID
+
+product_batchEdit:
+    method: POST
+    path: product-batchEdit
+    params:
+        - programID
+
+product_close:
+    method: POST
+    path: product-close
+    params:
+        - productID
+
+product_view:
+    method: GET
+    path: product-view
+    params:
+        - productID
+
+product_delete:
+    method: GET
+    path: product-delete
+    params:
+        - productID
+        - confirm
+
+product_roadmap:
+    method: GET
+    path: product-roadmap
+    params:
+        - productID
+        - branch
+
+product_dynamic:
+    method: GET
+    path: product-dynamic
+    params:
+        - productID
+        - type
+        - param
+        - recTotal
+        - date
+        - direction
+
+product_dashboard:
+    method: GET
+    path: product-dashboard
+    params:
+        - productID
+
+product_ajaxGetProducts:
+    method: GET
+    path: product-ajaxGetProducts
+    params:
+        - executionID
+
+product_ajaxGetProjects:
+    method: GET
+    path: product-ajaxGetProjects
+    params:
+        - productID
+        - branch
+        - projectID
+
+product_ajaxGetProjectsByBranch:
+    method: GET
+    path: product-ajaxGetProjectsByBranch
+    params:
+        - productID
+        - branch
+        - number
+
+product_ajaxGetExecutions:
+    method: GET
+    path: product-ajaxGetExecutions
+    params:
+        - productID
+        - projectID
+        - branch
+        - number
+        - executionID
+        - from
+
+product_ajaxGetExecutionsByProject:
+    method: GET
+    path: product-ajaxGetExecutionsByProject
+    params:
+        - productID
+        - projectID
+        - branch
+        - number
+
+product_ajaxGetPlans:
+    method: GET
+    path: product-ajaxGetPlans
+    params:
+        - productID
+        - branch
+        - planID
+        - fieldID
+        - needCreate
+        - expired
+        - param
+
+product_ajaxGetLine:
+    method: GET
+    path: product-ajaxGetLine
+    params:
+        - programID
+        - productID
+
+product_ajaxGetReviewers:
+    method: GET
+    path: product-ajaxGetReviewers
+    params:
+        - productID
+        - storyID
+
+product_ajaxGetDropMenu:
+    method: GET
+    path: product-ajaxGetDropMenu
+    params:
+        - productID
+        - module
+        - method
+        - extra
+        - from
+
+product_updateOrder:
+    method: POST
+    path: product-updateOrder
+
+product_showErrorNone:
+    method: GET
+    path: product-showErrorNone
+    params:
+        - moduleName
+        - activeMenu
+        - objectID
+
+product_all:
+    method: GET
+    path: product-all
+    params:
+        - browseType
+        - orderBy
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+product_kanban:
+    method: GET
+    path: product-kanban
+
+product_manageLine:
+    method: POST
+    path: product-manageLine
+
+product_whitelist:
+    method: GET
+    path: product-whitelist
+    params:
+        - productID
+        - module
+        - objectType
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+product_addWhitelist:
+    method: GET
+    path: product-addWhitelist
+    params:
+        - productID
+        - deptID
+        - copyID
+
+product_unbindWhitelist:
+    method: GET
+    path: product-unbindWhitelist
+    params:
+        - id
+        - confirm
+
+product_export:
+    method: POST
+    path: product-export
+    params:
+        - status
+        - orderBy
+
+product_build:
+    method: GET
+    path: product-build
+    params:
+        - productID
+        - branch
+
+product_ajaxSetState:
+    method: GET
+    path: product-ajaxSetState
+    params:
+        - productID
+
+product_track:
+    method: GET
+    path: product-track
+    params:
+        - productID
+        - branch
+        - projectID
+        - recTotal
+        - recPerPage
+        - pageID
+
+productplan_commonAction:
+    method: GET
+    path: productplan-commonAction
+    params:
+        - productID
+        - branch
+
+productplan_create:
+    method: POST
+    path: productplan-create
+    params:
+        - productID
+        - branchID
+        - parent
+
+productplan_edit:
+    method: POST
+    path: productplan-edit
+    params:
+        - planID
+
+productplan_batchEdit:
+    method: POST
+    path: productplan-batchEdit
+    params:
+        - productID
+        - branch
+
+productplan_batchChangeStatus:
+    method: POST
+    path: productplan-batchChangeStatus
+    params:
+        - status
+        - productID
+
+productplan_delete:
+    method: GET
+    path: productplan-delete
+    params:
+        - planID
+        - confirm
+
+productplan_browse:
+    method: GET
+    path: productplan-browse
+    params:
+        - productID
+        - branch
+        - browseType
+        - queryID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+productplan_view:
+    method: GET
+    path: productplan-view
+    params:
+        - planID
+        - type
+        - orderBy
+        - link
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+productplan_start:
+    method: GET
+    path: productplan-start
+    params:
+        - planID
+        - confirm
+
+productplan_finish:
+    method: GET
+    path: productplan-finish
+    params:
+        - planID
+        - confirm
+
+productplan_close:
+    method: POST
+    path: productplan-close
+    params:
+        - planID
+
+productplan_activate:
+    method: GET
+    path: productplan-activate
+    params:
+        - planID
+        - confirm
+
+productplan_ajaxGetProductplans:
+    method: GET
+    path: productplan-ajaxGetProductplans
+    params:
+        - productID
+        - branch
+        - number
+        - expired
+
+productplan_ajaxStorySort:
+    method: POST
+    path: productplan-ajaxStorySort
+    params:
+        - planID
+
+productplan_ajaxGetProjects:
+    method: GET
+    path: productplan-ajaxGetProjects
+    params:
+        - productID
+        - branch
+
+productplan_linkStory:
+    method: POST
+    path: productplan-linkStory
+    params:
+        - planID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+productplan_unlinkStory:
+    method: GET
+    path: productplan-unlinkStory
+    params:
+        - storyID
+        - planID
+        - confirm
+
+productplan_batchUnlinkStory:
+    method: POST
+    path: productplan-batchUnlinkStory
+    params:
+        - planID
+        - orderBy
+
+productplan_linkBug:
+    method: POST
+    path: productplan-linkBug
+    params:
+        - planID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+productplan_unlinkBug:
+    method: GET
+    path: productplan-unlinkBug
+    params:
+        - bugID
+        - planID
+        - confirm
+
+productplan_batchUnlinkBug:
+    method: POST
+    path: productplan-batchUnlinkBug
+    params:
+        - planID
+        - orderBy
+
+productplan_syncStory:
+    method: GET
+    path: productplan-syncStory
+    params:
+        - changes
+
+productplan_ajaxGetConflictStory:
+    method: GET
+    path: productplan-ajaxGetConflictStory
+    params:
+        - planID
+        - newBranch
+
+productplan_ajaxGetLast:
+    method: GET
+    path: productplan-ajaxGetLast
+    params:
+        - productID
+        - branch
+        - parent
+
+productplan_ajaxGetTopPlan:
+    method: GET
+    path: productplan-ajaxGetTopPlan
+    params:
+        - productID
+        - branch
+
+release_commonAction:
+    method: GET
+    path: release-commonAction
+    params:
+        - productID
+        - branch
+
+release_browse:
+    method: GET
+    path: release-browse
+    params:
+        - productID
+        - branch
+        - type
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+release_create:
+    method: POST
+    path: release-create
+    params:
+        - productID
+        - branch
+
+release_edit:
+    method: POST
+    path: release-edit
+    params:
+        - releaseID
+
+release_view:
+    method: GET
+    path: release-view
+    params:
+        - releaseID
+        - type
+        - link
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+release_notify:
+    method: POST
+    path: release-notify
+    params:
+        - releaseID
+
+release_delete:
+    method: GET
+    path: release-delete
+    params:
+        - releaseID
+        - confirm
+
+release_export:
+    method: POST
+    path: release-export
+
+release_linkStory:
+    method: POST
+    path: release-linkStory
+    params:
+        - releaseID
+        - browseType
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+release_unlinkStory:
+    method: GET
+    path: release-unlinkStory
+    params:
+        - releaseID
+        - storyID
+
+release_batchUnlinkStory:
+    method: GET
+    path: release-batchUnlinkStory
+    params:
+        - releaseID
+
+release_linkBug:
+    method: POST
+    path: release-linkBug
+    params:
+        - releaseID
+        - browseType
+        - param
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+release_unlinkBug:
+    method: GET
+    path: release-unlinkBug
+    params:
+        - releaseID
+        - bugID
+        - type
+
+release_batchUnlinkBug:
+    method: GET
+    path: release-batchUnlinkBug
+    params:
+        - releaseID
+        - type
+
+release_changeStatus:
+    method: GET
+    path: release-changeStatus
+    params:
+        - releaseID
+        - status
+
+story_create:
+    method: POST
+    path: story-create
+    params:
+        - productID
+        - branch
+        - moduleID
+        - storyID
+        - objectID
+        - bugID
+        - planID
+        - todoID
+        - extra
+        - storyType
+
+story_batchCreate:
+    method: POST
+    path: story-batchCreate
+    params:
+        - productID
+        - branch
+        - moduleID
+        - storyID
+        - executionID
+        - plan
+        - storyType
+        - extra
+
+story_commonAction:
+    method: GET
+    path: story-commonAction
+    params:
+        - storyID
+
+story_edit:
+    method: POST
+    path: story-edit
+    params:
+        - storyID
+        - kanbanGroup
+        - storyType
+
+story_batchEdit:
+    method: POST
+    path: story-batchEdit
+    params:
+        - productID
+        - executionID
+        - branch
+        - storyType
+        - from
+
+story_change:
+    method: POST
+    path: story-change
+    params:
+        - storyID
+        - from
+        - storyType
+
+story_activate:
+    method: POST
+    path: story-activate
+    params:
+        - storyID
+        - storyType
+
+story_view:
+    method: GET
+    path: story-view
+    params:
+        - storyID
+        - version
+        - param
+        - storyType
+
+story_delete:
+    method: GET
+    path: story-delete
+    params:
+        - storyID
+        - confirm
+        - from
+        - storyType
+
+story_review:
+    method: POST
+    path: story-review
+    params:
+        - storyID
+        - from
+        - storyType
+
+story_batchReview:
+    method: POST
+    path: story-batchReview
+    params:
+        - result
+        - reason
+        - storyType
+
+story_recall:
+    method: GET
+    path: story-recall
+    params:
+        - storyID
+        - from
+        - confirm
+        - storyType
+
+story_submitReview:
+    method: POST
+    path: story-submitReview
+    params:
+        - storyID
+        - storyType
+
+story_close:
+    method: POST
+    path: story-close
+    params:
+        - storyID
+        - from
+        - storyType
+
+story_batchClose:
+    method: POST
+    path: story-batchClose
+    params:
+        - productID
+        - executionID
+        - storyType
+        - from
+
+story_batchChangeModule:
+    method: POST
+    path: story-batchChangeModule
+    params:
+        - moduleID
+        - storyType
+
+story_batchToTask:
+    method: POST
+    path: story-batchToTask
+    params:
+        - executionID
+        - projectID
+
+story_batchChangePlan:
+    method: POST
+    path: story-batchChangePlan
+    params:
+        - planID
+        - oldPlanID
+
+story_batchChangeBranch:
+    method: POST
+    path: story-batchChangeBranch
+    params:
+        - branchID
+        - confirm
+        - storyIdList
+        - storyType
+
+story_batchChangeStage:
+    method: POST
+    path: story-batchChangeStage
+    params:
+        - stage
+
+story_assignTo:
+    method: POST
+    path: story-assignTo
+    params:
+        - storyID
+        - kanbanGroup
+        - from
+        - storyType
+
+story_batchAssignTo:
+    method: POST
+    path: story-batchAssignTo
+    params:
+        - storyType
+
+story_tasks:
+    method: GET
+    path: story-tasks
+    params:
+        - storyID
+        - executionID
+
+story_bugs:
+    method: GET
+    path: story-bugs
+    params:
+        - storyID
+        - executionID
+
+story_cases:
+    method: GET
+    path: story-cases
+    params:
+        - storyID
+
+story_linkStory:
+    method: POST
+    path: story-linkStory
+    params:
+        - storyID
+        - type
+        - linkedStoryID
+        - browseType
+        - queryID
+        - storyType
+
+story_linkStories:
+    method: GET
+    path: story-linkStories
+    params:
+        - storyID
+        - browseType
+        - excludeStories
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+story_linkRequirements:
+    method: GET
+    path: story-linkRequirements
+    params:
+        - storyID
+        - browseType
+        - excludeStories
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+story_processStoryChange:
+    method: GET
+    path: story-processStoryChange
+    params:
+        - storyID
+        - result
+
+story_ajaxGetExecutionStories:
+    method: GET
+    path: story-ajaxGetExecutionStories
+    params:
+        - executionID
+        - productID
+        - branch
+        - moduleID
+        - storyID
+        - number
+        - type
+        - status
+        - from
+
+story_ajaxGetProductStories:
+    method: GET
+    path: story-ajaxGetProductStories
+    params:
+        - productID
+        - branch
+        - moduleID
+        - storyID
+        - onlyOption
+        - status
+        - limit
+        - type
+        - hasParent
+        - executionID
+        - number
+
+story_ajaxSearchProductStories:
+    method: GET
+    path: story-ajaxSearchProductStories
+    params:
+        - key
+        - productID
+        - branch
+        - moduleID
+        - storyID
+        - status
+        - limit
+
+story_ajaxGetDetail:
+    method: GET
+    path: story-ajaxGetDetail
+    params:
+        - storyID
+
+story_ajaxGetInfo:
+    method: GET
+    path: story-ajaxGetInfo
+    params:
+        - storyID
+
+story_report:
+    method: POST
+    path: story-report
+    params:
+        - productID
+        - branchID
+        - storyType
+        - browseType
+        - moduleID
+        - chartType
+
+story_export:
+    method: POST
+    path: story-export
+    params:
+        - productID
+        - orderBy
+        - executionID
+        - browseType
+        - storyType
+
+story_ajaxGetUserStories:
+    method: GET
+    path: story-ajaxGetUserStories
+    params:
+        - userID
+        - id
+        - appendID
+
+story_ajaxGetStatus:
+    method: GET
+    path: story-ajaxGetStatus
+    params:
+        - method
+        - params
+
+story_ajaxGetAssignedTo:
+    method: GET
+    path: story-ajaxGetAssignedTo
+    params:
+        - type
+        - storyID
+        - assignees
+

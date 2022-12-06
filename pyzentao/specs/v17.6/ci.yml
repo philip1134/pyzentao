@@ -1,0 +1,958 @@
+ci_initQueue:
+    method: GET
+    path: ci-initQueue
+
+ci_exec:
+    method: GET
+    path: ci-exec
+
+ci_checkCompileStatus:
+    method: GET
+    path: ci-checkCompileStatus
+    params:
+        - compileID
+
+ci_commitResult:
+    method: GET
+    path: ci-commitResult
+
+compile_browse:
+    method: GET
+    path: compile-browse
+    params:
+        - repoID
+        - jobID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+compile_logs:
+    method: GET
+    path: compile-logs
+    params:
+        - buildID
+
+compile_syncCompile:
+    method: GET
+    path: compile-syncCompile
+
+git_run:
+    method: GET
+    path: git-run
+
+git_diff:
+    method: GET
+    path: git-diff
+    params:
+        - path
+        - revision
+
+git_cat:
+    method: GET
+    path: git-cat
+    params:
+        - path
+        - revision
+
+git_apiSync:
+    method: POST
+    path: git-apiSync
+
+git_ajaxSaveLog:
+    method: POST
+    path: git-ajaxSaveLog
+
+git_ajaxGetRepos:
+    method: GET
+    path: git-ajaxGetRepos
+
+gitlab_browse:
+    method: GET
+    path: gitlab-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_create:
+    method: POST
+    path: gitlab-create
+
+gitlab_view:
+    method: GET
+    path: gitlab-view
+    params:
+        - id
+
+gitlab_edit:
+    method: POST
+    path: gitlab-edit
+    params:
+        - id
+
+gitlab_bindUser:
+    method: POST
+    path: gitlab-bindUser
+    params:
+        - gitlabID
+
+gitlab_bindProduct:
+    method: GET
+    path: gitlab-bindProduct
+    params:
+        - gitlabID
+
+gitlab_delete:
+    method: GET
+    path: gitlab-delete
+    params:
+        - id
+        - confirm
+
+gitlab_checkToken:
+    method: POST
+    path: gitlab-checkToken
+
+gitlab_webhook:
+    method: GET
+    path: gitlab-webhook
+
+gitlab_browseGroup:
+    method: POST
+    path: gitlab-browseGroup
+    params:
+        - gitlabID
+        - orderBy
+
+gitlab_createGroup:
+    method: POST
+    path: gitlab-createGroup
+    params:
+        - gitlabID
+
+gitlab_editGroup:
+    method: POST
+    path: gitlab-editGroup
+    params:
+        - gitlabID
+        - groupID
+
+gitlab_deleteGroup:
+    method: GET
+    path: gitlab-deleteGroup
+    params:
+        - gitlabID
+        - groupID
+        - confirm
+
+gitlab_manageGroupMembers:
+    method: POST
+    path: gitlab-manageGroupMembers
+    params:
+        - gitlabID
+        - groupID
+
+gitlab_browseUser:
+    method: POST
+    path: gitlab-browseUser
+    params:
+        - gitlabID
+        - orderBy
+
+gitlab_createUser:
+    method: POST
+    path: gitlab-createUser
+    params:
+        - gitlabID
+
+gitlab_editUser:
+    method: POST
+    path: gitlab-editUser
+    params:
+        - gitlabID
+        - userID
+
+gitlab_deleteUser:
+    method: GET
+    path: gitlab-deleteUser
+    params:
+        - gitlabID
+        - userID
+        - confirm
+
+gitlab_browseProject:
+    method: POST
+    path: gitlab-browseProject
+    params:
+        - gitlabID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createProject:
+    method: POST
+    path: gitlab-createProject
+    params:
+        - gitlabID
+
+gitlab_editProject:
+    method: POST
+    path: gitlab-editProject
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_deleteProject:
+    method: GET
+    path: gitlab-deleteProject
+    params:
+        - gitlabID
+        - projectID
+        - confirm
+
+gitlab_browseBranch:
+    method: GET
+    path: gitlab-browseBranch
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_createBranch:
+    method: POST
+    path: gitlab-createBranch
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_browseTag:
+    method: POST
+    path: gitlab-browseTag
+    params:
+        - gitlabID
+        - projectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitlab_importIssue:
+    method: POST
+    path: gitlab-importIssue
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_createWebhook:
+    method: GET
+    path: gitlab-createWebhook
+    params:
+        - repoID
+        - confirm
+
+gitlab_manageProjectMembers:
+    method: POST
+    path: gitlab-manageProjectMembers
+    params:
+        - repoID
+
+gitlab_ajaxGetExecutionsByProduct:
+    method: GET
+    path: gitlab-ajaxGetExecutionsByProduct
+    params:
+        - productID
+
+gitlab_ajaxGetProjectBranches:
+    method: GET
+    path: gitlab-ajaxGetProjectBranches
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_ajaxGetMRUserPairs:
+    method: GET
+    path: gitlab-ajaxGetMRUserPairs
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_createTag:
+    method: POST
+    path: gitlab-createTag
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_deleteTag:
+    method: GET
+    path: gitlab-deleteTag
+    params:
+        - gitlabID
+        - projectID
+        - tagName
+        - confirm
+
+gitlab_manageBranchPriv:
+    method: POST
+    path: gitlab-manageBranchPriv
+    params:
+        - gitlabID
+        - projectID
+
+gitlab_manageTagPriv:
+    method: POST
+    path: gitlab-manageTagPriv
+    params:
+        - gitlabID
+        - projectID
+
+jenkins_browse:
+    method: GET
+    path: jenkins-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+jenkins_create:
+    method: POST
+    path: jenkins-create
+
+jenkins_edit:
+    method: POST
+    path: jenkins-edit
+    params:
+        - id
+
+jenkins_delete:
+    method: GET
+    path: jenkins-delete
+    params:
+        - id
+        - confim
+
+jenkins_ajaxGetJenkinsTasks:
+    method: GET
+    path: jenkins-ajaxGetJenkinsTasks
+    params:
+        - id
+
+job_browse:
+    method: GET
+    path: job-browse
+    params:
+        - repoID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+job_create:
+    method: POST
+    path: job-create
+
+job_edit:
+    method: POST
+    path: job-edit
+    params:
+        - jobID
+
+job_delete:
+    method: GET
+    path: job-delete
+    params:
+        - jobID
+        - confirm
+
+job_view:
+    method: GET
+    path: job-view
+    params:
+        - jobID
+        - compileID
+
+job_exec:
+    method: GET
+    path: job-exec
+    params:
+        - jobID
+
+job_ajaxGetProductByRepo:
+    method: GET
+    path: job-ajaxGetProductByRepo
+    params:
+        - repoID
+
+job_ajaxGetRefList:
+    method: GET
+    path: job-ajaxGetRefList
+    params:
+        - repoID
+
+job_ajaxGetRepoList:
+    method: GET
+    path: job-ajaxGetRepoList
+    params:
+        - engine
+
+job_ajaxGetRepoType:
+    method: GET
+    path: job-ajaxGetRepoType
+    params:
+        - repoID
+
+job_ajaxCheckSonarqubeLink:
+    method: GET
+    path: job-ajaxCheckSonarqubeLink
+    params:
+        - repoID
+        - jobID
+
+mr_browse:
+    method: GET
+    path: mr-browse
+    params:
+        - repoID
+        - mode
+        - param
+        - objectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_create:
+    method: POST
+    path: mr-create
+
+mr_edit:
+    method: POST
+    path: mr-edit
+    params:
+        - MRID
+
+mr_delete:
+    method: GET
+    path: mr-delete
+    params:
+        - MRID
+        - confirm
+
+mr_view:
+    method: GET
+    path: mr-view
+    params:
+        - MRID
+
+mr_syncMR:
+    method: GET
+    path: mr-syncMR
+
+mr_accept:
+    method: GET
+    path: mr-accept
+    params:
+        - MRID
+
+mr_diff:
+    method: POST
+    path: mr-diff
+    params:
+        - MRID
+        - encoding
+
+mr_approval:
+    method: POST
+    path: mr-approval
+    params:
+        - MRID
+        - action
+
+mr_close:
+    method: GET
+    path: mr-close
+    params:
+        - MRID
+
+mr_reopen:
+    method: GET
+    path: mr-reopen
+    params:
+        - MRID
+
+mr_link:
+    method: GET
+    path: mr-link
+    params:
+        - MRID
+        - type
+        - orderBy
+        - link
+        - param
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkStory:
+    method: POST
+    path: mr-linkStory
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkBug:
+    method: POST
+    path: mr-linkBug
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_linkTask:
+    method: POST
+    path: mr-linkTask
+    params:
+        - MRID
+        - productID
+        - browseType
+        - param
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mr_unlink:
+    method: GET
+    path: mr-unlink
+    params:
+        - MRID
+        - productID
+        - type
+        - linkID
+        - confirm
+
+mr_addReview:
+    method: POST
+    path: mr-addReview
+    params:
+        - repoID
+        - mr
+        - v1
+        - v2
+
+mr_ajaxGetMRTargetProjects:
+    method: GET
+    path: mr-ajaxGetMRTargetProjects
+    params:
+        - hostID
+        - projectID
+        - scm
+
+mr_ajaxGetRepoList:
+    method: GET
+    path: mr-ajaxGetRepoList
+    params:
+        - hostID
+        - projectID
+
+mr_ajaxGetJobList:
+    method: GET
+    path: mr-ajaxGetJobList
+    params:
+        - repoID
+
+mr_ajaxGetCompileList:
+    method: GET
+    path: mr-ajaxGetCompileList
+    params:
+        - jobID
+
+mr_ajaxCheckSameOpened:
+    method: POST
+    path: mr-ajaxCheckSameOpened
+    params:
+        - hostID
+
+mr_ajaxGetBranchPivs:
+    method: GET
+    path: mr-ajaxGetBranchPivs
+    params:
+        - hostID
+        - project
+
+repo_commonAction:
+    method: GET
+    path: repo-commonAction
+    params:
+        - repoID
+        - objectID
+
+repo_maintain:
+    method: GET
+    path: repo-maintain
+    params:
+        - objectID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_create:
+    method: POST
+    path: repo-create
+    params:
+        - objectID
+
+repo_edit:
+    method: POST
+    path: repo-edit
+    params:
+        - repoID
+        - objectID
+
+repo_delete:
+    method: GET
+    path: repo-delete
+    params:
+        - repoID
+        - objectID
+        - confirm
+
+repo_view:
+    method: POST
+    path: repo-view
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - showBug
+        - encoding
+
+repo_browse:
+    method: POST
+    path: repo-browse
+    params:
+        - repoID
+        - branchID
+        - objectID
+        - path
+        - revision
+        - refresh
+        - branchOrTag
+
+repo_log:
+    method: POST
+    path: repo-log
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_revision:
+    method: GET
+    path: repo-revision
+    params:
+        - repoID
+        - objectID
+        - revision
+        - root
+        - type
+
+repo_blame:
+    method: GET
+    path: repo-blame
+    params:
+        - repoID
+        - objectID
+        - entry
+        - revision
+        - encoding
+
+repo_diff:
+    method: POST
+    path: repo-diff
+    params:
+        - repoID
+        - objectID
+        - entry
+        - oldRevision
+        - newRevision
+        - showBug
+        - encoding
+        - isBranchOrTag
+
+repo_download:
+    method: GET
+    path: repo-download
+    params:
+        - repoID
+        - path
+        - fromRevision
+        - toRevision
+        - type
+        - isBranchOrTag
+
+repo_setRules:
+    method: POST
+    path: repo-setRules
+    params:
+        - module
+
+repo_showSyncCommit:
+    method: GET
+    path: repo-showSyncCommit
+    params:
+        - repoID
+        - objectID
+        - branch
+
+repo_ajaxSyncCommit:
+    method: GET
+    path: repo-ajaxSyncCommit
+    params:
+        - repoID
+        - type
+
+repo_ajaxSyncBranchCommit:
+    method: GET
+    path: repo-ajaxSyncBranchCommit
+    params:
+        - repoID
+        - branch
+
+repo_ajaxSideCommits:
+    method: GET
+    path: repo-ajaxSideCommits
+    params:
+        - repoID
+        - path
+        - objectID
+        - type
+        - recTotal
+        - recPerPage
+        - pageID
+
+repo_ajaxGetSVNDirs:
+    method: GET
+    path: repo-ajaxGetSVNDirs
+    params:
+        - repoID
+        - path
+
+repo_ajaxGetDropMenu:
+    method: GET
+    path: repo-ajaxGetDropMenu
+    params:
+        - repoID
+        - module
+        - method
+
+repo_ajaxGetHosts:
+    method: GET
+    path: repo-ajaxGetHosts
+    params:
+        - scm
+
+repo_ajaxGetProjects:
+    method: GET
+    path: repo-ajaxGetProjects
+    params:
+        - serverID
+
+repo_ajaxGetGiteaProjects:
+    method: GET
+    path: repo-ajaxGetGiteaProjects
+    params:
+        - giteaID
+
+repo_ajaxGetGogsProjects:
+    method: GET
+    path: repo-ajaxGetGogsProjects
+    params:
+        - gogsID
+
+repo_ajaxGetGitlabProjects:
+    method: GET
+    path: repo-ajaxGetGitlabProjects
+    params:
+        - gitlabID
+        - projectIdList
+        - filter
+
+repo_ajaxGetBranchDropMenu:
+    method: GET
+    path: repo-ajaxGetBranchDropMenu
+    params:
+        - repoID
+        - branchID
+        - objectID
+
+repo_ajaxLoadProducts:
+    method: GET
+    path: repo-ajaxLoadProducts
+    params:
+        - repoID
+
+repo_apiGetRepoByUrl:
+    method: POST
+    path: repo-apiGetRepoByUrl
+
+repo_ajaxGetRules:
+    method: GET
+    path: repo-ajaxGetRules
+
+repo_ajaxGetExecutions:
+    method: GET
+    path: repo-ajaxGetExecutions
+    params:
+        - productID
+        - branch
+
+repo_downloadCode:
+    method: GET
+    path: repo-downloadCode
+    params:
+        - repoID
+        - branch
+
+sonarqube_browse:
+    method: GET
+    path: sonarqube-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+sonarqube_reportView:
+    method: GET
+    path: sonarqube-reportView
+    params:
+        - jobID
+
+sonarqube_ajaxGetProjectList:
+    method: GET
+    path: sonarqube-ajaxGetProjectList
+    params:
+        - sonarqubeID
+        - projectKey
+
+sonarqube_create:
+    method: POST
+    path: sonarqube-create
+
+sonarqube_checkToken:
+    method: POST
+    path: sonarqube-checkToken
+    params:
+        - sonarqubeID
+
+sonarqube_edit:
+    method: POST
+    path: sonarqube-edit
+    params:
+        - sonarqubeID
+
+sonarqube_delete:
+    method: GET
+    path: sonarqube-delete
+    params:
+        - sonarqubeID
+        - confirm
+
+sonarqube_execJob:
+    method: GET
+    path: sonarqube-execJob
+    params:
+        - jobID
+
+sonarqube_browseProject:
+    method: POST
+    path: sonarqube-browseProject
+    params:
+        - sonarqubeID
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+sonarqube_createProject:
+    method: POST
+    path: sonarqube-createProject
+    params:
+        - sonarqubeID
+
+sonarqube_deleteProject:
+    method: GET
+    path: sonarqube-deleteProject
+    params:
+        - sonarqubeID
+        - projectKey
+        - confirm
+
+sonarqube_browseIssue:
+    method: POST
+    path: sonarqube-browseIssue
+    params:
+        - sonarqubeID
+        - projectKey
+        - search
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+svn_run:
+    method: GET
+    path: svn-run
+
+svn_diff:
+    method: GET
+    path: svn-diff
+    params:
+        - url
+        - revision
+
+svn_cat:
+    method: GET
+    path: svn-cat
+    params:
+        - url
+        - revision
+
+svn_apiSync:
+    method: POST
+    path: svn-apiSync
+
+svn_ajaxSaveLog:
+    method: POST
+    path: svn-ajaxSaveLog
+
+svn_ajaxGetRepos:
+    method: GET
+    path: svn-ajaxGetRepos
+

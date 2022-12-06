@@ -1,0 +1,146 @@
+mail:
+    method: GET
+    path: mail
+
+mail_detect:
+    method: POST
+    path: mail-detect
+
+mail_edit:
+    method: GET
+    path: mail-edit
+
+mail_save:
+    method: POST
+    path: mail-save
+
+mail_sendCloud:
+    method: POST
+    path: mail-sendCloud
+
+mail_test:
+    method: POST
+    path: mail-test
+
+mail_reset:
+    method: GET
+    path: mail-reset
+
+mail_asyncSend:
+    method: GET
+    path: mail-asyncSend
+
+mail_resend:
+    method: GET
+    path: mail-resend
+    params:
+        - queueID
+
+mail_browse:
+    method: GET
+    path: mail-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+mail_delete:
+    method: GET
+    path: mail-delete
+    params:
+        - id
+        - confirm
+
+mail_batchDelete:
+    method: POST
+    path: mail-batchDelete
+    params:
+        - confirm
+
+mail_sendcloudUser:
+    method: POST
+    path: mail-sendcloudUser
+
+mail_ztCloud:
+    method: POST
+    path: mail-ztCloud
+
+message:
+    method: GET
+    path: message
+
+message_browser:
+    method: POST
+    path: message-browser
+
+message_setting:
+    method: POST
+    path: message-setting
+
+message_ajaxGetMessage:
+    method: GET
+    path: message-ajaxGetMessage
+    params:
+        - windowBlur
+
+webhook_browse:
+    method: GET
+    path: webhook-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+webhook_create:
+    method: POST
+    path: webhook-create
+
+webhook_edit:
+    method: POST
+    path: webhook-edit
+    params:
+        - id
+
+webhook_delete:
+    method: GET
+    path: webhook-delete
+    params:
+        - id
+
+webhook_log:
+    method: GET
+    path: webhook-log
+    params:
+        - id
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+webhook_bind:
+    method: POST
+    path: webhook-bind
+    params:
+        - id
+        - recTotal
+        - recPerPage
+        - pageID
+
+webhook_chooseDept:
+    method: GET
+    path: webhook-chooseDept
+    params:
+        - id
+
+webhook_ajaxGetFeishuDeptList:
+    method: POST
+    path: webhook-ajaxGetFeishuDeptList
+    params:
+        - webhookID
+
+webhook_asyncSend:
+    method: GET
+    path: webhook-asyncSend
+

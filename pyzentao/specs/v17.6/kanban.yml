@@ -1,0 +1,476 @@
+kanban_space:
+    method: GET
+    path: kanban-space
+    params:
+        - browseType
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_createSpace:
+    method: POST
+    path: kanban-createSpace
+    params:
+        - type
+
+kanban_editSpace:
+    method: POST
+    path: kanban-editSpace
+    params:
+        - spaceID
+        - type
+
+kanban_activateSpace:
+    method: POST
+    path: kanban-activateSpace
+    params:
+        - spaceID
+
+kanban_closeSpace:
+    method: POST
+    path: kanban-closeSpace
+    params:
+        - spaceID
+
+kanban_deleteSpace:
+    method: GET
+    path: kanban-deleteSpace
+    params:
+        - spaceID
+        - confirm
+
+kanban_create:
+    method: POST
+    path: kanban-create
+    params:
+        - spaceID
+        - type
+        - copyKanbanID
+        - extra
+
+kanban_edit:
+    method: POST
+    path: kanban-edit
+    params:
+        - kanbanID
+
+kanban_setting:
+    method: POST
+    path: kanban-setting
+    params:
+        - kanbanID
+
+kanban_activate:
+    method: POST
+    path: kanban-activate
+    params:
+        - kanbanID
+
+kanban_close:
+    method: POST
+    path: kanban-close
+    params:
+        - kanbanID
+
+kanban_view:
+    method: GET
+    path: kanban-view
+    params:
+        - kanbanID
+
+kanban_delete:
+    method: GET
+    path: kanban-delete
+    params:
+        - kanbanID
+        - confirm
+        - browseType
+
+kanban_createRegion:
+    method: POST
+    path: kanban-createRegion
+    params:
+        - kanbanID
+        - from
+
+kanban_editRegion:
+    method: POST
+    path: kanban-editRegion
+    params:
+        - regionID
+
+kanban_sortRegion:
+    method: GET
+    path: kanban-sortRegion
+    params:
+        - regions
+
+kanban_sortGroup:
+    method: GET
+    path: kanban-sortGroup
+    params:
+        - region
+        - groups
+
+kanban_deleteRegion:
+    method: GET
+    path: kanban-deleteRegion
+    params:
+        - regionID
+        - confirm
+
+kanban_createLane:
+    method: POST
+    path: kanban-createLane
+    params:
+        - kanbanID
+        - regionID
+        - from
+
+kanban_sortLane:
+    method: GET
+    path: kanban-sortLane
+    params:
+        - regionID
+        - lanes
+
+kanban_sortColumn:
+    method: GET
+    path: kanban-sortColumn
+    params:
+        - regionID
+        - kanbanID
+        - columns
+
+kanban_deleteLane:
+    method: GET
+    path: kanban-deleteLane
+    params:
+        - regionID
+        - kanbanID
+        - laneID
+        - confirm
+
+kanban_createColumn:
+    method: POST
+    path: kanban-createColumn
+    params:
+        - columnID
+        - position
+
+kanban_splitColumn:
+    method: POST
+    path: kanban-splitColumn
+    params:
+        - columnID
+
+kanban_archiveColumn:
+    method: GET
+    path: kanban-archiveColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_restoreColumn:
+    method: GET
+    path: kanban-restoreColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_viewArchivedColumn:
+    method: GET
+    path: kanban-viewArchivedColumn
+    params:
+        - regionID
+
+kanban_deleteColumn:
+    method: GET
+    path: kanban-deleteColumn
+    params:
+        - columnID
+        - confirm
+
+kanban_createCard:
+    method: POST
+    path: kanban-createCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+
+kanban_batchCreateCard:
+    method: POST
+    path: kanban-batchCreateCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - laneID
+        - columnID
+
+kanban_editCard:
+    method: POST
+    path: kanban-editCard
+    params:
+        - cardID
+
+kanban_finishCard:
+    method: GET
+    path: kanban-finishCard
+    params:
+        - cardID
+        - kanbanID
+
+kanban_activateCard:
+    method: POST
+    path: kanban-activateCard
+    params:
+        - cardID
+        - kanbanID
+
+kanban_viewCard:
+    method: GET
+    path: kanban-viewCard
+    params:
+        - cardID
+
+kanban_moveCard:
+    method: GET
+    path: kanban-moveCard
+    params:
+        - cardID
+        - fromColID
+        - toColID
+        - fromLaneID
+        - toLaneID
+        - kanbanID
+
+kanban_importCard:
+    method: POST
+    path: kanban-importCard
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedKanbanID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importPlan:
+    method: POST
+    path: kanban-importPlan
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProductID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importRelease:
+    method: POST
+    path: kanban-importRelease
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProductID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importBuild:
+    method: POST
+    path: kanban-importBuild
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProjectID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_importExecution:
+    method: POST
+    path: kanban-importExecution
+    params:
+        - kanbanID
+        - regionID
+        - groupID
+        - columnID
+        - selectedProjectID
+        - recTotal
+        - recPerPage
+        - pageID
+
+kanban_setCardColor:
+    method: GET
+    path: kanban-setCardColor
+    params:
+        - cardID
+        - color
+        - kanbanID
+
+kanban_sortCard:
+    method: GET
+    path: kanban-sortCard
+    params:
+        - kanbanID
+        - laneID
+        - columnID
+        - cards
+
+kanban_archiveCard:
+    method: GET
+    path: kanban-archiveCard
+    params:
+        - cardID
+        - confirm
+
+kanban_viewArchivedCard:
+    method: GET
+    path: kanban-viewArchivedCard
+    params:
+        - regionID
+
+kanban_restoreCard:
+    method: GET
+    path: kanban-restoreCard
+    params:
+        - cardID
+        - confirm
+
+kanban_deleteCard:
+    method: GET
+    path: kanban-deleteCard
+    params:
+        - cardID
+        - confirm
+
+kanban_deleteObjectCard:
+    method: GET
+    path: kanban-deleteObjectCard
+    params:
+        - objectType
+        - objectID
+        - regionID
+
+kanban_setWIP:
+    method: POST
+    path: kanban-setWIP
+    params:
+        - columnID
+        - executionID
+        - from
+
+kanban_setLane:
+    method: POST
+    path: kanban-setLane
+    params:
+        - laneID
+        - executionID
+        - from
+
+kanban_editLaneName:
+    method: POST
+    path: kanban-editLaneName
+    params:
+        - laneID
+        - executionID
+        - from
+
+kanban_editLaneColor:
+    method: POST
+    path: kanban-editLaneColor
+    params:
+        - laneID
+        - executionID
+        - from
+
+kanban_setColumn:
+    method: POST
+    path: kanban-setColumn
+    params:
+        - columnID
+        - executionID
+        - from
+
+kanban_ajaxCardsSort:
+    method: GET
+    path: kanban-ajaxCardsSort
+    params:
+        - laneType
+        - columnID
+        - orderBy
+
+kanban_ajaxMoveCard:
+    method: GET
+    path: kanban-ajaxMoveCard
+    params:
+        - cardID
+        - fromColID
+        - toColID
+        - fromLaneID
+        - toLaneID
+        - executionID
+        - browseType
+        - groupBy
+        - regionID
+        - orderBy
+
+kanban_laneMove:
+    method: GET
+    path: kanban-laneMove
+    params:
+        - executionID
+        - currentType
+        - targetType
+
+kanban_ajaxGetContactUsers:
+    method: GET
+    path: kanban-ajaxGetContactUsers
+    params:
+        - field
+        - contactListID
+
+kanban_ajaxGetKanbanMenu:
+    method: GET
+    path: kanban-ajaxGetKanbanMenu
+    params:
+        - kanbanID
+        - moduleName
+        - methodName
+
+kanban_ajaxGetLanes:
+    method: GET
+    path: kanban-ajaxGetLanes
+    params:
+        - regionID
+        - type
+        - field
+        - i
+
+kanban_ajaxLoadUsers:
+    method: GET
+    path: kanban-ajaxLoadUsers
+    params:
+        - spaceID
+        - field
+        - selectedUser
+        - type
+
+kanban_ajaxSaveRegionID:
+    method: GET
+    path: kanban-ajaxSaveRegionID
+    params:
+        - regionID
+

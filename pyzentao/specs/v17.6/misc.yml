@@ -1,0 +1,338 @@
+gitea_browse:
+    method: GET
+    path: gitea-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gitea_create:
+    method: POST
+    path: gitea-create
+
+gitea_view:
+    method: GET
+    path: gitea-view
+    params:
+        - giteaID
+
+gitea_edit:
+    method: POST
+    path: gitea-edit
+    params:
+        - giteaID
+
+gitea_delete:
+    method: GET
+    path: gitea-delete
+    params:
+        - giteaID
+        - confirm
+
+gitea_checkToken:
+    method: POST
+    path: gitea-checkToken
+
+gitea_bindUser:
+    method: POST
+    path: gitea-bindUser
+    params:
+        - giteaID
+
+gitea_ajaxGetProjectBranches:
+    method: GET
+    path: gitea-ajaxGetProjectBranches
+    params:
+        - giteaID
+        - project
+
+gogs_browse:
+    method: GET
+    path: gogs-browse
+    params:
+        - orderBy
+        - recTotal
+        - recPerPage
+        - pageID
+
+gogs_create:
+    method: POST
+    path: gogs-create
+
+gogs_view:
+    method: GET
+    path: gogs-view
+    params:
+        - gogsID
+
+gogs_edit:
+    method: POST
+    path: gogs-edit
+    params:
+        - gogsID
+
+gogs_delete:
+    method: GET
+    path: gogs-delete
+    params:
+        - gogsID
+        - confirm
+
+gogs_checkToken:
+    method: POST
+    path: gogs-checkToken
+
+gogs_bindUser:
+    method: POST
+    path: gogs-bindUser
+    params:
+        - gogsID
+
+gogs_ajaxGetProjectBranches:
+    method: GET
+    path: gogs-ajaxGetProjectBranches
+    params:
+        - gogsID
+        - project
+
+holiday:
+    method: GET
+    path: holiday
+
+holiday_browse:
+    method: GET
+    path: holiday-browse
+    params:
+        - year
+
+holiday_create:
+    method: POST
+    path: holiday-create
+
+holiday_edit:
+    method: POST
+    path: holiday-edit
+    params:
+        - id
+
+holiday_delete:
+    method: GET
+    path: holiday-delete
+    params:
+        - id
+        - confirm
+
+misc_ping:
+    method: GET
+    path: misc-ping
+
+misc_phpinfo:
+    method: GET
+    path: misc-phpinfo
+
+misc_about:
+    method: GET
+    path: misc-about
+
+misc_updateNL:
+    method: GET
+    path: misc-updateNL
+
+misc_checkUpdate:
+    method: GET
+    path: misc-checkUpdate
+    params:
+        - sn
+
+misc_checkExtension:
+    method: GET
+    path: misc-checkExtension
+
+misc_downNotify:
+    method: GET
+    path: misc-downNotify
+
+misc_qrCode:
+    method: GET
+    path: misc-qrCode
+
+misc_ajaxIgnoreBrowser:
+    method: GET
+    path: misc-ajaxIgnoreBrowser
+
+misc_changeLog:
+    method: GET
+    path: misc-changeLog
+    params:
+        - version
+
+misc_checkNetConnect:
+    method: GET
+    path: misc-checkNetConnect
+
+misc_captcha:
+    method: GET
+    path: misc-captcha
+    params:
+        - sessionVar
+        - uuid
+
+misc_ajaxSetUnfoldID:
+    method: POST
+    path: misc-ajaxSetUnfoldID
+    params:
+        - objectID
+        - objectType
+        - action
+
+misc_getRemind:
+    method: GET
+    path: misc-getRemind
+
+misc_features:
+    method: GET
+    path: misc-features
+
+misc_ajaxSaveViewed:
+    method: GET
+    path: misc-ajaxSaveViewed
+    params:
+        - feature
+
+port_export:
+    method: POST
+    path: port-export
+    params:
+        - model
+
+port_exportTemplate:
+    method: POST
+    path: port-exportTemplate
+    params:
+        - model
+        - params
+
+port_import:
+    method: GET
+    path: port-import
+    params:
+        - model
+        - locate
+
+port_ajaxGetTbody:
+    method: GET
+    path: port-ajaxGetTbody
+    params:
+        - model
+        - lastID
+        - pagerID
+
+port_ajaxGetOptions:
+    method: GET
+    path: port-ajaxGetOptions
+    params:
+        - model
+        - field
+        - value
+        - index
+
+client:
+    method: GET
+    path: client
+
+client_browse:
+    method: GET
+    path: client-browse
+
+client_create:
+    method: POST
+    path: client-create
+
+client_download:
+    method: GET
+    path: client-download
+    params:
+        - version
+        - link
+        - os
+
+client_edit:
+    method: POST
+    path: client-edit
+    params:
+        - clientID
+
+client_changelog:
+    method: GET
+    path: client-changelog
+    params:
+        - clientID
+
+client_delete:
+    method: GET
+    path: client-delete
+    params:
+        - clientID
+
+client_checkUpgrade:
+    method: GET
+    path: client-checkUpgrade
+
+client_downloadClient:
+    method: POST
+    path: client-downloadClient
+    params:
+        - action
+        - os
+
+client_ajaxGetClientPackage:
+    method: GET
+    path: client-ajaxGetClientPackage
+    params:
+        - os
+
+client_ajaxGetPackageSize:
+    method: GET
+    path: client-ajaxGetPackageSize
+
+client_ajaxSetClientConfig:
+    method: GET
+    path: client-ajaxSetClientConfig
+    params:
+        - os
+
+client_getClientLinks:
+    method: POST
+    path: client-getClientLinks
+    params:
+        - os
+
+conference_admin:
+    method: POST
+    path: conference-admin
+    params:
+        - type
+
+integration_office:
+    method: POST
+    path: integration-office
+
+integration_wopi:
+    method: GET
+    path: integration-wopi
+    params:
+        - fileID
+        - serverName
+        - protocol
+        - hostname
+        - port
+        - sessionID
+        - mode
+        - messageID
+        - userID
+
+license_uploadLicense:
+    method: GET
+    path: license-uploadLicense
+
