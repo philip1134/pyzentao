@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 
 
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 
 
-from .zentao import Zentao
-from .response import Response
+from pyzentao.zentao import Zentao
+from pyzentao.response import Response
 
 
 # end
