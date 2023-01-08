@@ -35,15 +35,15 @@ pyzentao
 也可以自定义API规格
 
 
-Installation
-------------
+安装
+----
 
 .. code:: text
 
     $ pip install -U pyzentao
 
-Usage
------
+使用
+----
 
 举个栗子，要获取指定用户的任务，原生API为：
 
@@ -79,7 +79,7 @@ Usage
 .. code:: text
 
     url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://my.zentao.site/zentao
-    version: 禅道版本号，支持 'v17.6', 16.5', '15.7', '15' (15.2) 和 '12' (12.5.3)等。不同的禅道版本其API格式不同，默认取值 '15'
+    version: 禅道版本号，支持 '17.6', 16.5', '15.7', '15' (15.2) 和 '12' (12.5.3)等。不同的禅道版本其API格式不同，默认取值 '15'
     username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
     password: 登录禅道的帐号密码
     spec:   自定义的API规则，选填
