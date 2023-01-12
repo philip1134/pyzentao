@@ -48,7 +48,7 @@ class Response:
 
             if "data" in self.raw:
                 self.data = AttributeDict(
-                    json.loads(self.raw.get("data", "{}"))
+                    json.loads(self.raw.get("data", r"{}"))
                 )
             else:
                 self.data = self.raw
