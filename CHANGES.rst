@@ -4,6 +4,15 @@ pytest Changelog
 Here you can see the full list of changes between each pytest release.
 
 
+Version 0.3.0
+-------------
+
+Released on 2023-01-12
+
+- allow to send POST data in request body
+- map POST response to {status, data}
+
+
 Version 0.2.5
 -------------
 

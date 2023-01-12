@@ -45,13 +45,13 @@ pyzentao
 使用
 ----
 
-举个栗子，要获取指定用户的任务，原生API为：
+举个栗子，要获取指定用户的任务，原生API为
 
 .. code:: text
 
     GET  /zentao/user-task-[userID]-[type]-[recTotal]-[recPerPage]-[pageID].json
 
-该API被映射为 ``user_task`` 方法：
+该API被映射为 ``user_task`` 方法
 
 .. code:: python
 
@@ -73,13 +73,13 @@ pyzentao
     print(tasks.status) # success
     print(tasks.data) # dict...
 
-修改测试用例，原生API为：
+对于需携带POST参数的API，可使用 ``data`` 传入，例如创建任务，原生API为
 
 .. code:: text
 
-    POST  /zentao/testcase-edit-[caseID]-[comment]-[executionID].json
+    GET/POST  /zentao/task-create-[projectID]-[storyID]-[moduleID]-[taskID]-[todoID].json
 
-该API被映射为 ``testcase_edit`` 方法：
+该API被映射为 ``task_create`` 方法
 
 .. code:: python
 
@@ -87,22 +87,30 @@ pyzentao
 
     zentao = pyzentao.Zentao({
         "url": "http://my.zentao.site/zentao",
-        "version": "15",
+        "version": "17.6",
         "username": "admin",
         "password": "123456",
     })
 
-    data = {
-        "type": "feature"
-    }
-
-    tasks = zentao.testcase_edit(
-        caseID=1,
-        data=data,
+    response = zentao.task_create(
+        executionID=2,
+        storyID=0,
+        moduleID=0,
         ...
+        data={
+            "execution": 2,
+            "type": "design",
+            "name": "锦囊喵叽",
+            "assignedTo[]": "老六",
+            "pri": 3,
+            "desc": "暴打小柯基"
+            ...
+        },
     )
 
-    print(tasks.status) # success
+    print(response.status) # success
+
+注意，在 POST参数中,使用 ``assignedTo[]`` 指派任务，而不是文档中的 ``assignedTo`` ⊙﹏⊙‖∣
 
 初始化 ``Zentao`` 对象时的参数说明如下：
 
@@ -162,6 +170,8 @@ pyzentao
         raw=True
     )
 
+某些 POST API 调用的返回值为 {result, message, ...}，而非 {status, data} 格式，
+我们均将其映射为后者，即 result 映射为 status, {message, ...} 赋值为 data 。
 
 ``pyzentao`` 对于API调用过程中出现的异常并不作捕获，建议业务层根据自身使用场景决定处理逻辑。
 
