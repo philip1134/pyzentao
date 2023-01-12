@@ -49,6 +49,7 @@ class Zentao:
 
         # check out params
         params = kwargs.pop("params", {})
+        data = kwargs.pop("data", {})
         params[self.session.name] = self.session.id
 
         api = self.apis.get(api_name, kwargs)
@@ -56,7 +57,8 @@ class Zentao:
         response = get_json(requests.request(
             method=api.get("method", "GET"),
             url=api.get("url"),
-            params=params
+            params=params,
+            data=data
         ))
 
         # return raw response or not

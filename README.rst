@@ -73,6 +73,36 @@ pyzentao
     print(tasks.status) # success
     print(tasks.data) # dict...
 
+修改测试用例，原生API为：
+
+.. code:: text
+
+    POST  /zentao/testcase-edit-[caseID]-[comment]-[executionID].json
+
+该API被映射为 ``testcase_edit`` 方法：
+
+.. code:: python
+
+    import pyzentao
+
+    zentao = pyzentao.Zentao({
+        "url": "http://my.zentao.site/zentao",
+        "version": "15",
+        "username": "admin",
+        "password": "123456",
+    })
+
+    data = {
+        "type": "feature"
+    }
+
+    tasks = zentao.testcase_edit(
+        caseID=1,
+        data=data,
+        ...
+    )
+
+    print(tasks.status) # success
 
 初始化 ``Zentao`` 对象时的参数说明如下：
 
