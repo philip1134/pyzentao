@@ -33,13 +33,25 @@ class Response:
 
 # public
     def parse(self):
-        """parse raw data, just keep 'status' and 'data'"""
+        """parse raw data, just keep 'status' and 'data'
+
+        in GET response, there we can get {status, data}, but for POST response
+        in some zentao version, we get {result, message, ...}, in this case we
+        map 'result' to 'status', and pack all the other keys into 'data'
+        """
 
         if isinstance(self.raw, dict):
-            self.status = self.raw.get("status", None)
-            self.data = AttributeDict(
-                json.loads(self.raw.get("data", {}))
-            )
+            if "status" in self.raw:
+                self.status = self.raw.pop("status", None)
+            else:
+                self.status = self.raw.pop("result", None)
+
+            if "data" in self.raw:
+                self.data = AttributeDict(
+                    json.loads(self.raw.get("data", "{}"))
+                )
+            else:
+                self.data = self.raw
 
 
 # end
