@@ -42,10 +42,16 @@ pyzentao
 
     $ pip install -U pyzentao
 
-使用
+用法
 ----
 
-举个栗子，要获取指定用户的任务，原生API为
+上栗子
+~~~~~
+
+查询用户任务
+^^^^^^^^^^
+
+获取指定用户的任务，原生API为
 
 .. code:: text
 
@@ -72,6 +78,9 @@ pyzentao
 
     print(tasks.status) # success
     print(tasks.data) # dict...
+
+创建任务
+^^^^^^^
 
 对于需携带POST参数的API，可使用 ``data`` 传入，例如创建任务，原生API为
 
@@ -112,6 +121,9 @@ pyzentao
 
 注意，在 POST参数中,使用 ``assignedTo[]`` 指派任务，而不是文档中的 ``assignedTo`` ⊙﹏⊙‖∣
 
+初始化参数说明
+~~~~~~~~~~~~
+
 初始化 ``Zentao`` 对象时的参数说明如下：
 
 .. code:: text
@@ -123,6 +135,9 @@ pyzentao
     spec:   自定义的API规则，选填
         path: 存放自定义规格的路径或者文件路径，须为yaml文件
         merge: 合并方式，默认为 True 表示与默认规则合并
+
+自定义规格
+~~~~~~~~
 
 对于暂未默认支持的禅道版本，可使用 ``spec`` 指定自定义的API规格，例如
 
@@ -158,6 +173,9 @@ pyzentao
 对于未支持的禅道分支版本，可以使用 ``merge: True`` 的方式合并规格，合并时使用了 ``dict.update(...)``，
 对于原生API中方法为 ``GET/POST`` 的接口均使用 ``POST`` 方法调用。
 
+返回数据处理
+~~~~~~~~~~
+
 禅道原生API的返回数据中字段繁杂，默认情况下 ``pyzentao`` 做了整理，只保留了 ``status`` 和 ``data`` 的数据，
 如果需要获得全部原生的数据，可在API调用中加入参数 ``raw=True``，例如
 
@@ -172,6 +190,9 @@ pyzentao
 
 某些 POST API 调用的返回值为 {result, message, ...}，而非 {status, data} 格式，
 我们均将其映射为后者，即 result 映射为 status, {message, ...} 赋值为 data 。
+
+其他
+~~~~
 
 ``pyzentao`` 对于API调用过程中出现的异常并不作捕获，建议业务层根据自身使用场景决定处理逻辑。
 
