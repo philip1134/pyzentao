@@ -44,7 +44,7 @@ Version 0.2.2
 
 Released on 2021-11-07
 
-- fiendly handle JSONDecodeError for no json in response
+- friendly handle JSONDecodeError for no json in response
 - more description in README
 
 
