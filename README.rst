@@ -32,7 +32,8 @@ pyzentao
     - v15.2
     - v12.5.3
 
-也可以自定义API规格
+也可以自定义API规格。自 r0.3.0 版本之后，规格文件转由 `pyzentao-specs <https://github.com/philip1134/pyzentao-specs>`__
+更新，请异步上述链接查看详情。
 
 
 安装
