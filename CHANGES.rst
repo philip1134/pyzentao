@@ -1,7 +1,7 @@
-pytest Changelog
-=================
+pyzentao Changelog
+==================
 
-Here you can see the full list of changes between each pytest release.
+Here you can see the full list of changes between each pyzentao release.
 
 
 Version 0.3.0
