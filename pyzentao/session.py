@@ -7,7 +7,7 @@
 
 import json
 import requests
-from pyzentao.common import get_json
+from pyzentao.utils import get_json
 from pyzentao.exceptions import AuthenticationError
 
 

@@ -12,7 +12,7 @@ from pyzentao.attribute_dict import AttributeDict
 from pyzentao.api import API
 from pyzentao.session import Session
 from pyzentao.response import Response
-from pyzentao.common import get_json
+from pyzentao.utils import get_json
 
 
 def make_api_method(api, **kwargs):
@@ -25,6 +25,23 @@ class Zentao:
     """zentao main entry class"""
 
     def __init__(self, config):
+        """initializer
+
+        config can be a config file path or a dict, config file should be yaml
+        which contains:
+            zentao:
+                url: http://my.zentao.site/zentao
+                username: admin
+                password: 123456
+                spec: /path/to/spec
+
+        or dict which contains:
+            - url: http://my.zentao.site/zentao
+            - username: admin
+            - password: 123456
+            - spec: /path/to/spec
+        """
+
         super(Zentao, self).__init__()
 
         # load config
@@ -77,8 +94,7 @@ class Zentao:
         # load api specs
         self.apis = API(
             base_url=self.config.url,
-            version=self.config.version,
-            config=self.config.get("spec", None)
+            spec=self.config.spec
         )
 
         # generate methods by api name
@@ -98,9 +114,9 @@ class Zentao:
 
         self.config = AttributeDict({
             "url": "",
-            "version": "15",
             "username": "",
             "password": "",
+            "spec": None,
         })
         self.config.update(cfg)
 

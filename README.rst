@@ -22,18 +22,7 @@ pyzentao
 
 被映射成为 ``Zentao.user_task(...)`` ，后续 ``[...]`` 里的参数被映射成为调用方法的参数。
 
-在调用方法时，``pyzentao`` 会根据初始化时输入的配置参数获取禅道的授权，然后调用对应的API，并返回原生的数据结果。
-
-目前支持禅道开源版:
-
-    - v17.6
-    - v16.5
-    - v15.7
-    - v15.2
-    - v12.5.3
-
-也可以自定义API规格。自 r0.3.0 版本之后，规格文件转由 `pyzentao-specs <https://github.com/philip1134/pyzentao-specs>`__
-更新，请移步上述链接查看详情。
+在调用方法时，``pyzentao`` 会根据初始化时输入的配置参数获取禅道的授权，然后调用对应的API，并返回数据结果。
 
 
 安装
@@ -43,11 +32,17 @@ pyzentao
 
     $ pip install -U pyzentao
 
+使用时需要根据你家的禅道版本指定 API 规格，自 ``pyzentao r0.4.0`` 版本之后，规格文件由
+`pyzentao-specs <https://github.com/philip1134/pyzentao-specs>`__ 项目维护，
+在该项目下载对应的规格文件，放到你的项目下，初始化时指向这个路径即可，详见 ``pyzentao-specs`` 的说明。
+
+也可以使用 `miaou <https://github.com/philip1134/miaou>`__ 自助生成规格文件。
+
 用法
 ----
 
 上栗子
-~~~~~
+~~~~~~
 
 查询用户任务
 ^^^^^^^^^^
@@ -66,9 +61,9 @@ pyzentao
 
     zentao = pyzentao.Zentao({
         "url": "http://my.zentao.site/zentao",
-        "version": "15",
         "username": "admin",
         "password": "123456",
+        "spec": "/path/to/my/project/v17.6"
     })
 
     tasks = zentao.user_task(
@@ -97,9 +92,9 @@ pyzentao
 
     zentao = pyzentao.Zentao({
         "url": "http://my.zentao.site/zentao",
-        "version": "17.6",
         "username": "admin",
         "password": "123456",
+        "spec": "/path/to/my/project/v17.6"
     })
 
     response = zentao.task_create(
@@ -130,49 +125,9 @@ pyzentao
 .. code:: text
 
     url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://my.zentao.site/zentao
-    version: 禅道版本号，支持 '17.6', 16.5', '15.7', '15' (15.2) 和 '12' (12.5.3)等。不同的禅道版本其API格式不同，默认取值 '15'
     username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
     password: 登录禅道的帐号密码
-    spec:   自定义的API规则，选填
-        path: 存放自定义规格的路径或者文件路径，须为yaml文件
-        merge: 合并方式，默认为 True 表示与默认规则合并
-
-自定义规格
-~~~~~~~~
-
-对于暂未默认支持的禅道版本，可使用 ``spec`` 指定自定义的API规格，例如
-
-.. code:: python
-
-    import pyzentao
-
-    zentao = pyzentao.Zentao({
-        "url": "http://my.zentao.site/zentao",
-        "username": "admin",
-        "password": "123456",
-        "spec": {
-            "path": "path/to/spec", # 存放规格文件的地址，可以指向目录或单个文件
-            "merge": False # 默认取值 True 会合并到 15 版本
-        }
-    })
-
-规格文件应为 yaml 文件，格式如
-
-.. code:: yaml
-
-    user_task:
-        method: GET
-        path: user-task
-        params:
-            - userID
-            - type
-            - recTotal
-            - recPerPage
-            - pageID
-    ...
-
-对于未支持的禅道分支版本，可以使用 ``merge: True`` 的方式合并规格，合并时使用了 ``dict.update(...)``，
-对于原生API中方法为 ``GET/POST`` 的接口均使用 ``POST`` 方法调用。
+    spec:   API规格文件路径，可以是 yaml 文件路径或是包含规格文件的目录路径
 
 返回数据处理
 ~~~~~~~~~~

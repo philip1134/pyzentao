@@ -8,7 +8,8 @@
 import os
 import yaml
 import urllib
-from pyzentao.exceptions import APINameError
+from pyzentao.utils import is_empty_dir
+from pyzentao.exceptions import APINameError, APISpecNotFoundError
 
 
 class API:
@@ -17,14 +18,12 @@ class API:
     def __init__(
         self,
         base_url,
-        version,
-        config=None
+        spec=None
     ):
         super(API, self).__init__()
 
         self.base_url = base_url
-        self.version = version
-        self._load(config)
+        self._load(spec)
 
 # public
     def get(self, name, params=None):
@@ -64,32 +63,16 @@ class API:
             self.base_url, "-".join(paths)
         )
 
-    def _load(self, config):
-        """load spec data"""
+    def _load(self, path):
+        """load spec from the specified path"""
 
         self._specs = {}
 
-        if config is None:
-            self._load_default()
-        else:
-            if config.get("merge", True):
-                self._load_default()
-
-            self._load_path(config.get("path"))
-
-    def _load_default(self):
-        """load default spec"""
-
-        self._load_path(
-            os.path.join(
-                os.path.dirname(__file__),
-                "specs",
-                "v%s" % str(self.version)
-            )
-        )
-
-    def _load_path(self, path):
-        """load spec from the specified path"""
+        # check out spec path
+        if path is None or \
+           not os.path.exists(path) or \
+           (os.path.isdir(path) and is_empty_dir(path)):
+            raise APISpecNotFoundError(path)
 
         if os.path.isdir(path):
             # path is a directory

@@ -34,6 +34,20 @@ class APINameError(PyZentaoException):
         return "Unknown API name '%s'" % self.name
 
 
+class APISpecNotFoundError(PyZentaoException):
+    """exception for no spec found error"""
+
+    def __init__(self, path):
+        super(APISpecNotFoundError, self).__init__()
+
+        self.path = path
+
+    def __str__(self):
+        """printer"""
+
+        return "No API spec found from the path '%s'" % self.path
+
+
 class InvalidJSONResponseError(PyZentaoException):
     """exception for invalid json in response error"""
 

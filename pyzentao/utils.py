@@ -5,6 +5,7 @@
 #
 
 
+import os
 import json
 import requests
 from pyzentao.exceptions import InvalidJSONResponseError
@@ -23,5 +24,10 @@ def get_json(response):
         # invalid json in api response
         raise InvalidJSONResponseError(response) from None
 
+
+def is_empty_dir(dir_path):
+    """check out directory is empty or not"""
+
+    return not any((True for _ in os.scandir(dir_path)))
 
 # end
