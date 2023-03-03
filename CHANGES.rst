@@ -4,6 +4,14 @@ pyzentao Changelog
 Here you can see the full list of changes between each pyzentao release.
 
 
+Version 0.4.0
+-------------
+
+Released on 2023-03-03
+
+- transfer api specs to pyzentao-specs project
+
+
 Version 0.3.0
 -------------
 
