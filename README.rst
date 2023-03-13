@@ -122,12 +122,18 @@ pyzentao
 
 初始化 ``Zentao`` 对象时的参数说明如下：
 
-.. code:: text
 
-    url: 禅道站点的域名，一般需要加上 zentao 这个前缀，如 http://my.zentao.site/zentao
-    username: 登录禅道的帐号用户名，该帐号最好具有管理员权限
-    password: 登录禅道的帐号密码
-    spec:   API规格文件路径，可以是 yaml 文件路径或是包含规格文件的目录路径
+- url
+    [必填] 禅道站点的域名，一般需要加上 zentao 这个前缀，如 "http://my.zentao.site/zentao"
+
+- username
+    [必填] 登录禅道的帐号用户名，该帐号最好具有管理员权限
+
+- password
+    [必填] 登录禅道的帐号密码
+
+- spec
+    [必填] API规格文件路径，可以是 yaml 文件路径或是包含规格文件的目录路径
 
 返回数据处理
 ~~~~~~~~~~~~
