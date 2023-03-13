@@ -33,10 +33,10 @@ class Session:
         self.id = None
 
 # public
-    def connect(self):
+    def connect(self, force_reconnect=False):
         """setup connection"""
 
-        if not self.connected:
+        if force_reconnect or not self.connected:
             self.connected = self._get_session() and self._login()
 
         return self.connected

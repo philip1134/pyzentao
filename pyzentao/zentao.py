@@ -62,6 +62,7 @@ class Zentao:
     def request(self, api_name, **kwargs):
         """wrapper for requests.request"""
 
+        # self.session.connect(kwargs.pop("reconnect", False))
         self.session.connect()
 
         # check out params
@@ -86,6 +87,11 @@ class Zentao:
             return response
         else:
             return Response(response)
+
+    def reconnect(self):
+        """force zentao session reconnect"""
+
+        self.session.connect(force_reconnect=True)
 
 # protected
     def _init_apis(self):
