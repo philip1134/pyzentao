@@ -4,6 +4,14 @@ pyzentao Changelog
 Here you can see the full list of changes between each pyzentao release.
 
 
+Version 0.4.1
+-------------
+
+Released on 2023-03-14
+
+- allow to force reconnect session
+
+
 Version 0.4.0
 -------------
 
