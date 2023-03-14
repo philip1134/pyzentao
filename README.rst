@@ -153,12 +153,30 @@ pyzentao
 某些 POST API 调用的返回值为 {result, message, ...}，而非 {status, data} 格式，
 我们均将其映射为后者，即 result 映射为 status, {message, ...} 赋值为 data 。
 
+
 其他
 ~~~~
 
 ``pyzentao`` 对于API调用过程中出现的异常并不作捕获，建议业务层根据自身使用场景决定处理逻辑。
 
-如果API的返回数据中不包含合法的json数据，将会抛出 ``InvalidJSONResponseError`` 的异常，
-一般原因是返回了HTML格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生API的调用是否正常。
+如果你的项目以 daemon 的形式在运行，在禅道 session 过期的时候可以重连，例如
+
+.. code:: python
+
+    import pyzentao
+
+    zentao = pyzentao.Zentao(...)
+
+    # 调用 reconnect
+    zentao.reconnect()
+
+    # 或在调用某个 API 方法时使用 force_reconnect
+    zentao.user_task(
+        ...
+        force_reconnect=True
+    )
+
+如果 API 的返回数据中不包含合法的 json 数据，将会抛出 ``InvalidJSONResponseError`` 的异常，
+一般原因是返回了 HTML 格式的数据，如404页面，请确认初始化时的 ``url`` 参数是否正确，或原生 API 的调用是否正常。
 
 作为懒癌晚期患者，功能仅在 ``Linux/Python3.10`` 环境下测试，不打算兼容 ``Python2`` 和 ``Python3.3`` 以前版本 (๑¯ω¯๑)

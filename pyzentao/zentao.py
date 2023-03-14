@@ -15,12 +15,6 @@ from pyzentao.response import Response
 from pyzentao.utils import get_json
 
 
-def make_api_method(api, **kwargs):
-    def _api(self, **kwargs):
-        return self.request(api, **kwargs)
-    return _api
-
-
 class Zentao:
     """zentao main entry class"""
 
@@ -62,8 +56,8 @@ class Zentao:
     def request(self, api_name, **kwargs):
         """wrapper for requests.request"""
 
-        # self.session.connect(kwargs.pop("reconnect", False))
-        self.session.connect()
+        # connect session
+        self.session.connect(kwargs.pop("force_reconnect", False))
 
         # check out params
         params = kwargs.pop("params", {})
@@ -75,6 +69,7 @@ class Zentao:
         # get api spec
         api = self.apis.get(api_name, kwargs)
 
+        # send request
         response = get_json(requests.request(
             method=api.get("method", "GET"),
             url=api.get("url"),
@@ -91,7 +86,7 @@ class Zentao:
     def reconnect(self):
         """force zentao session reconnect"""
 
-        self.session.connect(force_reconnect=True)
+        return self.session.connect(force_reconnect=True)
 
 # protected
     def _init_apis(self):
@@ -105,7 +100,7 @@ class Zentao:
 
         # generate methods by api name
         for api in self.apis.names():
-            setattr(Zentao, api, make_api_method(api))
+            setattr(Zentao, api, self._make_api_method(api))
 
     def _load_config(self, config):
         """load configuration"""
@@ -129,5 +124,12 @@ class Zentao:
         # check out url
         if not self.config.url.endswith("/"):
             self.config.url += "/"
+
+    @staticmethod
+    def _make_api_method(api, **kwargs):
+        def _api(self, **kwargs):
+            return self.request(api, **kwargs)
+        return _api
+
 
 # end
