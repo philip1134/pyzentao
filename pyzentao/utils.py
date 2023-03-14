@@ -28,6 +28,6 @@ def get_json(response):
 def is_empty_dir(dir_path):
     """check out directory is empty or not"""
 
-    return not any((True for _ in os.scandir(dir_path)))
+    return not any(True for _ in os.scandir(dir_path))
 
 # end
